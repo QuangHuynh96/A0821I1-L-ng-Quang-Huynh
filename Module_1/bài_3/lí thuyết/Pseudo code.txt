@@ -1,0 +1,81 @@
+//Tính điểm trung bình của 3 môn toán, lý, hóa.
+BEGIN
+	INPUT math, physics, cheistry
+	average = (math + physics + cheistry) /3
+	DISPLAY average
+END
+
+//Viết ct, cho phép nhập điểm tb, nếu tb >= 75 thì hiển thị đậu, ngược lại < 75 thì rớt.
+BEGIN
+	INPUT average
+	IF average >= 75
+		DISPLAY "pass"
+	ELSE
+		DISPLAY "fail"
+	END IF
+END
+
+//xếp loại học viên dựa trên điểm tb
+giỏi: tb >= 9
+khá: 9 > tb >=7
+trung bình: 7 > tb >=6
+yếu: tb < 6
+
+BEGIN
+	INPUT average
+	IF average >= 9
+		DISPLAY "exellent"
+	ELSE IF average >= 7
+		DISPLAY "good"
+	ELSE IF average >= 6
+		DISPLAY "average"
+	ELSE
+		DISPLAY "below"
+	END IF
+	------------------------
+	INPUT average
+	IF average < 6
+		DISPLAY "below"
+	ELSE IF average < 7
+		DISPLAY "average"
+	ELSE IF average < 9
+		DISPLAY "good"
+	ELSE
+		DISPLAY "exellent"
+	END IF
+END
+---
+IF
+
+END IF
+---
+IF
+	IF
+	..
+	END IF
+ELSE
+	IF
+	..
+	ELSE
+	...
+	END IF
+END IF
+
+//Hiển thị các số từ 1 đến 10
+BEGIN
+	DISPLAY 1
+	DISPLAY 2
+	DISPLAY 3
+	DISPLAY 4
+	....
+	DISPLAY 10
+	----------------
+	count = 1
+	WHILE(count <= 10)
+		DO
+			DISPLAY count
+			count = count + 1
+		END DO
+END
+
+FOR, WHILE, LOOP, DO-WHILE
