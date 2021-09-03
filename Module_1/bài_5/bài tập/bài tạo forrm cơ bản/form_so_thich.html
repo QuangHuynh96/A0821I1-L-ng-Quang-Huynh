@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+<div>
+    <header class="header"> SỞ THÍCH CỦA BẠN</header>
+    <form method="post" action="mynterests.html" class="form">
+        <div class="form__success">Họ và tên</div>
+        <input type="text" name="your name" class="form__input"><br>
+        <div class="form__success">Email</div>
+        <input type="text" name="email" class="form__input"><br>
+        <div class="form__success">Sở thích</div>
+        <div class="form__checkbox">
+            <label><input type="checkbox" name="hobby" >Thể thao</label><br>
+            <label><input type="checkbox" name="hobby" >Lướt wed</label><br>
+            <label><input type="checkbox" name="hobby">Du lịch</label><br>
+        </div>
+        <div class="form__checkbox">
+            <label><input type="checkbox" name="hobby" >Âm nhạc</label><br>
+            <label><input type="checkbox" name="hobby" >Chơi game</label><br>
+        </div>
+        <div class="form__checkbox">
+            <label><input type="checkbox" name="hobby" >Đọc sách</label><br>
+            <label><input type="checkbox" name="hobby" >Điện ảnh</label><br>
+        </div>
+        <br>
+        <div class="form__seclec">
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</div>
+<style>
+    body{
+        width:700px;
+        min-height:250px;
+        margin: auto;
+        border: 10px solid lightskyblue;
+        font-size: 20px;
+    }
+    .header{
+        background-color: orangered;
+        height: 30px;
+        padding: 5px 5px 5px 5px;
+        margin: 5px 5px 5px 5px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+    .form__success{
+        width: 200px;
+        color: blue;
+        text-align: right;
+        float: left;
+    }
+    .form__checkbox{
+        margin-left: 5px;
+        color: red;
+        float: left;
+    }
+    .form__input{
+        margin-left: 10px;
+        width: 250px;
+        border: 3px inset;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+    .form__seclec{
+        margin-left: 210px;
+    clear: left;
+
+</style>
+</body>

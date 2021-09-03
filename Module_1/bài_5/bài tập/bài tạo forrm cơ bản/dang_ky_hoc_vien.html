@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+<div id="top">
+    <header class="header">STUDENT REGISTRATION</header>
+    <form method="post" action="student_registration.html" class="main">
+        <div class="main--text">Your name</div>
+        <input type="text" class="main__input--name"><br>
+        <div class="main--text">Date of birth</div>
+        <input type="text" class="main__input--day"><br>
+        <div class="main--text">Gender</div>
+        <label><input name="hobby" value="male" type="radio" class="main__input"/> Male</label>
+        <label><input name="hobby" value="female" type="radio" class="main__input"/> Female</label> <br/>
+        <div class="main--text">Address</div>
+        <textarea cols="25" rows="2" class="main__input"></textarea><br>
+        <div class="main--text">Class</div>
+        <select name="Class" class="main__input">
+            <option value="take">-chọn lớp-</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select><br>
+        <div class="main--text">Email</div>
+        <input type="text" name="Email" class="main__input"><br>
+        <div class="main--text" class="main__input">Phone</div>
+        <input type="text" name="Phone" class="main__input"><br>
+        <div class="main__seclec">
+            <input type="submit" value="Register" class="main__seclec--style">
+            <input type="reset" value="Reset" class="main__seclec--style">
+        </div>
+    </form>
+</div>
+<style>
+    body{
+        width: 500px;
+        margin: auto;
+        height: 500px;
+    }
+
+    #top{
+        background-color: #fffcad;
+    }
+
+    .header{
+        background-color: #d5fcd7;
+        color: #1645fa;
+        margin: 5px 5px 5px 5px;
+        padding: 5px 5px 5px 5px;
+    }
+
+    .main--text{
+        color: blue;
+        width: 125px;
+        padding-left: 10px;
+        margin-left: 0px;
+        margin-top: 10px;
+        float: left;
+        clear: left;
+    }
+
+    .main__seclec{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 135px;
+        line-height: center;
+    }
+
+    .main__input{
+        margin-top: 10px;
+        border: 2px inset;
+    }
+
+    .main__input--name{
+        margin-top: 10px;
+        width: 200px;
+        border: 2px inset;
+    }
+
+    .main__input--day{
+        margin-top: 10px;
+        width: 100px;
+        border: 2px inset;
+    }
+
+    .main__seclec--style{
+        width: 85px;
+        border: 2px outset;
+    }
+</style>
+</body>
+
