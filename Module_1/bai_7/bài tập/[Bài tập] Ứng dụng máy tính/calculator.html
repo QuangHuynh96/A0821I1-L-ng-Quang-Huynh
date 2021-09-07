@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<form>
+    <input type="text" id="box_1"/>
+    <input type="text" id="box_2"/>
+    <br>
+    <br>
+    <button onclick="addition()">Addition(+)</button>
+    <button onclick="Subtraction()">Subtraction(-)</button>
+    <button onclick="Multiplication()">Multiplication(x)</button>
+    <button onclick="Division()">Division(/)</button>
+</form>
+<script>
+<!--phần này định đặt biến chung, rồi dùng alert() cho từng hàm.-->
+        //nhưng đầu ra NaN ko chạy đc, chưa hiểu lắm!
+        /*var giatri1 = document.getElementById('box_1').value;
+        var giatri2 = document.getElementById('box_2').value;
+        var nb_giatri1 = parseInt(giatri1);
+        var nb_giatri2 = parseInt(giatri2);*/
+
+        function addition() {
+            let giatri1 = document.getElementById('box_1').value;
+            let giatri2 = document.getElementById('box_2').value;
+            let nb_giatri1 = parseInt(giatri1);
+            let nb_giatri2 = parseInt(giatri2);
+            alert(nb_giatri1 + nb_giatri2);
+        }
+
+        function Subtraction() {
+            let giatri1 = document.getElementById('box_1').value;
+            let giatri2 = document.getElementById('box_2').value;
+            let nb_giatri1 = parseInt(giatri1);
+            let nb_giatri2 = parseInt(giatri2);
+            alert(nb_giatri1 - nb_giatri2);
+        }
+
+        function Multiplication() {
+           let giatri1 = document.getElementById('box_1').value;
+           let giatri2 = document.getElementById('box_2').value;
+           let nb_giatri1 = parseInt(giatri1);
+           let nb_giatri2 = parseInt(giatri2);
+            alert(nb_giatri1 * nb_giatri2);
+
+        }
+
+        function Division() {
+            let giatri1 = document.getElementById('box_1').value;
+            let giatri2 = document.getElementById('box_2').value;
+            let nb_giatri1 = parseInt(giatri1);
+            let nb_giatri2 = parseInt(giatri2);
+            alert(nb_giatri1 / nb_giatri2);
+        }
+</script>
+</body>
+</html>

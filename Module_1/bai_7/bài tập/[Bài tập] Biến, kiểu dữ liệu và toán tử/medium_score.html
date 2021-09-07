@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Biến, kiểu dữ liệu và toán tử</title>
+    <script>
+        var input_physics = prompt('điểm môn vật lý?');
+        var input_chemistry = prompt('điểm môn hoá học?');
+        var input_biological = prompt('điểm môn sinh học?');
+        var physics = parseInt(input_physics);
+        var chemistry = parseInt(input_chemistry);
+        var biological = parseInt(input_biological);
+        var medium = (physics + chemistry + biological)/3;
+        document.write('Điểm trung bình là: ' + medium);
+        document.write('<br/>');
+        var total = physics + chemistry + biological;
+        document.write('Tổng điểm là: ' + total);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
