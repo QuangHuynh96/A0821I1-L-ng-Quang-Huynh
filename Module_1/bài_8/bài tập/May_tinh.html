@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            1000px;
+            margin: auto;
+        }
+        table{
+            width: 500px;
+            margin:50px auto;
+            border: 5px outset black;
+            text-align: center;
+            font-size: 30px;
+            color: blue;
+        }
+        .row1{
+            height: 40px;
+            border: 2px inset;
+            text-align: right;
+        }
+        .button{
+            display: block;
+            border: 3px outset;
+            width: 100%;
+        }
+        .button:hover{
+            background-color: #cccccc;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<table cellpadding="10px">
+    <tr>
+        <td colspan="4" class="row1">
+            <span id="result"></span>
+        </td>
+    </tr>
+    <tr>
+        <td><buttooon class="button" onclick="calBasic('1')">1</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('2')">2</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('3')">3</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('+')">+</buttooon></td>
+    </tr>
+    <tr>
+        <td><buttooon class="button" onclick="calBasic('4')">4</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('5')">5</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('6')">6</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('-')">-</buttooon></td>
+    </tr>
+    <tr>
+        <td><buttooon class="button" onclick="calBasic(7)">7</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('8')">8</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('9')">9</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('*')">x</buttooon></td>
+    </tr>
+    <tr>
+        <td><buttooon class="button" onclick="calBasic('C')">C</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('0')">0</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('=')">=</buttooon></td>
+        <td><buttooon class="button" onclick="calBasic('/')">/</buttooon></td>
+    </tr>
+</table>
+<script>
+    function calBasic(input) {
+        let result = document.getElementById("result").innerText;
+        // console.log("result: " + result);
+        // console.log(input);
+        switch (input){
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '+':
+            case '-':
+                result = result + input;
+                break;
+            case '*':
+            case '/':
+                if( result.length != 0){
+                    result = result + input;
+                }
+                break;
+            case 'C':
+                result = ' ';
+                break;
+            case '=':
+                result = eval(result);
+                break;
+        }
+        document.getElementById("result").innerText = result;
+    }
+</script>
+</body>
+</html>

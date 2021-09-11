@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day_of_month</title>
+</head>
+<body>
+    <input type="text" id="Input" placeholder="Nhập số tháng"/>
+    <button onclick="dayNumber()">Tính số ngày</button>
+    <br/><br/>
+    Kết quả: <span id="ketqua">  </span>
+<script>
+    function dayNumber(){
+        let giatrivao = document.getElementById('Input').value;
+        let a = '28 ngày hoặc 29 ngày';
+        let b = '30 ngày'
+        let c = '31 ngày'
+
+         switch (parseInt(giatrivao)) {
+            case 2:
+                document.getElementById('ketqua').innerText= a;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('ketqua').innerText= b;
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('ketqua').innerText= c;
+                break;
+         }
+    }
+</script>
+</body>
+</html>

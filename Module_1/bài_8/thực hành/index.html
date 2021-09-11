@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác định năm nhuận</title>
+</head>
+<body>
+<script>
+    let  year = parseInt(prompt('Enter a year'));/* lấy giá trị là number từ ô prompt*/
+    if (year % 4 == 0) { /* nếu chia hết cho 4 và...-->có thể là năm nhuận*/
+        if (year % 100 == 0){
+            if (year % 400 == 0) {/*nếu chia hết cho 100 và chia hết cho 400--năm nhuận*/
+                alert(year + " is a leap year");
+            } else {/* ngược lại,nếu chia hết cho 100 và ko chia hết cho 400--> ko nhuận*/
+                alert(year + " is NOT a leap year");
+            }
+        } else {/*ngược lại, nếu chia hết cho 4 và ko chia hết cho 100-->năm nhuận*/
+            alert(year + " is a leap year");
+        }
+    } else { /*ngược lại, nếu ko chia hết cho 4-->không phải là năm nhuận*/
+        alert(year + " is NOT a leap year");
+    }
+</script>
+</body>
+</html>

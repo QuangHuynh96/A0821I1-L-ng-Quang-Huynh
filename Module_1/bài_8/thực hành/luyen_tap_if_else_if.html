@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="box_1">Tên đăng nhập
+<br/><br/>
+<input type="text" id="box_2"/> Mật khẩu
+<br/><br/>
+<button type="button" onclick="log_in()">Đăng nhập</button>
+<script>
+    function log_in(){
+        let name = document.getElementById('box_1').value;
+        let passWord = document.getElementById('box_2').value;
+        if (name == 'Admin'){
+            if (passWord == 'TheMaster'){
+                alert('Welcome.')
+            } else{
+                if (passWord == 'null'){
+                    alert('Canceled')}
+                else {alert('Wrong password')}
+            }
+        }else {
+            if (name == 'null'){alert('canceled')}
+            else { alert('I don\'t know you')}
+        }
+    }
+</script>
+</body>
+</html>

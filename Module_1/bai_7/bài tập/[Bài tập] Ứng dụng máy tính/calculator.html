@@ -6,8 +6,8 @@
 </head>
 <body>
 <form>
-    <input type="text" id="box_1"/>
-    <input type="text" id="box_2"/>
+    <input type="text" id="box1"/>
+    <input type="text" id="box2"/>
     <br>
     <br>
     <button onclick="addition()">Addition(+)</button>
@@ -16,44 +16,42 @@
     <button onclick="Division()">Division(/)</button>
 </form>
 <script>
-<!--phần này định đặt biến chung, rồi dùng alert() cho từng hàm.-->
-        //nhưng đầu ra NaN ko chạy đc, chưa hiểu lắm!
-        /*var giatri1 = document.getElementById('box_1').value;
-        var giatri2 = document.getElementById('box_2').value;
-        var nb_giatri1 = parseInt(giatri1);
-        var nb_giatri2 = parseInt(giatri2);*/
+        // var input1 ;
+        // var input2 = document.getElementById('box2').value;
+        // var giatri1 = parseInt(input1);
+        // var giatri2 = parseInt(input2);
 
         function addition() {
-            let giatri1 = document.getElementById('box_1').value;
-            let giatri2 = document.getElementById('box_2').value;
-            let nb_giatri1 = parseInt(giatri1);
-            let nb_giatri2 = parseInt(giatri2);
-            alert(nb_giatri1 + nb_giatri2);
+            // let input1 = document.getElementById('box1').value;
+            // let input2 = document.getElementById('box1').value;
+            let giatri1 = parseInt(document.getElementById('box1').value);
+            let giatri2 = parseInt(document.getElementById('box2').value);
+            alert(giatri1 + giatri2);
         }
 
         function Subtraction() {
-            let giatri1 = document.getElementById('box_1').value;
-            let giatri2 = document.getElementById('box_2').value;
-            let nb_giatri1 = parseInt(giatri1);
-            let nb_giatri2 = parseInt(giatri2);
-            alert(nb_giatri1 - nb_giatri2);
+            // let input1 = document.getElementById('box1').value;
+            // let input2 = document.getElementById('box2').value;
+            let giatri1 = parseInt(document.getElementById('box1').value);
+            let giatri2 = parseInt(document.getElementById('box2').value);
+            alert(giatri1 - giatri2);
         }
 
         function Multiplication() {
-           let giatri1 = document.getElementById('box_1').value;
-           let giatri2 = document.getElementById('box_2').value;
-           let nb_giatri1 = parseInt(giatri1);
-           let nb_giatri2 = parseInt(giatri2);
-            alert(nb_giatri1 * nb_giatri2);
+            // let input1 = document.getElementById('box1').value;
+            // let input2 = document.getElementById('box2').value;
+            let giatri1 = parseInt(document.getElementById('box1').value);
+            let giatri2 = parseInt(document.getElementById('box2').value);
+            alert(giatri1 * giatri2);
 
         }
 
         function Division() {
-            let giatri1 = document.getElementById('box_1').value;
-            let giatri2 = document.getElementById('box_2').value;
-            let nb_giatri1 = parseInt(giatri1);
-            let nb_giatri2 = parseInt(giatri2);
-            alert(nb_giatri1 / nb_giatri2);
+            // let input1 = document.getElementById('box1').value;
+            // let input2 = document.getElementById('box2').value;
+            let giatri1 = parseInt(document.getElementById('box1').value);
+            let giatri2 = parseInt(document.getElementById('box2').value);
+            alert(giatri1 / giatri2);
         }
 </script>
 </body>
