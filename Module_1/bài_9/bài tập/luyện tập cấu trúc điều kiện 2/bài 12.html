@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính lãi ngân hàng</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="money"/> Số tiền vay(vnđồng)<br/><br/>
+        <input type="text" id="month"/> Kỳ hạn vay(tháng)<br/><br/>
+        <input type="text" id="interest_rate"/> lãi suất(%/tháng)<br/><br/>
+        <button onclick="tinhToan()">Tính</button>
+    </form>
+    <script>
+        function tinhToan(){
+            let tienVay =parseInt(document.getElementById('money').value);
+            let thoiGianVay =parseInt(document.getElementById('month').value);
+            let laiSuat =(parseInt(document.getElementById('interest_rate').value))/100;
+            //code trên /100 để lấy số phần trăm. 
+            /*tổng số tiền phải trả*/
+            let tongNo = tienVay * Math.pow((1+laiSuat),thoiGianVay);
+            document.write(parseInt(tongNo) + ' đồng');
+        }
+       </script>
+</body>
+</html>

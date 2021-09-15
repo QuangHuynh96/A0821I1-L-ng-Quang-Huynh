@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numberA = parseInt(prompt('Nhập số nguyên A!'))
+        let numberB = parseInt(prompt('Nhập số nguyên B!'))
+        let numberC = parseInt(prompt('Nhập số nguyên C!'))
+        if(numberA > numberB && numberA > numberC){
+            alert('số '+ numberA + ' là số lớn nhất' );  
+        }
+        if(numberA < numberB && numberB > numberC){
+            alert('số '+ numberB + ' là số lớn nhất');
+        }
+        if(numberC > numberA && numberC > numberB){
+            alert('số '+ numberC + ' là số lớn nhất');
+        }
+    </script>
+</body>
+</html>

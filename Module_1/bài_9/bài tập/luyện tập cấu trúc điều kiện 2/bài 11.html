@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính thuế thu nhập</title>
+</head>
+<body>
+    //dựa theo thuế suất mới nhất năm 2021.
+    <script>
+        let thuNhap = parseInt(prompt('Tổng thu nhập tháng này là bao nhiêu? (triệu đồng)'));
+        let thueSuat;
+        let tienThue;
+        if(thuNhap <= 5){
+            thueSuat = 0.05;
+            tienThue = thuNhap * thueSuat;
+            alert('Tiền thuế phải nộp là '+ tienThue + ' triệu đồng' );
+        }else if(thuNhap <= 10){
+            thueSuat = 0.1;
+            tienThue = thuNhap * thueSuat;
+            alert('Tiền thuế phải nộp là '+ tienThue + ' triệu đồng' );
+        }else if( thuNhap <= 18){
+            thueSuat = 0.15;
+            tienThue = thuNhap * thueSuat;
+            alert('Tiền thuế phải nộp là '+ tienThue + ' triệu đồng' );
+        }else if( thuNhap <= 32){
+            thueSuat = 0.2;
+            tienThue = thuNhap * thueSuat;
+            alert('Tiền thuế phải nộp là '+ tienThue + ' triệu đồng' );
+        }else if( thuNhap <= 52){
+            thueSuat = 0.25;
+            tienThue = thuNhap * thueSuat;
+            alert('Tiền thuế phải nộp là '+ tienThue + ' triệu đồng' );
+        }else if( thuNhap <= 80){
+            thueSuat = 0.3;
+            tienThue = thuNhap * thueSuat;
+            alert('Tiền thuế phải nộp là '+ tienThue + ' triệu đồng' );
+        }else{
+            thueSuat = 0.35;
+            tienThue = thuNhap * thueSuat;
+            alert('Tiền thuế phải nộp là '+ tienThue + ' triệu đồng' );
+        }
+    </script>
+</body>
+</html>

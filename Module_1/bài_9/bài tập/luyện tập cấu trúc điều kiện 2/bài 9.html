@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('nhập số thực a!'));
+        let b = parseInt(prompt('nhập số thực b!'));
+        let c = parseInt(prompt('nhập số thực c!'));
+        function condition(){
+            a > 0; b > 0; c > 0;
+            a + b > c;
+            b + c > a;
+            a + c > b;
+        }
+        (condition)?alert('a,b,c là 3 cạnh của một tam giác.'):alert('a,b,c không phải là ba cạnh của một tam giác.')
+    </script>
+</body>
+</html>

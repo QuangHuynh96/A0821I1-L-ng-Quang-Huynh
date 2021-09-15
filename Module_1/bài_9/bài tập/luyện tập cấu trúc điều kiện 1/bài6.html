@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sales = parseInt(prompt('Doanh thu trong tháng(triệu VNĐ)?'));
+        let leve_1 = (sales / 100) *2; 
+        let leve_2 = (sales / 100) *5; 
+        if(sales >= 100){
+            alert('5% doanh số. ' + leve_2 + 'triệu');
+        }else if( sales >=50){
+            alert('2% doanh thu. ' + leve_1 + 'triệu');
+        }else alert('Tháng tới cố gắn hơn nhé!')
+    </script>
+</body>
+</html>

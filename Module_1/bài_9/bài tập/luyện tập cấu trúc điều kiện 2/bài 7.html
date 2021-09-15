@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giải phương trình bậc II</title>
+</head>
+<body>
+    <script>
+        let aNumber = parseInt(prompt('Nhập tham số a cho phương trình bậc II! '));
+        let bNumber = parseInt(prompt('Nhập tham số b cho phương trình bậc II! '));
+        let cNumber = parseInt(prompt('Nhập tham số c cho phương trình bậc II! '));
+        let delta = (bNumber*bNumber) - 4*(aNumber)*(cNumber);
+        let x1;
+        let x2;
+        if(delta < 0){
+            alert('phương trình vô nghiệm.');
+        }else if(delta == 0){
+            x1 = -(bNumber/2*aNumber);
+            x2 = x1;
+            alert('Phương trình có nghiệm kép x1 = x2 = '+x1);
+        }else{
+            x1 = (-bNumber + Math.sqrt(delta))/(2*aNumber);
+            x2 = (-bNumber - Math.sqrt(delta))/(2*aNumber);
+            alert('Phương trình có hai nghiệm là: x1 = '+x1 + ', x2 = ' +x2);
+        }
+    </script>
+</body>
+</html>

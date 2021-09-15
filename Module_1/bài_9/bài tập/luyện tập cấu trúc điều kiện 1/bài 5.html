@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let testScore = parseInt(prompt('Nhập điểm bài kiểm tra!'));
+        let exam_1_Score = parseInt(prompt('Nhập điểm thi giữa kỳ!'));
+        let exam_2_Score = parseInt(prompt('Nhập điểm thi cuối kỳ!'));
+        let mediumScore = (testScore + exam_1_Score + exam_2_Score) /3;
+        if(mediumScore >= 8.5){
+            alert('Học lực giỏi.');
+        }else if(mediumScore >= 6.5){
+            alert('Học lực khá.');
+        }else if(mediumScore >= 4.5){
+            alert('Học lực trung bình.');
+        }else alert('Học lực yếu.');
+    </script>
+</body>
+</html>
