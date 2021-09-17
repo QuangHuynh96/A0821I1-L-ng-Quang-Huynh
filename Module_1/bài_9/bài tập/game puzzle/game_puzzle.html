@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        display: flex;
+        }
+    </style>
+</head>
+<body>
+    <img src="image/Hinh1a.png" onclick="clickChange(1)" id="box_a"  width="250 px" height="600 px">
+    <img src="image/Hinh1b.png" onclick="clickChange(2)" id="box_b" width="250 px" height="600 px">
+    <img src="image/Hinh1c.png" onclick="clickChange(3)" id="box_c" width="250 px" height="600 px">
+    <img src="image/Hinh1d.png" onclick="clickChange(4)" id="box_d" width="250 px" height="600 px">
+    <img src="image/Hinh1e.png" onclick="clickChange(5)" id="box_e" width="250 px" height="600 px">
+    <script>
+        let img;
+        function clickChange(number){
+            switch(number){
+                case 1:{
+                    img = document.getElementById('box_a').getAttribute('src');
+                    if(img == 'image/Hinh1a.png'){
+                    document.getElementById('box_a').src ='image/Hinh2a.png';
+                    }else if(img == 'image/Hinh2a.png'){
+                    document.getElementById('box_a').src = 'image/Hinh3a.png';
+                    }else if(img == 'image/Hinh3a.png'){
+                    document.getElementById('box_a').src = 'image/Hinh1a.png';
+                    }
+                    break;
+                }
+                case 2:{
+                    img = document.getElementById('box_b').getAttribute('src');
+                    if(img == 'image/Hinh1b.png'){
+                    document.getElementById('box_b').src ='image/Hinh2b.png';
+                    }else if(img == 'image/Hinh2b.png'){
+                    document.getElementById('box_b').src = 'image/Hinh3b.png';
+                    }else if(img == 'image/Hinh3b.png'){
+                    document.getElementById('box_b').src = 'image/Hinh1b.png';
+                    }
+                    break;
+                }
+                case 3:{
+                    img = document.getElementById('box_c').getAttribute('src');
+                    if(img == 'image/Hinh1c.png'){
+                    document.getElementById('box_c').src ='image/Hinh2c.png';
+                    }else if(img == 'image/Hinh2c.png'){
+                    document.getElementById('box_c').src = 'image/Hinh3c.png';
+                    }else if(img == 'image/Hinh3c.png'){
+                    document.getElementById('box_c').src = 'image/Hinh1c.png';
+                    }
+                    break;
+                }
+                case 4:{ 
+                    img = document.getElementById('box_d').getAttribute('src');
+                    if(img == 'image/Hinh1d.png'){
+                    document.getElementById('box_d').src ='image/Hinh2d.png';
+                    }else if(img == 'image/Hinh2d.png'){
+                    document.getElementById('box_d').src = 'image/Hinh3d.png';
+                    }else if(img == 'image/Hinh3d.png'){
+                    document.getElementById('box_d').src = 'image/Hinh1d.png';
+                    }
+                    break;
+                }
+                case 5:{
+                    img = document.getElementById('box_e').getAttribute('src');
+                     if(img == 'image/Hinh1e.png'){
+                    document.getElementById('box_e').src ='image/Hinh2e.png';
+                    }else if(img == 'image/Hinh2e.png'){
+                    document.getElementById('box_e').src = 'image/Hinh3e.png';
+                    }else if(img == 'image/Hinh3e.png'){
+                    document.getElementById('box_e').src = 'image/Hinh1e.png';
+                    }
+                    break;
+                }
+            }
+            if(document.getElementById('box_a').getAttribute('src') == 'image/Hinh1a.png'
+            && document.getElementById('box_b').getAttribute('src') == 'image/Hinh1b.png'
+            && document.getElementById('box_c').getAttribute('src') == 'image/Hinh1c.png'
+            && document.getElementById('box_d').getAttribute('src') == 'image/Hinh1d.png'
+            && document.getElementById('box_e').getAttribute('src') == 'image/Hinh1e.png'){
+                alert('ghép thành công.')
+            }else if(document.getElementById('box_a').getAttribute('src') == 'image/Hinh2a.png'
+            && document.getElementById('box_b').getAttribute('src') == 'image/Hinh2b.png'
+            && document.getElementById('box_c').getAttribute('src') == 'image/Hinh2c.png'
+            && document.getElementById('box_d').getAttribute('src') == 'image/Hinh2d.png'
+            && document.getElementById('box_e').getAttribute('src') == 'image/Hinh2e.png'){
+                alert('ghép thành công.')
+            }else if(document.getElementById('box_a').getAttribute('src') == 'image/Hinh3a.png'
+            && document.getElementById('box_b').getAttribute('src') == 'image/Hinh3b.png'
+            && document.getElementById('box_c').getAttribute('src') == 'image/Hinh3c.png'
+            && document.getElementById('box_d').getAttribute('src') == 'image/Hinh3d.png'
+            && document.getElementById('box_e').getAttribute('src') == 'image/Hinh3e.png'){
+                alert('ghép thành công.')
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

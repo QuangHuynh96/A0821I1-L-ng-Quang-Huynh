@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <div id="main">
+    <div id="good">
+        <input type="checkbox" id="change_good" class="switch_good"/>     GOOD
+    </div>
+    <div id="fast">
+        <input type="checkbox" id="change_fast"  class="switch_fast"/>     FAST
+    </div>
+    <div id="cheap">
+        <input type="checkbox" id="change_cheap"  class="switch_cheap"/>     CHEAP
+    </div>
+   </div>
+   <script>
+     let checked_good = document.getElementById('change_good');
+     let checked_fast = document.getElementById('chang_fast');
+     let checked_cheap = document.getElementById('change_cheap');
+     checked_good.addEventListener('change',function(){
+        alert("ahihi");
+     });
+   </script>
+</body>
+</html>
