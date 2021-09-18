@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bài 4: tìm số đâu tiên trong dãy fibonacci  chia hết cho 5
+        let a = 0, b = 1;
+        let numberFib = 0;
+        for(let i = 1; i > 0; i ++){
+            numberFib = a + b;
+            a = b;
+            b = numberFib;
+            if(numberFib%5 == 0){
+                document.write('số đầu tiên trong dãy fibonacci chia hết cho 5 là: '+numberFib);
+                break;
+            }
+         }
+        //document.write(numberFib);
+    </script>
+</body>
+</html>
