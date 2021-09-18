@@ -7,17 +7,30 @@
 </head>
 <body>
     <script>
-         let number = prompt('Nhập số lượng số nguyên tố muốn in ra:');
-         let count = 0;
-         let n = 2;
-         while(count < number){
-             if(n%1 == 0 && n%n == 0){
-                 console.log(n +' là số nguyên tố thứ '+ (n-1));
+         let number = 0 ; n = 0;
+         while(number < 20){
+            if(n<2){   //ko phải snt
+            }
+             else if( n == 2){
+                document.write(n+ ',');
+                number++;
+            }
+            else if( n%2 == 0){  //ko phải snt
+            }
+            else{
+                //n là số nguyên tố thì trong khoảng từ 2 đến
+                // căn bậc hai cua n sẽ không tồn tại số mà n chia hết.
+             for(let i = 3; i < Math.sqrt(n);i+=2){ //Math.sqrt là hàm tính căn bậc hai.
+                 if(n%i ==0){  //ko phải snt
+                    break;
+                 }else{
+                     document.write(n+ ',');
+                     number++;
+                 }
              }
-             count++;
-             n++;
+            }
+            n++;
          }
-
     </script>
 </body>
 </html>
