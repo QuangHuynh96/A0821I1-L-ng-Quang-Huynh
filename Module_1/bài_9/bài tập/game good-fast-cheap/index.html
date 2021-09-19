@@ -9,22 +9,32 @@
 <body>
    <div id="main">
     <div id="good">
-        <input type="checkbox" id="change_good" class="switch_good"/>     GOOD
+        <input type="checkbox"  id="change_good" class="switch_good"/>     GOOD
     </div>
     <div id="fast">
-        <input type="checkbox" id="change_fast"  class="switch_fast"/>     FAST
+        <input type="checkbox"  id="change_fast"  class="switch_fast"/>     FAST
     </div>
     <div id="cheap">
-        <input type="checkbox" id="change_cheap"  class="switch_cheap"/>     CHEAP
+        <input type="checkbox"  id="change_cheap"  class="switch_cheap"/>     CHEAP
     </div>
    </div>
    <script>
-     let checked_good = document.getElementById('change_good');
-     let checked_fast = document.get;
-     let checked_cheap = document.getElementById('change_cheap');
-     checked_good.addEventListener('change',function(){
-        console.log('a');
-     });
+       document.getElementById('change_cheap').onclick = function(a){
+           if(this.checked || (document.getElementById('change_fast').checked = true)){
+            document.getElementById('change_good').checked = false;
+           }
+       }
+       document.getElementById('change_fast').onclick = function(a){
+           if(this.checked || (document.getElementById('change_good').checked = true) ){
+            document.getElementById('change_cheap').checked = false ;
+
+           }
+       }
+       document.getElementById('change_good').onclick = function(a){
+           if(this.checked || (document.getElementById('change_cheap').checked = true)){
+            document.getElementById('change_fast').checked = false ;
+           }
+       }            
    </script>
 </body>
 </html>

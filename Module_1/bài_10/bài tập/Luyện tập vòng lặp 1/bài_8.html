@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="onGame()">Chơi</button>
+    <script>
+        function onGame(){
+        let a =parseInt(prompt('Chọn trong khoảng từ số:'));
+        let b =parseInt(prompt('đến số:'));
+        let n = Math.floor(Math.random()*(b-a) +a);
+        console.log('&nbsp&nbsp');
+        let checkInput = true;
+        while(checkInput){
+            let number = prompt('Số bạn muốn đoán là: ');
+            if(number == n){
+                alert('Xin chúc mừng!');
+                checkInput = false;
+            }else if( number < n){
+                alert( 'Số bạn chọn nhỏ hơn.');
+            }else if( number > n){
+                alert('Số bạn chọn lớn hơn.');
+            }else{
+                alert('Nhập sai, hãy bắt đầu lại!');
+                checkInput = false;
+            }
+        }
+    };
+    </script>
+</body>   
+</html>

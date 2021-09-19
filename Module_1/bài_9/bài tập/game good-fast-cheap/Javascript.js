@@ -1,3 +1,0 @@
-function checkSwitch(){
-    alert('ahihi')
-}
