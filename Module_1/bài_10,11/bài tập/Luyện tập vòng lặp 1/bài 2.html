@@ -7,12 +7,12 @@
 </head>
 <body>
     <script>
-        let a 
-        while(a!='N'){
-            a = prompt('nhập nhiệt độ hiện tại.(bấm N để thoát)');
-            if(a > 100){
+        let temp; 
+        do{
+            temp = prompt('nhập nhiệt độ hiện tại.');
+            if(temp > 100){
                 alert('Hãy giảm nhiệt độ xuống!');
-            }else if(a < 20){
+            }else if(temp < 20){
                 alert('Hãy tăng nhiệt độ lên!');   
             }else{
                 if(a != 'N'){

@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let money = prompt('Nhập số tiền vay? (VND)'),
+    interestRate = prompt('lãi suất? (%/tháng) '),
+    time = prompt('thời gian vay? (tháng)'),
+    result = money;
+    for(let i=1; i<= time; i++){
+        result = Math.floor(eval(result + money*(interestRate/100)));
+    }
+    document.write('Tổng số tiền phải trải sau '+time+' tháng là: '+ result+' VND.');
+</script>
+</body>
+</html>

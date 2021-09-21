@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let result= '';
+        for(a=1; a<20;a++){
+            result+= '*';
+        }result+='<br/>';
+        for(j=0;j<5;j++){
+            for(i = 1; i<20;i++){
+                if(i==1||i==19){
+                    result+='*';
+                }else{
+                    result+='&nbsp&nbsp';
+                }
+            }result+='<br/>';
+        }
+        for(a=1; a<20;a++){
+            result+= '*';
+        }result+='<br/>';
+document.write(result);
+    </script>
+</body>
+</html>

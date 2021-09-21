@@ -7,23 +7,18 @@
 </head>
 <body>
     <script>
-        let result= '';
-        for(a=0; a<=20;a++){
-            result+= '*';
-        }result+='<br/>';
-        for(j=0;j<5;j++){
-            for(i = 0; i<=20;i++){
-                if(i==0||i==20){
-                    result+='*';
+        let result = '';
+        for(let i = 1; i <= 4; i++){
+            for(let j = 1; j<=5;j++){
+                if((i==2&&(j == 2||j==3||j==4))
+                || (i==3&&(j == 2||j==3||j==4))){
+                    result += "&nbsp&nbsp";
                 }else{
-                    result+='&nbsp;&nbsp;';
+                    result += "*";
                 }
             }result+='<br/>';
-        }
-        for(a=0; a<=20;a++){
-            result+= '*';
         }result+='<br/>';
-document.write(result);
+        document.write(result);
     </script>
 </body>
 </html>
