@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>Caro Game Simple</h2>
+<hr style="width: 200px;"/>
+<p id="value"></p>
+<input type="button" value="Player A" onclick="changeValueA()">
+<input type="button" value="Player B" onclick="changeValueB()">
+<script>
+    let main = [];
+    let data = '';
+    for (let i = 0; i < 5; i++) { // vòng lặp để tạo mảng main[].
+    main[i] = new Array('.', '.', '.', '.', '.');
+    }
+    for( let i = 0; i<5; i++){
+        for( let j = 0; j<5; j++){
+            data += main[i][j] + '&nbsp&nbsp&nbsp';
+        }data+= '<br/>';
+    }
+    document.getElementById('value').innerHTML = data;
+   function changeValueA(){
+        data = '' // reset về lại rỗng 
+        let x = prompt('Nhập tọa độ x (1-4)');
+        let y = prompt('Nhập tọa độ y (<1-4)');
+        main[y][x] = 'x';// đổi trục, trong thực tế thì trục x nằm ngang, y nằm dọc ( khác với mảng x dọc, y ngang)
+        for( let i = 0; i<5; i++){
+            for( let j = 0; j<5; j++){
+            data += main[i][j] + '&nbsp&nbsp';
+            }data+= '<br/>';// xuống dòng khi y++
+        document.getElementById('value').innerHTML = data;
+
+
+
+        }
+    }
+    function changeValueB(){
+        data = '' // reset về lại rỗng 
+        let x = prompt('Nhập tọa độ x (1-4)');
+        let y = prompt('Nhập tọa độ y (<1-4)');
+        main[y][x] = 'o';// đổi trục, trong thực tế thì trục x nằm ngang, y nằm dọc ( khác với mảng x dọc, y ngang)
+        for( let i = 0; i<5; i++){
+            for( let j = 0; j<5; j++){
+            data += main[i][j] + '&nbsp&nbsp';
+            }data+= '<br/>';// xuống dòng khi y++
+        document.getElementById('value').innerHTML = data;
+        
+    }
+    
+    if( (main[y-2][x] == main[y-1][x] == main[y][x] == 'x')
+        || (main[y][x-2] == main[y][x-1] == main[y][x] == 'o')){
+             alert('Bạn đã chiến thắng');
+        }//chưa triển khai được điều kiện để game over.
+        }
+</script>
+</body>
+</html>

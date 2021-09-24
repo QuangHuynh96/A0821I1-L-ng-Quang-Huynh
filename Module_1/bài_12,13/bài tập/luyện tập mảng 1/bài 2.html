@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valueArr = [];
+        let maxlet, n;
+        for( let i = 0; i < 10; i++){
+            let input = prompt('Nhập số thứ ' +(i)+ ' vào mảng: ');
+            valueArr[i] = input;          
+        }
+        max = valueArr[0];
+        for(let j = 0; j< valueArr.length;j++){
+            if(valueArr[j] > max ){
+                max = valueArr[j];
+                n = j;
+            }
+        }console.log(valueArr);
+        console.log('max: '+max + ', location: ' + n);
+    </script>
+</body>
+</html>

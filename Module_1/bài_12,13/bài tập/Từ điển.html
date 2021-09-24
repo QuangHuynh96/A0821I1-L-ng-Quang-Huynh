@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Từ điển Anh-Việt</h1>
+    <input type="text" id="inputtext" placeholder="Enter text"><br><br>
+    <input type="button" onclick="searchA()" value="Eng-VN">
+    <input type="button" onclick="searchB()" value="VN-Eng">
+    <p id= 'result' style="width: 220px;height: 50px ;border: 1px solid; padding: 10px;" ></p>
+    <script>
+        let English = ['one','two','three','four','five','six','seven','eight','nine','ten'];
+        let VietNamese = ['một','hai','ba','bốn','năm','sáu','bảy','tám','chín','mười'];
+        function searchA(){
+            let inputValue = document.getElementById('inputtext').value;
+            for(let i = 0; i < English.length; i++){
+                if(English.indexOf(inputValue) !==-1){
+                    document.getElementById('result').innerHTML = VietNamese[English.indexOf(inputValue)];
+                }else{
+                    document.getElementById('result').innerHTML = 'Word not found!';
+                }
+            }
+        }
+        function searchB(){
+            let inputValue = document.getElementById('inputtext').value;
+            for(let i = 0; i < VietNamese.length; i++){
+                if(VietNamese.indexOf(inputValue) !==-1){
+                    document.getElementById('result').innerHTML = English[VietNamese.indexOf(inputValue)];
+                }else{
+                    document.getElementById('result').innerHTML = 'không tìm thấy từ!';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

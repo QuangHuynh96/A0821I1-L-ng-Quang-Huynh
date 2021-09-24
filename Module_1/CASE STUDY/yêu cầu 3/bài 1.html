@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lengthArr =parseInt(prompt('Nhập số lượng giá trị trong mảng'));
+        let a_Arr = [];
+        let b_Arr = [];
+        for( let i = 0; i < lengthArr; i++){
+            a_Arr[i] = parseInt(prompt(' Nhập giá trị mainArr['+i+']'));           
+        }console.log('mảng a: '+a_Arr);
+        b_Arr[0] = a_Arr[0];
+        for( let n = 1; n < a_Arr.length; n++){
+            b_Arr[n] = b_Arr[n - 1] + a_Arr[n];
+        }console.log('mảng b: '+b_Arr);
+    </script> 
+</body>
+</html>

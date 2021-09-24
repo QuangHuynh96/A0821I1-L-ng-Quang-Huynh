@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value = prompt('Nhập dãy số ngẫu nhiên.');
+        let valueArr = value.toString();// chuyển value thành mảng, lưu vaò valueArr
+        let result = [valueArr[0]];
+        for(let i = 1; i< valueArr.length; i++){
+            if( (valueArr[i-1]%2==0) && (valueArr[i]%2==0) ){
+                result.push('-', valueArr[i]);// thêm cho mảng resulr giá thị '-' và valueArr[i]
+            }else{
+                result.push(valueArr[i]);
+            }
+        }document.write(result.join());
+    </script>
+</body>
+</html>

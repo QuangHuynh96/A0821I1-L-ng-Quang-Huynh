@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Caro Game Simple</h2>
+<hr style="width: 200px;margin-left: 0px;"/>
+<p id="value"></p>
+<input type="button" value="Change value" onclick="changeValue()">
+<script>
+    let main = [];
+    let data = '';
+    for (let i = 0; i < 5; i++) { // vòng lặp để tạo mảng main[].
+    main[i] = new Array(0, 0, 0, 0, 0);
+    }
+    for( let i = 0; i<5; i++){
+        for( let j = 0; j<5; j++){
+            data += main[i][j] + ' &nbsp&nbsp';
+        }data+= '<br/>';
+    }
+    document.getElementById('value').innerHTML = data;
+   function changeValue(){
+        data = '' // reset về lại rỗng 
+        let x = prompt('Nhập tọa độ x (1-4)');
+        let y = prompt('Nhập tọa độ y (<1-4)');
+        main[y][x] = 'x';// đổi trục, trong thực tế thì trục x nằm ngang, y nằm dọc ( khác với mảng x dọc, y ngang)
+        for( let i = 0; i<5; i++){
+            for( let j = 0; j<5; j++){
+            data += main[i][j] + ' &nbsp&nbsp';
+            }data+= '<br/>';// xuống dòng khi y++
+        document.getElementById('value').innerHTML = data;
+        }
+    }
+</script>
+</body>
+</html>
