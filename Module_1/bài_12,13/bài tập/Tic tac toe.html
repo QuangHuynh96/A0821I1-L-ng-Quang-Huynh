@@ -28,6 +28,8 @@
         }data+= '<br/>';
     }
     document.getElementById('value').innerHTML = data;
+
+
    function changeValueA(){
         data = '' // reset về lại rỗng 
         let x = prompt('Nhập tọa độ x (1-4)');
@@ -38,10 +40,19 @@
             data += main[i][j] + '&nbsp&nbsp';
             }data+= '<br/>';// xuống dòng khi y++
         document.getElementById('value').innerHTML = data;
-
-
-
         }
+        for(a = 0; a < 5; a++){
+        for( let b = 0; b < 5; b++){
+            if( ((main[a][b]==main[a][b+1])
+            && (main[a][b]==main[a][b+2])
+            && (main[a][b]== 'x')) 
+            || ((main[a][b]==main[a+1][b])
+            && (main[a][b]==main[a+2][b])
+            && (main[a][b]== 'x'))){
+                alert('player A chiến thắng!');
+                break;
+            }
+        }}
     }
     function changeValueB(){
         data = '' // reset về lại rỗng 
@@ -53,14 +64,21 @@
             data += main[i][j] + '&nbsp&nbsp';
             }data+= '<br/>';// xuống dòng khi y++
         document.getElementById('value').innerHTML = data;
-        
-    }
-    
-    if( (main[y-2][x] == main[y-1][x] == main[y][x] == 'x')
-        || (main[y][x-2] == main[y][x-1] == main[y][x] == 'o')){
-             alert('Bạn đã chiến thắng');
-        }//chưa triển khai được điều kiện để game over.
         }
+        for(a = 0; a < 5; a++){
+        for( let b = 0; b < 5; b++){
+            if( ((main[a][b]==main[a][b+1])
+            && (main[a][b]==main[a][b+2])
+            && (main[a][b]== 'o')) 
+            || ((main[a][b]==main[a+1][b])
+            && (main[a][b]==main[a+2][b])
+            && (main[a][b]== 'o'))){
+                alert('player B chiến thắng!');
+                break;
+            }
+        }}
+}
+    
 </script>
 </body>
 </html>

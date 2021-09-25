@@ -6,23 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-  <script>
-      let newArr = [0];//tạo mảng
+    <script>
+        let newArr = [0];//tạo mảng
          newArr.length =parseInt(prompt('Nhập kích thước mảng: '));
          for( let i = 0; i<newArr.length; i++){
              newArr[i]= parseInt(prompt('Nhập giá trị cho newArr['+i+'] :'));
          }
-      let max = 0;
-      let average = 0;   
-         for(let j = 0; j< newArr.length;j++){
-            if(newArr[j] > max ){
-                max = newArr[j];
-            }
-            average += newArr[j]; 
-        }
-        document.write(' số lớn nhất là ' +max+'<br/>'
-        + 'giá trị trung bình của mảng là: '+ average/newArr.length);
-
-  </script>
+         let result = 0;
+         for(let j = 0; j < newArr.length; j++){
+             if(newArr[j] < 0){
+                 result++;
+             }
+         }
+         alert('mảng có '+result+' số âm.');
+    </script>
 </body>
 </html>

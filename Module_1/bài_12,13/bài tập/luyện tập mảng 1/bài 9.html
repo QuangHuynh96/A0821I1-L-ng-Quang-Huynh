@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr_A = [0];//tạo mảng 10 giá trị
+        let arr_B = [0];
+         arr_A.length = 10;
+         for( let i = 0; i<arr_A.length; i++){
+            arr_A[i]= parseInt(prompt('Nhập giá trị cho mảng a['+i+'] :'));
+         }
+         arr_B.length = 10;
+         for( let i = 0; i<arr_B.length; i++){
+            arr_B[i]= parseInt(prompt('Nhập giá trị cho mảng b['+i+'] :'));
+         }
+         let arr_C = arr_A.concat(arr_B);
+         console.log(arr_C);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let newArr = [0];//tạo mảng
+         newArr.length = 10;
+         for( let i = 0; i<newArr.length; i++){
+             newArr[i]= parseInt(prompt('Nhập giá trị cho newArr['+i+'] :'));
+         }
+         console.log(newArr);
+        let numberV = parseInt(prompt('Nhập số nguyên bất kỳ: '));
+         for( let j = 0; j < 10; j++){
+             if(newArr[j] == numberV){
+                 for(let k = j;k < newArr.length - 1; k++){
+                    newArr[k] = newArr[k + 1];
+                 }
+                 newArr[newArr.length - 1] = 0;
+                break;
+             }
+         }
+         console.log(newArr);
+    </script>
+</body>
+</html>
