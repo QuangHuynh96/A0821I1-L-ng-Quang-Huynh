@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let outPut = '';
+         let fakeArr = ['I',' ','am',' ','iron',' ','man'];
+        function passKey(){
+            let n = (document.getElementById('text').value).length;
+            if( n > 0){
+                for( let i = 0; i < n; i++){
+
+                        if(n == i+1){
+                            outPut += fakeArr[i];
+                        }
+                    if( n == 15){
+                    document.getElementById('text').value = '';
+                    }
+                }              
+            }
+            document.getElementById('text').value = outPut;           
+        }
+    </script>
+</head>
+<body>
+    <h3>Type anthink slowly</h3>
+    <form>
+        <textarea id="text" cols="30" rows="5" onkeydown="passKey()" ></textarea>
+    </form>
+</body>
+</html>

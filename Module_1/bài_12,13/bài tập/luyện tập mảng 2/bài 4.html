@@ -7,16 +7,17 @@
 </head>
 <body>
     <script>
-        let result = 0;
+        let number = 0, result = ' ';
         let text = prompt(' Nhập một chuỗi câu : ');
         let newArr = text.split(' ');
         console.log(newArr);
         for( let i=0; i<newArr.length;i++){
             if(newArr[i]!== ''){
-                result++;
+                number++;
+                result += newArr[i]+','
             }
         }
-        document.write(newArr+' có '+ result+ ' từ');
+        document.write('Text có '+ number+ ' từ là :'+result);
     </script>
 </body>
 </html>

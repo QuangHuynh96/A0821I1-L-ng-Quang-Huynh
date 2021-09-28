@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(54, 65, 37); 
+            width: 1000px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+        #header{
+            text-align: center;
+        }
+        #main{
+            display: flex;
+            text-align: center;
+            
+        }
+        .ima{
+            width: 140px;
+            height: 110px;
+            margin: 10px;
+            border-radius: 30px ;
+            border: 2px inset burlywood;
+        }
+        #out{
+            width: 200px;
+            margin: auto;
+            text-align: right;
+        }
+        
+        #done{
+            width: 100px;
+            height: 35px;
+            border:2px inset rgb(243, 241, 237);
+            border-radius: 15px;
+            background-color: cadetblue;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 id="header">Menu</h2>
+    <div id="main">
+        <img onclick="oderclick(0)" class="ima" src="cafe.jpg">
+        <img onclick="oderclick(1)" class="ima" src="nuoccam.jpg">
+        <img onclick="oderclick(2)" class="ima" src="carot.jpg">
+        <img onclick="oderclick(3)" class="ima" src="cachua.jpg">
+        <img onclick="oderclick(4)" class="ima" src="suoi.jpg">
+        <img onclick="oderclick(5)" class="ima" src="dua.jpg">
+    </div>
+    <p id="out"></p>
+    <input id="done" type="button" value="Tính tiền" onclick="odeEnd()">
+    <script>
+        let giatien = [10,15,16,17,5,20];
+        let menu = ['cafe','Nước cam','Cà rốt','Cà chua','Nước suối','Nước dừa'];
+        let output= '';//biến hiển thị đơn giá tưng món
+        let result;//biến giá tiền nhân số lượng từng món
+        let soluong;
+        let tongcong = 0;
+        function oderclick(a){
+            soluong = parseInt(prompt(menu[a]+' '+giatien[a]+'k, Nhập số lượng: '));
+            result = soluong*giatien[a];
+            tongcong += result;
+            output += soluong+' '+menu[a]+' x '+giatien[a]+'k :'+result+'k' +'<br>';
+            document.getElementById('out').innerHTML =output;
+        }
+        function odeEnd(){
+            document.getElementById('out').innerHTML =output +'tổng cộng: '+ tongcong+'k';
+        }
+    </script> 
+</body>
+</html>

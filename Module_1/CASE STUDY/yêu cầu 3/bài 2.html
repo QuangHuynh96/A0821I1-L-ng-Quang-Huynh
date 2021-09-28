@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr_A = [], arr_B = [];
+        arr_A.length = parseInt(prompt('Nhập số giá trị mảng A: ')); 
+        arr_B.length = parseInt(prompt('Nhập số giá trị mảng B: '));
+        for(let a = 0; a < arr_A.length; a++){
+            arr_A[a] = parseInt(prompt('Nhập giá trị arr_A[' +a+ ']'));
+        }
+        for(let b = 0; b < arr_B.length; b++){
+            arr_B[b] = parseInt(prompt('Nhập giá trị arr_B[' +b+ ']'));
+        }
+        console.log(arr_A);
+        console.log(arr_B);
+        let arr_V = [];
+            for( let i = 0; i < arr_B.length; i++){
+                let check = true;
+                for( let j = 0; j < arr_A.length; j++){
+                    if( arr_B[i] == arr_A[j]){
+                        check = false;
+                    }
+                }
+                if( check == true){
+                    arr_V.push(arr_B[i]);
+                }
+            }
+            console.log(arr_V);
+    </script>
+</body>
+</html>
