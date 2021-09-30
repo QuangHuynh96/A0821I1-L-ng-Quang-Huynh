@@ -36,6 +36,7 @@
         #done{
             width: 100px;
             height: 35px;
+            margin-top: 20px;
             border:2px inset rgb(243, 241, 237);
             border-radius: 15px;
             background-color: cadetblue;
@@ -56,6 +57,7 @@
     </div>
     <p id="out"></p>
     <input id="done" type="button" value="Tính tiền" onclick="odeEnd()">
+    <p>(Nhấn vào hình để chọn món, kết thúc oder nhấn "Tính tiền")</p>
     <script>
         let giatien = [10,15,16,17,5,20];
         let menu = ['cafe','Nước cam','Cà rốt','Cà chua','Nước suối','Nước dừa'];
@@ -71,7 +73,7 @@
             document.getElementById('out').innerHTML =output;
         }
         function odeEnd(){
-            document.getElementById('out').innerHTML =output +'tổng cộng: '+ tongcong+'k';
+            document.getElementById('out').innerHTML =output +'Tổng cộng: '+ tongcong+'k';
         }
     </script> 
 </body>
