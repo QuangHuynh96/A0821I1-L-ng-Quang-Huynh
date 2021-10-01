@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = prompt('Nhập chuổi câu bất kỳ: ');
+//hàm tìm chuổi dài nhất
+    function maxLength(arr) {
+        let max = arr[0].length; 
+        let maxValue = arr[0];
+        for(let i = 1; i< arr.length; i++) {
+            if( arr[i].length > max) {
+                maxValue = arr[i]
+                max = arr[i].length;
+            }
+        }
+        return maxValue.join('');
+    }
+//hàm bỏ khoảng trắng, viết hoa chữ cái đầu
+    function main(str) {
+        let Arr = str.toLowerCase().split(' ');
+        console.log('chuỗi vào: '+str);
+        let laststr = ''; //tạo chuổi ra
+
+        for( let i =0; i < Arr.length; i++) {                        
+            if( Arr[i] !== '') {
+                Arr[i] = Arr[i].split('');
+                Arr[i][0] = Arr[i][0].toUpperCase();
+                for( let j = 0; j < Arr[i].length; j++) {
+                    laststr += Arr[i][j];
+                }
+                laststr += ' ';
+            }
+        }
+
+        console.log(Arr);
+        console.log('chuỗi ra: '+laststr);
+        console.log(maxLength(Arr));
+    }
+    main(input);
+    </script>
+</body>
+</html>

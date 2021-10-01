@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h3>Add New Product</h3>
+        <input id="input">
+        <button onclick="addNewProduct()">add</button>
+        <h3>Display All Product</h3>
+        <div id="display"></div>
+    <script>
+        let listPhone = ["Iphone 11", "Samsung Galaxy", "Nokia", "Xiaomi", "Blackberry"];
+        function display() {
+        let table = "<table  border='1px' cellpadding='20px'>" +
+        '<tr> <th>Product Name</th> </tr>';
+        for( let i = 0; i< listPhone.length; i++) {
+            table += ' <tr>'+
+                        '<td>'+listPhone[i]+'</td>' +
+                        '<td><button onclick="editProduct('+i+')">Edit</button></td>' +
+                        '<td><button onclick="deleteProduct('+i+')">Delete</button></td>' +    
+                     '</tr>'
+        }table += "</table>";
+        document.getElementById('display').innerHTML = table;
+    }
+
+        function addNewProduct() {
+        let product = document.getElementById('input').value;
+        listPhone.push(product);
+        document.getElementById('input').value = "";
+        display();
+    }
+    function editProduct(index) {
+        listPhone[index] = prompt("Nhập tên mới: ");
+        display();
+    }
+
+    function deleteProduct(index) {
+        let check = confirm("Bạn có muốn xóa sản phẩm " + listPhone[index] + " Không?");
+        if (check === true){
+            listPhone.splice(index, 1);
+            display();
+        }
+    }
+    display();
+    </script>
+</body>
+</html>
