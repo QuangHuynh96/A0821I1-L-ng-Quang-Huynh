@@ -20,14 +20,14 @@
             else{
                 //n là số nguyên tố thì trong khoảng từ 2 đến
                 // căn bậc hai cua n sẽ không tồn tại số mà n chia hết.
-             for(let i = 3; i < Math.sqrt(n);i+=2){ //Math.sqrt là hàm tính căn bậc hai.
-                 if(n%i ==0){  //ko phải snt
-                    break;
-                 }else{
-                     document.write(n+ ',');
-                     number++;
-                 }
-             }
+                for(let i = 3; i < Math.sqrt(n);i+=2){ //Math.sqrt là hàm tính căn bậc hai.
+                    if(n%i == 0){  //ko phải snt
+                       break;
+                    }else{
+                       document.write(n+ ',');
+                       number++;
+                    }
+                }
             }
             n++;
          }

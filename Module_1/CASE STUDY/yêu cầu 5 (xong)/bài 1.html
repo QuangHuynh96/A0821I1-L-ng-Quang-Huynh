@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('Nhập kích thước m:'));
+        let b = parseInt(prompt('Nhập kích thước n:'));
+
+    function mathTotal(m,n) {
+        let total = 0;
+        //tạo kích thước ma trận
+        let maTran= new Array(m);
+        for (let k = 0; k < m; k++) {
+            maTran[k] = new Array(n);
+        }
+        //nhập giá trị ngẫu nhiên từ 0 đến (m*n) cho ma trận và tính tổng
+        for( let i = 0; i < m; i++) {
+            for( let j = 0; j < n; j++) {
+                maTran[i][j] = Math.floor(Math.random()*(m*n));
+                if(maTran[i][j] % 2 == 0) {
+                    total += maTran[i][j];
+                }
+             }
+        }
+        console.log(maTran);
+        console.log(total);
+    }
+    mathTotal(a,b)
+    </script>
+    
+</body>
+</html>
