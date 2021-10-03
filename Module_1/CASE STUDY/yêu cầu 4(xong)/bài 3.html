@@ -19,12 +19,19 @@
             for( let i = 0; i < arr1.length; i++) {
                 for( let j = 0; j < arr2.length; j++) { 
                     if(arr1[i] == arr2[j] ) {
-                         outValue += arr1[i]+', ';
+                         outValue += arr1[i];
                          n++;
                     }
                 }
             }
-            console.log('hai chuỗi có '+n+' kí tự chung là: '+outValue);
+            let arrvalue = outValue.split('');
+            for( let u = 0; u < arrvalue.length; u++) {
+                if( arrvalue[u] == arrvalue[u+1] ) {
+                    arrvalue.splice(u,1);
+                    u--;
+                }
+            } console.log('có: '+arrvalue.length+' kí tự trùng: '+arrvalue);
+
         }
         checkStr(a,b);
     </script>
