@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class SwitchButton {
+            constructor() {
+                this.statusbutton = false;
+            }
+            SwitchOff(ElectricLamp) {
+                this.statusbutton = false;
+                ElectricLamp.statusLamp = this.statusbutton;
+            }
+            SwitchOn(ElectricLamp) {
+                this.statusbutton = true;
+                ElectricLamp.statusLamp =  this.statusbutton;
+            }
+        }
+        
+        class ElectricLamp {
+            constructor() {
+                this.statusLamp = false;
+            }
+            StatusLamp() {
+                if(this.statusLamp === true) {
+                    console.log('bóng đèn đang sáng!');
+                }else {
+                    console.log('bóng đèn đang tắt!');
+                }
+            }
+
+        }
+        let congtat1 = new SwitchButton();
+        let bongden1 = new ElectricLamp();
+
+        for(let i = 0; i < 5; i++) {
+            console.log(i+1);
+            congtat1.SwitchOn(bongden1);
+            bongden1.StatusLamp();
+
+            congtat1.SwitchOff(bongden1);
+            bongden1.StatusLamp();
+        }
+    </script>
+
+</body>
+</html>

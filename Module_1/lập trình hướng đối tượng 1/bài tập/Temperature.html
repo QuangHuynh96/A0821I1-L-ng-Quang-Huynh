@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature {
+            constructor(value) {
+                this.value = value;
+                this.changeCtoF = (value*9/5) + 32;
+                this.changeCtoK = value + 273.15; 
+
+            }
+            getF() {
+                return this.changeCtoF
+            }
+            getK() {
+                return this.changeCtoK
+            }
+        }
+        let giatri1 = new Temperature(25);
+        document.write('Độ F: '+ giatri1.getF());
+        document.write('Độ K: '+ giatri1.getK());
+    </script>
+</body>
+</html>

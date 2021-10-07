@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple {
+            constructor(color) {
+                this.mass = 10;
+                this.color= color;
+
+            }
+            getMass() {
+                return this.mass
+            }
+            setMass() {
+                this.mass--;
+            }
+        }
+
+        class Human {
+            constructor( name, gender, weigh) {
+                this.name = name;
+                this.gender = gender;
+                this.weigh = weigh;
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                this.name = name
+            }
+
+            getGender() {
+                return this.gender;
+            }
+            setGender(gender) {
+                this.gender = gender;
+            }
+
+            getWeigh() {
+                return this.weigh;
+            }
+            setWeigh(weigh) {
+                this.weigh = weigh;
+            }
+
+            say(str) {
+                alert(str);
+            }
+
+            checkApple(Apple) {
+                alert('khối lượng quả táo là: '+Apple.getMass())
+            }
+
+            eatApple(Apple) {
+                if(Apple.mass > 0) {
+                    this.weigh++;
+                    Apple.setMass();
+                    this.say('táo ngon quá!')
+                }else {
+                    this.say('hết táo rồi!')
+                }
+
+            }
+        }
+        let taodo = new Apple('đỏ');
+        let eva = new Human('eva', 'nữ', 45);
+        eva.checkApple(taodo);
+        eva.eatApple(taodo);
+        console.log(taodo.getMass());     
+    </script>
+</body>
+</html>
