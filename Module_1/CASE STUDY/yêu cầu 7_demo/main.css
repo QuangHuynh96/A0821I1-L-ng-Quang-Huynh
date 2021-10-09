@@ -5,18 +5,34 @@ body{
     margin: auto;
     border: 2px solid;
 }
-#main__header{
+#header{
     height: 15%;
     border-bottom: 2px solid;
     background-color: rgb(202, 196, 196);
 }
-.header--top{
-    height: 35%;
+.header__top{
+    height:35%;
     margin: 0px;
     text-align: center;
 }
-.menu{
-    height: 65%;
+.header__menu{
+    display: flex;
+    padding: 0 10px;
+    height: 55%;
+}
+.header__menu--img {
+    margin: 0 7px;
+    height: 30px;
+    width: 30px;
+}
+.header__menu--img:hover {
+    cursor: pointer;
+}
+.header__menu--input {
+    border-radius: 5px;
+    display: block;
+    height: 30px;
+    width: 80%;
 }
 #top{
     display: flex;
@@ -31,7 +47,7 @@ body{
    height: 100%;
    padding:0px 50px;
 }
-.header{
+.h3{
     flex: 4;
     text-align: center;
 }
@@ -59,6 +75,9 @@ body{
     padding: 10px;
     border: 2px solid;
     border-radius: 5px;
+}
+.list__ul--item:hover {
+    cursor: pointer;
 }
 
 #main_right{
