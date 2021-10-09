@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            color: blue;
+        }
+        .ticker {
+            display: block;
+            width: 18px;
+            height: 18px;
+            border: 3px red inset;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .ticker2 {
+            display: block;
+            width: 18px;
+            height: 18px;
+            color: red;
+            border: 3px red inset;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Xổ số CodeGym</h1> 
+    <div id="result"></div>
+    <br>
+    <td><button onclick="buyTicker()">Buy ticker</button></td>
+    <button onclick="checkLottery()">Quay số</button>
+    <br>
+    <br>
+    <div id="lottery"></div>
+    <script>
+        class Ticker {
+            constructor() {
+                this.number;
+            }
+            setNumber() {
+                let arr = new Array(6);
+                for( let i = 0; i < 6; i++) {
+                    arr[i] = parseInt(prompt('Nhập số thứ '+i+': (0-99)'));
+                }
+                this.number = arr;
+            }
+            setAutoNumber() {
+                let arr = new Array(6);
+                for( let i = 0; i < 6; i++) {
+                    arr[i] = Math.floor( Math.random() * 100 );
+                }
+                this.number = arr;
+            }   
+            getNumber() {
+                return this.number;
+            }
+        }
+
+        let arrTicker = [];
+        function buyTicker() {
+            let ticker = new Ticker();
+            let check = prompt('1. Số tự chọn.'+'2. Số ngẫu nhiên.');
+            if( check == 1) {
+                ticker.setNumber();
+                arrTicker.push(ticker.getNumber());
+            }else if( check == 2) {
+                ticker.setAutoNumber();
+                arrTicker.push(ticker.getNumber());
+            }else {
+                alert('Lỗi, hãy chọn lại.')
+            }
+            console.log(arrTicker);
+            let result = '<table><tr>'; // in vé mua ra màn hình
+                for( let i = 0; i < arrTicker.length; i++) {
+                    for( let j = 0; j < arrTicker[i].length; j++) {
+                        result += '<td><span class="ticker" >'+arrTicker[i][j]+'</span></td>';
+                    }result += '</tr>';
+                }
+                result += '</tr></table>';
+                document.getElementById('result').innerHTML = result;
+        }
+
+        function checkLottery() {
+            let arrLottery = new Ticker();
+            arrLottery.setAutoNumber();
+            console.log(arrLottery.getNumber());
+
+            let result = '<table><tr>';//in kết quả ra màn hình
+            for( let i = 0; i < arrLottery.getNumber().length; i++) {
+                result += '<td><span class="ticker2" >'+arrLottery.getNumber()[i]+'</span></td>';
+            }
+            result += '</tr></table>';
+            document.getElementById('lottery').innerHTML = result;
+
+            let check = 0;
+            for( let i = 0; i < arrTicker.length; i++) {
+                if( arrTicker[i] == arrLottery) {
+                    check = 1;
+                    break;
+                }else if( arrTicker[i][1] == arrLottery[1]
+                      &&  arrTicker[i][2] == arrLottery[2]
+                      &&  arrTicker[i][3] == arrLottery[3]
+                      &&  arrTicker[i][4] == arrLottery[4]
+                      &&  arrTicker[i][5] == arrLottery[5]) {
+                          check = 2;
+                }else if( arrTicker[i][3] == arrLottery[3]
+                      &&  arrTicker[i][4] == arrLottery[4]
+                      &&  arrTicker[i][5] == arrLottery[5]) {
+                          check = 3;
+                      }
+            }
+            if( check == 1) {
+                result += '<h2>xin chúc mừng bạn đã trúng giải nhất!</h2>';
+            } else if( check == 2) {
+                result += '<h2>chúc mừng bạn đã trúng giải nhì!</h2>';
+            }else if( check == 3) {
+                result += '<h2>Chúc mừng bạn đã trúng giải khuyến khích!</h2>';
+            } else {
+                result += '<h2>Chúc bạn may mắn lần sau!</h2>';           
+            }
+            document.getElementById('lottery').innerHTML = result;      
+        }
+    </script>
+</body>
+</html>

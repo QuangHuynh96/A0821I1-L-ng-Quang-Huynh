@@ -15,18 +15,18 @@
         let listPhone = ["Iphone 11", "Samsung Galaxy", "Nokia", "Xiaomi", "Blackberry"];
         function display() {
         let table = "<table  border='1px' cellpadding='20px'>" +
-        '<tr> <th>Product Name</th> </tr>';
-        for( let i = 0; i< listPhone.length; i++) {
+                            '<tr><th>Product Name</th></tr>';
+        for( let i = 0; i < listPhone.length; i++) {
             table += ' <tr>'+
                         '<td>'+listPhone[i]+'</td>' +
                         '<td><button onclick="editProduct('+i+')">Edit</button></td>' +
                         '<td><button onclick="deleteProduct('+i+')">Delete</button></td>' +    
                      '</tr>'
-        }table += "</table>";
+        } table += "</table>";
         document.getElementById('display').innerHTML = table;
     }
 
-        function addNewProduct() {
+    function addNewProduct() {
         let product = document.getElementById('input').value;
         listPhone.push(product);
         document.getElementById('input').value = "";
