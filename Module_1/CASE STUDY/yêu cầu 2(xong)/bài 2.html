@@ -8,21 +8,17 @@
 <body>
     <script>
         let key = prompt('Nhập một chữ cái.');
+        key = key.toLocaleLowerCase();
         switch(key){
             case 'o':
             case 'u':
             case 'i':
             case 'a':
             case 'e':
-            case 'O':
-            case 'U':
-            case 'I':
-            case 'A':
-            case 'E':
-                alert( key+ ' là ký tự nguyên âm');
+                alert( ' là ký tự nguyên âm');
                 break;
             default:
-                alert(key+ ' là phụ âm');
+                alert( ' là phụ âm');
         }  
     </script> 
 </body>

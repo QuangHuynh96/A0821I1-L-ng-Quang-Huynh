@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s = '07:05:45PM';
+         let arr = s.split('');
+         console.log(arr);
+           if( arr[8] + arr[9] == 'PM') {
+            arr[0] = Number(arr[0]) + 1;
+            arr[1] = Number(arr[1]) + 2;
+            arr.splice(8);
+            arr.splice(9);
+           }
+           console.log(arr);
+        console.log(arr.join(''))
+    </script>
+</body>
+</html>

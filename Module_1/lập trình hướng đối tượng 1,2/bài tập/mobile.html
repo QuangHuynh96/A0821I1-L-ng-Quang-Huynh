@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Mobile {
+            constructor() {
+                this.pin = 100;
+                this.receivedMessage = [];
+                this.sentMessage = [];
+                this.status = false;
+            }
+            getStatus() {
+                return this.status;
+            }
+            turnOn() {
+                if(this.pin > 0) {
+                this.status = true;
+                }else {
+                    alert('Hết pin!');
+                }
+            }
+            turnOff() {
+                this.status = false;
+            }
+            getSentMessage() {
+                return this.sentMessage;
+            }
+            getReceivedMessage() {
+                return this.receivedMessage;
+            }
+            
+            setReceivedMessage(message) {
+                this.receivedMessage.push(message);
+                this.pin--;
+            }
+            SentMessage(Mobile) {
+                if(this.status == true) {
+                    let message = prompt('Soạn tin nhắn:');
+                    this.sentMessage.push(message);
+                    Mobile.setReceivedMessage(message);
+                    this.pin--;
+                }
+            }
+
+            checkPin() {
+                return this.pin;
+            }
+        }
+        let nokia = new Mobile();
+        let samsung = new Mobile();
+        nokia.turnOn();
+
+        nokia.SentMessage(samsung);
+        console.log(nokia.getSentMessage());
+        console.log(samsung.getReceivedMessage());
+        console.log('Điện thoại nokia còn '+nokia.checkPin()+'% pin.');
+        console.log('Điện thoại sam sum còn '+samsung.checkPin()+'% pin.');
+    </script>
+</body>
+</html>

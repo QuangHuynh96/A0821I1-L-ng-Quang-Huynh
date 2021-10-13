@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Mouses {
+            constructor(name,weight,speed) {
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+                this.status = true;
+                this.action = 'chít chít!';
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                this.name = name;
+            }
+
+            getWeight() {
+                return this.weight;
+            }
+            setWeight(weight) {
+                this.weight = weight;
+            }
+
+            getSpeed() {
+                return this.speed;
+            }
+            setSpeed(speed) {
+                this.speed = speed;
+            }
+
+            getStatus() {
+                return this.status;
+            }
+            setStatus(status) {
+                this.status = status;
+            }
+
+            getAction() {
+                return this.action;
+            }
+        }
+
+        class Cats {
+            constructor(name,weight,maxspeed) {
+                this.name = name;
+                this.weight = weight;
+                this.maxspeed = maxspeed;
+                this.action = 'meo meo!';
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                this.name = name;
+            }
+
+            getWeight() {
+                return this.weight;
+            }
+            setWeight(weight) {
+                this.weight = weight;
+            }
+
+            getMaxspeed() {
+                return this.maxspeed;
+            }
+            setMaxspeed(maxspeed) {
+                this.maxspeed = maxspeed;
+            }
+            getAction() {
+                return this.action;
+            }
+            
+            catchtheMousse(Mouses) {
+                if(this.getMaxspeed() > Mouses.getSpeed()) {
+                    console.log('Mèo '+this.getName()+' đã bắt được '+Mouses.getName());
+                }else {
+                    console.log('mèo ko bắt kịp chuột!');
+                }
+            }
+            
+            eatMouse(Mouses) {
+                if((this.getMaxspeed() > Mouses.getSpeed()) && Mouses.getStatus) {
+                    console.log('Mèo ăn thịt chuột!');
+                    this.setWeight(this.getWeight()+Mouses.getWeight());
+                }else {
+                    console.log('Mèo ko ăn được chuột!');
+                }
+            }
+        }
+        let Tom = new Cats('tom',50,300);
+        let Jerry = new Mouses('jerry',15,299);
+        Tom.catchtheMousse(Jerry);
+        Tom.eatMouse(Jerry);
+        console.log(Tom.getWeight());
+    </script>
+</body>
+</html>
