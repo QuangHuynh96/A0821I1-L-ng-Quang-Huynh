@@ -12,7 +12,7 @@
         let result = '';
         for( let i = 0; i < h; i++){
             for(let j = 0; j < n; j++){
-                if(j > h-2-i && j < h+i ){
+                if(j >= h-1-i && j <= h-1+i ){
                     result += '*';
                 }else{
                     result += '&nbsp&nbsp';

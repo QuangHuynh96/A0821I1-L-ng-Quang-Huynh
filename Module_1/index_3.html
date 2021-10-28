@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>số nguyên tố</title>
+</head>
+<body>
+    <script>
+        function checkNumber(Arr) { 
+            let result = [];//hàm xuất mảng snt
+            for( let j = 0; j < Arr.length; j++) {
+                if(Arr[j] < 2) {// ko phải snt, nhảy vòng lặp tiếp theo
+                    continue;
+                }else {
+                    let check_Snt = true;
+                    for(let i = 2; i < Arr[j] - 1;i++){ 
+                        if(Arr[j] % i == 0){  
+                            check_Snt = false;
+                            break;
+                        }   
+                    }
+                    if( check_Snt == true) {
+                        result.push(Arr[j]);
+                    }
+                }
+            }
+            console.log('result: ' + result);
+        }
+        let n = parseInt(prompt('Nhập số lượng số nguyên'));
+        let arr = [];
+        for( let i = 0; i < n; i++) { 
+            arr[i] = parseInt(prompt('Nhập số nguyên:'));
+        }
+        console.log('arr: ' + arr);
+        checkNumber(arr);
+    </script>
+</body>
+</html>

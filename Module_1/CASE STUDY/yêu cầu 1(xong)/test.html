@@ -6,18 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let s = '07:05:45PM';
-         let arr = s.split('');
-         console.log(arr);
-           if( arr[8] + arr[9] == 'PM') {
-            arr[0] = Number(arr[0]) + 1;
-            arr[1] = Number(arr[1]) + 2;
-            arr.splice(8);
-            arr.splice(9);
-           }
-           console.log(arr);
-        console.log(arr.join(''))
+    <script> 
+   function func1(a){
+
+if(a == 2) return 2;
+
+return a * func1(a - 1);
+
+}console.log(func1(4))
     </script>
 </body>
 </html>

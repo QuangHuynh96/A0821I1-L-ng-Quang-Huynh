@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone list</title>
+</head>
+<body>
+    <h1>Phone list</h1>
+    <button type="button" onclick="addNewProduct()">Add new</button>
+    <p id="output"></p>
+    <script>
+        class Phone {
+        constructor(id, name, made, coin) {
+            this.id = id;
+            this.name = name;
+            this.made = made;
+            this.coin = coin;
+        }
+        getId() {
+            return this.id;
+        }
+        setId(value) {
+            this.id = value;
+        }
+        getName() {
+            return this.name;
+        }
+        setName(value) {
+            this.name = value;
+        }
+        getMade() {
+            return this.made;
+        }
+        setMade(value) {
+            this.made = value;
+        }
+        getCoin() {
+            return this.coin;
+        }
+        setCoin(value) {
+            this.coin = value;
+        }
+        toString() {
+            return   this.id + " " 
+                    +this.name + " " 
+                    +this.made + " " 
+                    +this.coin;
+        }
+    }
+    let arr = [];
+    function addNewProduct() {
+        let newphone = new Phone();
+        newphone.setId(prompt("Số Serie?"));
+        newphone.setName(prompt("Tên điện thoại?"));
+        newphone.setMade(prompt("Hãng?"));
+        newphone.setCoin(prompt("Giá tiền"));
+        if(newphone.getId() == '' || newphone.getId() == null
+        || newphone.getName() == '' || newphone.getName() == null
+        || newphone.getMade() == '' || newphone.getMade() == null
+        || newphone.getCoin() == '' || newphone.getCoin() == null) {
+            alert('lỗi, hãy nhập lại!');
+            addNewProduct();
+        }else {
+            arr.push(newphone);
+            arr.sort(function(a, b){
+                if (a.getName().toLowerCase() < b.getName().toLowerCase())
+                    return -1;
+                if (a.getName().toLowerCase() > b.getName().toLowerCase())
+                    return 1;
+                return 0;
+            });
+            console.log(arr.toString());
+            document.getElementById("output").innerHTML=display();
+        }
+    }
+    function display() {
+        let table = "<table border='1px' cellpadding='10px'>"
+            +"<tr><th>Serie</th><th>Nam</th><th>Made</th><th>Money</th></tr>"
+        for (let i = 0; i < arr.length; i++) {
+        table+="<tr>";
+        table+="<td>"+arr[i].getId()+"</td>";
+        table+="<td>"+arr[i].getName()+"</td>";
+        table+="<td>"+arr[i].getMade()+"</td>";
+        table+="<td>"+arr[i].getCoin()+"</td>";
+        table+="</tr>";
+        }
+        return table;
+    }
+
+
+    </script>
+</body>
+</html>
