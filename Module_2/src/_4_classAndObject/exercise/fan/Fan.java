@@ -2,23 +2,34 @@ package _4_classAndObject.exercise.fan;
 
 public class Fan {
     //final
-    final int slow = 1;
-    final int medium = 2;
-    final int fast = 3;
+    final int SLOW = 1;
+    final int MEDIUM = 2;
+    final int FAST = 3;
 
     private int speed;
     private boolean on;
     private double darius;
     private String color;
 
-    //contructor
+    //contrustor
     public Fan() {
-        this.speed = slow;
+        this.speed = SLOW;
         this.on = false;
         this.darius = 5;
         this.color = "blue";
     }
     //geter
+    /*
+    public int getFAST() {
+        return this.FAST;
+    }
+    public int getMEDIUM() {
+        return this.MEDIUM;
+    }
+    public int getSLOW() {
+        return this.SLOW;
+    }*/
+
     public int getSpeed() {
         return this.speed;
     }
@@ -31,6 +42,7 @@ public class Fan {
     public String getColor() {
         return this.color;
     }
+
     //seter
     public void setSpeed(int speed) {
         this.speed = speed;
