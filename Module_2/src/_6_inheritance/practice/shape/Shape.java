@@ -1,6 +1,6 @@
 package _6_inheritance.practice.shape;
 
-public class Shape {
+public abstract class Shape {
     protected String color;
     protected boolean filled;
 
@@ -37,4 +37,6 @@ public class Shape {
             return "A Shape with color of "+this.getColor()+" and not filled.";
         }
     }
+
+    public abstract double getArea();
 }
