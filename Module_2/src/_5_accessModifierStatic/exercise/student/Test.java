@@ -1,6 +1,6 @@
 package _5_accessModifierStatic.exercise.student;
 
-public class Test {
+ class Test {
     private String Name;
     private String Class;
 
