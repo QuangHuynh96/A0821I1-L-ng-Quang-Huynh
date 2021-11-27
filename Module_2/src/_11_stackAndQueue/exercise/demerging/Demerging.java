@@ -23,9 +23,9 @@ public class Demerging {
 
         Queue<Person> qFemale = new LinkedList<>();
         Queue<Person> qMale = new LinkedList<>();
-        personList.forEach(o -> {
-                    if (o.getGender() == "nu") qFemale.add(o);
-                    else qMale.add(o);
+        personList.forEach(person -> {
+                    if (person.getGender() == "nu") qFemale.add(person);
+                    else qMale.add(person);
                 }
         );
         personList.clear();
@@ -35,6 +35,9 @@ public class Demerging {
         while(!qMale.isEmpty()) {
             personList.add(qMale.remove());
         }
-        personList.forEach(System.out::println);
+//        personList.forEach(System.out::println);
+        for(Person p : personList) {
+            System.out.println(p);
+        }
     }
 }
