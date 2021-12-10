@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-class CopyFileText {
+class CopyFileChar {
     //hàm đọc file.
     List<String> readFile(String filePath) {
         List<String> list = new ArrayList<String>();

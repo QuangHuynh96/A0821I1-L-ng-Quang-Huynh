@@ -3,13 +3,13 @@ package _12_javaCollectionFramework.exercise.e1_ArrayLisst;
 public class Product {
     private int id;
     private String name;
-    private int duration;
+    private int manufacturer;
     private int price;
 
     public Product(int id, String name, int duration, int price) {
         this.id = id;
         this.name = name;
-        this.duration = duration;
+        this.manufacturer = duration;
         this.price = price;
     }
     public Product() {
@@ -33,11 +33,11 @@ public class Product {
     }
 
     public int getDuration() {
-        return duration;
+        return manufacturer;
     }
 
     public void setDuration(int year) {
-        this.duration = year;
+        this.manufacturer = year;
     }
 
     public int getId() {

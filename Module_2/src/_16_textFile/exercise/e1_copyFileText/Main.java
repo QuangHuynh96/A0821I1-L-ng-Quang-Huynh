@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CopyFileText copy = new CopyFileText();
+        CopyFileChar copy = new CopyFileChar();
         System.out.println("Enter filePath in: ");
         String pathIn = scanner.nextLine();
         List<String> list = copy.readFile(pathIn);
