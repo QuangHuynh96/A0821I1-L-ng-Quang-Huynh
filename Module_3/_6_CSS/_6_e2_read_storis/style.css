@@ -1,0 +1,86 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+body {
+    max-width: 60%;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+
+#header {
+    position: fixed;
+    margin-top: -54px;
+    padding-left: 32px;
+    min-width: 60%;
+    height: 36x;
+    background-color: darkgray;
+}
+#header:hover {
+    background-color: #717171;
+}
+
+
+.song_text {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    min-height: 400px;
+    padding: 32px;
+    padding-top: 40px;
+    text-align: justify;
+}
+
+#nav {
+    margin-top: 54px;
+}
+
+#nav_list {
+    list-style-type: none;
+    text-indent: 32px;
+}
+
+li:hover a {
+    background-color: #717171;
+    color: #fff !important;
+}
+
+.back_ground_color1{
+    color: #fff;
+    background-color: #717171;
+}
+
+.back_ground_color2{
+    color: #fff;
+    background-color: silver;
+}
+
+#song1 {
+    background-image: url(./img/bucthutinhdautien.jpg);
+    background-size: 100%;
+}
+#song2 {
+    background-image: url(./img/conmuatinhyeu.jpg);
+    background-size: 100%;
+}
+
+#song3 {
+    background-image: url(./img/quademnay.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#song4 {
+    background-image: url(./img/chiconlaitinhyeu.jpg);
+    background-size: 100%;
+    opacity: 0.7;
+}
