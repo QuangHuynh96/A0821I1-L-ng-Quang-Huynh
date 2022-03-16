@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+
+    <style>
+        /* pc or laptop */
+        @media  (min-width: 700px) {
+            .card_img-row {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
+        /* tablet */
+        @media  (max-width: 700px) {
+            
+            .card_img-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+           .card-w {
+               width: 50%;
+           }
+        }
+        /* mobile */
+        @media  (max-width: 500px) {
+            .card_img-row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+           .card-w {
+               width: 100%;
+               margin-top: 5%;
+           }
+        }
+        
+            
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Responsive Image Gallery</h3>
+        <p>Resize the browser window to see the effect.</p>
+        <div class="contain card_img-row ">
+            <div class="card card-w" style="width: 18rem;">
+                <img src="/_e1_Base_Gallery/img/img_fjords.jpg" class="card-img-top card_img" alt="...">
+                <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card card-w" style="width: 18rem;">
+                <img src="/_e1_Base_Gallery/img/img_forest.jpg" class="card-img-top card_img" alt="...">
+                <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card card-w" style="width: 18rem;">
+                <img src="/_e1_Base_Gallery/img/img_lights.jpg" class="card-img-top card_img" alt="...">
+                <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card card-w" style="width: 18rem;">
+                <img src="/_e1_Base_Gallery/img/img_mountains.jpg" class="card-img-top card_img" alt="...">
+                <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>
+            This example use media queries to re-arrange the images on different screen sizes:
+            for screens larger than 700px wide, it will show four images side by side,
+            for screens smaller than 700px, it will show two images side by side. 
+            For screens smaller than 500px, the images will stack vertically (100%).
+        </p>
+    </div>
+</body>
+</html>
