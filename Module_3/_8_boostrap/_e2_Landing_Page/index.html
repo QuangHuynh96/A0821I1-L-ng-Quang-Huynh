@@ -1,0 +1,455 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/themify-icons-font/themify-icons/themify-icons.css">
+
+
+    <style>
+        html {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            min-width: 316px;
+            font-size: 13px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .header nav a {
+            border-bottom: #fff 2px solid;
+            padding: 16px 8px 10px !important;
+        }
+
+        .header nav a:hover {
+            border-bottom: #000 2px solid;
+        }
+
+        .footer a {
+            height: 100% !important;
+            border-bottom: #f8f9fa 2px solid;
+            font-size: 11px !important;
+        }
+
+        .footer a:hover {
+            border-bottom: #000 2px solid;
+
+        }
+
+        .border_none {
+            border: none !important;
+        }
+
+        @media (min-width : 992px) {
+
+            .sub-nav-2 {
+                display: none;
+            }
+        }
+
+        @media (max-width :991px) {
+            .drop_down {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container   ">
+        <!-- header -->
+        <div class="header" style="margin: 0px -15px;">
+            <!-- nav -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-while">
+                <a class="navbar-brand" href="#" style="border: none;">
+                    <img src="/img/Microsoft_logo_(2012).svg.png" alt="" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Surface <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="#">Computers</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Computers
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">2-in-1 PCs</a>
+                        <a class="dropdown-item" href="#">Laptop</a>
+                        <a class="dropdown-item" href="#">Doul Screen</a>
+                        <a class="dropdown-item" href="#">All-in-One</a>
+                        <a class="dropdown-item" href="#">Need help deciding?</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                          Computers for Business
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">2-in-1 PCs</a>
+                            <a class="dropdown-item" href="#">Laptop</a>
+                            <a class="dropdown-item" href="#">Doul Screen</a>
+                            <a class="dropdown-item" href="#">All-in-One</a>
+                            <a class="dropdown-item" href="#">Need help deciding?</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                          Accessories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Surface Heaphones 2</a>
+                          <a class="dropdown-item" href="#">Surface Pro X accessories</a>
+                          <a class="dropdown-item" href="#">Surface Pro accessories</a>
+                          <a class="dropdown-item" href="#">Surface Laptop accessories</a>
+                          <a class="dropdown-item" href="#">Surface Book accessories</a>
+                          <a class="dropdown-item" href="#">Surface Go accessories</a>
+                          <a class="dropdown-item" href="#">Surface Studio accessories</a>
+                          <a class="dropdown-item" href="#">All Surface accessories</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                          Shop now
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Surface deals</a>
+                          <a class="dropdown-item" href="#">Surface bundles</a>
+                          <a class="dropdown-item" href="#">All surface devices</a>
+                          <a class="dropdown-item" href="#">Where to buy</a>
+                          <a class="dropdown-item" href="#">personal shopping appointment</a>
+                        </div>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                          All microsoft
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Microsoft 365</a>
+                          <a class="dropdown-item" href="#">Office</a>
+                          <a class="dropdown-item" href="#">Windowms</a>
+                          <a class="dropdown-item" href="#">Surface</a>
+                          <a class="dropdown-item" href="#">Xbox</a>
+                          <a class="dropdown-item" href="#">Deals</a>
+                          <a class="dropdown-item" href="#">Support</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link ti-search border_none" href="#"> Search</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link ti-shopping-cart border_none" href="#"> Shopping</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link ti-user border_none" href="#"> Login</a>
+                      </li>
+                  </ul>
+                </div>
+            </nav>
+            <!-- end-nav -->
+            <div class="content d-flex justify-content-center" style="background-color: #0067b8;padding: 4px 0px;">
+                <a class="border_none" style="color: #fff; font-size: 15px;" href="#">Save big on Surface devices. Shop Deals ></a>
+            </div>
+        </div>
+        <!-- end-header -->
+
+        <!-- start-main -->
+        <div class="main">
+            <!-- start panel -->
+            <div class="row">
+                <div class="row">
+                    <img class="col-md-12" src="/img/bg-micr365.jfif" alt="" width="100%"
+                        height="auto">
+                </div>
+            </div>
+            <!-- end_panel -->
+            <div class=" row d-flex justify-content-center" style="padding-top: 48px; font-size: 16px; font-weight: 600;">
+                <div class="card col-sm-3 mb-4 border-0 d-flex align-items-center" style="width: 100%; text-align: center">
+                    <img src="/img/micro.png" class="card-img-top" alt="..." style="width: 40px; height: 40px;">
+                    <div class="card-body">
+                        <a href="#" class="card-link text-dark">Chọn Microsoft 365 của bạn</a>
+                    </div>
+                </div>
+                <div class="card col-sm-3 mb-4 border-0 d-flex align-items-center" style="width: 100%; text-align: center">
+                    <img src="/img/game-icon.webp" class="card-img-top" alt="..." style="width: 40px; height: 40px;">
+                    <div class="card-body">
+                        <a href="#" class="card-link text-dark">Khám phá trò chơi trên PC</a>
+                    </div>
+                </div>
+                <div class="card col-sm-3 mb-4 border-0 d-flex align-items-center" style="width: 100%; text-align: center;">
+                    <img src="/img/micro.png" class="card-img-top" alt="..." style="width: 40px; height: 40px;">
+                    <div class="card-body">
+                        <a href="#" class="card-link text-dark">Tải Windowns</a>
+                    </div>
+                </div>
+            </div>
+            <!-- start list-card -->
+            <div class="row justify-content-center" style="padding-top: 15px;">
+                <div class="card col-sm-6 col-md-3 pd-16-8 mb-4 border-0" style="width: 100%;">
+                    <img src="/img/img.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Được thiết kế cho cuộc sống hôm nay và mai sau</h5>
+                        <p class="card-text">Trò chơi thế hệ tiếp theo. Mục tiêu của bạn. Gia đình và bạn bè. Windows 11
+                            được thiết kế để đưa bạn đến gần hơn với mọi thứ bạn yêu thích.</p>
+                        <a href="#" class="btn btn-primary">Xem PC của bạn đã sẵn sàng chưa</a>
+                    </div>
+                </div>
+                <div class="card col-sm-6 col-md-3 pd-16-8 mb-4 border-0" style="width: 100%;">
+                    <img src="/img/img2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Microsoft Edge</h5>
+                        <p class="card-text">Hiệu suất đẳng cấp thế giới với độ bảo mật lớn hơn, năng suất cao hơn và
+                            nhiều giá trị hơn trong khi duyệt web.</p>
+                        <a href="#" class="btn btn-primary">Tải xuống ngay</a>
+                    </div>
+                </div>
+                <div class="card col-sm-6 col-md-3 pd-16-8 mb-4 border-0" style="width: 100%;">
+                    <img src="/img/img3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Microsoft OneDrive</h5>
+                        <p class="card-text">Lưu tệp và ảnh của bạn vào OneDrive và truy cập từ mọi nơi, mọi thiết bị.
+                        </p>
+                        <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+                <div class="card col-sm-6 col-md-3 pd-16-8 mb-4 border-0" style="width: 100%;">
+                    <img src="/img/img4.webp" class="card-img-top" alt="..." width="100%"
+                        height="auto">
+                    <div class="card-body">
+                        <h5 class="card-title">OneNote</h5>
+                        <p class="card-text">Sắp xếp khoa học các ghi chú và cuộc sống của bạn.</p>
+                        <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end-list-card -->
+            <!-- start-panel2 -->
+            <div class="row">
+                <div class="row">
+                    <!-- <div class="col-md-6">
+                        <h1>Microsoft 365</h1>
+                        <p>
+                            Các ứng dụng Office cao cấp,
+                            lưu trữ đám mây bổ sung, bảo mật nâng cao cùng nhiều tính năng khác—tất cả trong một gói đăng ký tiện lợi
+                        </p>
+                        <a class="btn btn-secondary" href="#" role="button">Cho tối đa 6 người dùng</a>
+                        <a class="btn " href="#" role="button">Cho 1 người dùng</a>
+                    </div> -->
+                    <img class="col-md-12" src="/img/panel2.webp" alt="" width="100%" height="auto">
+                </div>
+            </div>
+            <!-- end-panel2 -->
+            <!-- start list-card-2 -->
+            <div class="row justify-content-center">
+                <div class="col-12" style="padding-top: 48px">
+                    <h2>Dành cho doanh nghiệp</h2>
+                </div>
+                <div class="card col-sm-6 col-md-3 pd-16-8  mb-4 border-0" style="width: 100%;">
+                    <img src="/img/card_img_1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tải miễn phí Microsoft Teams</h5>
+                        <p class="card-text">Hội họp, trò chuyện trực tuyến và dung lượng lưu trữ đám mây được chia sẻ —
+                            tất cả ở cùng một nơi.</p>
+                        <a href="#" class="btn btn-primary">Đăng ký miễn phí</a>
+                    </div>
+                </div>
+                <div class="card col-sm-6 col-md-3 pd-16-8 mb-4 border-0" style="width: 100%;">
+                    <img src="/img/card_img_2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Microsoft 365 dành cho doanh nghiệp</h5>
+                        <p class="card-text">Đi trước một bước với các ứng dụng mạnh mẽ giúp tăng năng suất, kết nối và
+                            bảo mật.</p>
+                        <a href="#" class="btn btn-primary">Mua sắm ngay</a>
+                    </div>
+                </div>
+                <div class="card col-sm-6 col-md-3 pd-16-8 mb-4 border-0" style="width: 100%;">
+                    <img src="/img/card_img_3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Giải pháp tuyệt vời cho trường học của bạn</h5>
+                        <p class="card-text">Đẩy nhanh tốc độ lĩnh hội kiến thức nhờ các thiết bị Windows 11 và Windows
+                            11 SE toàn diện, dễ tiếp cận và có giá phải chăng cho học sinh và các ngôi trường bậc phổ
+                            thông.</p>
+                        <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+                    </div>
+                </div>
+                <div class="card col-sm-6 col-md-3 pd-16-8 mb-4 border-0" style="width: 100%;">
+                    <img src="/img/card_img_4.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Chào mừng bạn đến với PC trên đám mây Windows 365</h5>
+                        <p class="card-text">Truyền phát trải nghiệm Windows của bạn một cách an toàn từ đám mây
+                            Microsoft sang mọi thiết bị.</p>
+                        <a href="#" class="btn btn-primary">tải ngay hôm nay</a>
+                    </div>
+                </div>
+                <div class="row col-12 justify-content-start pd-16-8">
+                    <h5>Dõi theo trên Microsoft</h5>
+                    <a class="ti-facebook" style="font-size: 20px; margin-left: 8px;" href=""></a>
+                </div>
+            </div>
+            <!-- end-list-card-2-->
+        </div>
+        <!-- end_main -->
+        <!-- footer -->
+        <div class="footer">
+            <!-- start-contract -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light row align-items-start">
+                <div class="col-sm-4 col-lg-2">
+                    <h5 style="padding: 36px 0px 4px;">Nội dung mới</h5>
+                    <ul class="navbar-nav mr-auto row">
+                        <li class="nav-item  col-12">
+                            <a class="nav-link" href="#">
+                                Microsoft 365 </a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Ứng dụng cho Windows 11</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <h5 style="padding: 36px 0px 4px;">Microsoft Store</h5>
+                    <ul class="navbar-nav mr-auto row">
+                        <li class="nav-item  col-12">
+                            <a class="nav-link" href="#">
+                                Hồ sơ tài khoản </a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Trung tâm tải xuống</span></a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Trả lại</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Theo dõi đơn hàng </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <h5 style="padding: 36px 0px 4px;">Giáo dục</h5>
+                    <ul class="navbar-nav mr-auto row">
+                        <li class="nav-item  col-12">
+                            <a class="nav-link" href="#">
+                                Microsodt trong giáo dục </a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Office cho học sinh</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Office 365 cho trường học </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <h5 style="padding: 36px 0px 4px;">Doanh nghiệp</h5>
+                    <ul class="navbar-nav mr-auto row">
+                        <li class="nav-item  col-12">
+                            <a class="nav-link" href="#">
+                                Microsoft Azure </a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Microsoft Industry</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Dịch vụ Tài chính </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <h5 style="padding: 36px 0px 4px;">Nhà phát triển</h5>
+                    <ul class="navbar-nav mr-auto row">
+                        <li class="nav-item  col-12">
+                            <a class="nav-link" href="#">
+                                Microsoft Visual Studio </a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Trung tâm nhà phát triển</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Kênh 9</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Trung tâm Phát triển Microsoft 365</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Chương trình Nhà phát triển Microsoft 365</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <h5 style="padding: 36px 0px 4px;">Công ty</h5>
+                    <ul class="navbar-nav mr-auto row">
+                        <li class="nav-item  col-12">
+                            <a class="nav-link" href="#">
+                                Sự nghiệp </a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Giới thiệu về Microsoft</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Tin tức công ty</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Quyền riêng tư ở Microsoft</a>
+                        </li>
+                        <li class="nav-item  col-12 ">
+                            <a class="nav-link" href="#">
+                                Nhà đầu tư </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+            <!--end-contract -->
+            <!-- start-sub-contract -->
+            <nav class="nav row bg-light justify-content-space-around" style="padding: 30px 24px 16px ">
+                <a class="nav-link active ti-world text-dark" aria-current="page" href="#">
+                    Tiếng Việt (Việt Nam)</a>
+                <a class="nav-link text-dark" href="#">Liên hệ với Microsoft</a>
+                <a class="nav-link text-dark" href="#"> Quyền riêng tư</a>
+                <a class="nav-link text-dark" href="#">Điều khoản sử dụng</a>
+                <a class="nav-link text-dark" href="#"> Nhãn hiệu</a>
+                <a class="nav-link text-dark" href="#">Giới thiệu về quảng cáo của chúng tôi</a>
+                <a class="nav-link text-dark disabled" href="#">© Microsoft 2022</a>
+            </nav>
+
+            <!-- end-sub-contract-->
+        </div>
+    </div>
+</body>
+
+</html>

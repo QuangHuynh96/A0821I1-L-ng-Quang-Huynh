@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88ef4b23-2b64-486a-baaa-2751402d8c42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/data/paymentAccount.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/data/paymentAccount.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/data/savingAccount.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/data/savingAccount.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/models/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/models/PaymentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/models/PaymentAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/models/SavingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/models/SavingAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/serrvice/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/serrvice/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/serrvice/PaymentAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/serrvice/PaymentAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/serrvice/SavingAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/serrvice/SavingAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/view/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/bankAccount/view/HomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/controller/FuramarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/controller/FuramarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/ContractServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/caseStudy_2/service/impl/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/controller/BikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/controller/BikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/controller/TruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/controller/TruckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Bike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Transportation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Transportation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/models/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/BikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/BikeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/TruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/TruckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/impl/BikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/impl/BikeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/impl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/impl/TruckServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/service/impl/TruckServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/util/ConstantUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/util/ConstantUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/AddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/AddView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/DeleteView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/DeleteView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/DisplayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/DisplayView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_1_transportationManagement/view/HomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/models/GenuineProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/models/GenuineProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/models/HandedProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/models/HandedProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/service/GenuineProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/service/GenuineProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/service/HandedProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/service/HandedProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/views/ProductViews.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_2_ProductManagement/views/ProductViews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/models/GoodStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/models/GoodStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/models/NormalStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/models/NormalStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/service/baseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/service/baseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/util/ValueDateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_2/src/eM_3_studentManagement/util/ValueDateStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/controller/EmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Booking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Facility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/House.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/model/Villa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/BaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/BookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/ContactService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/FacilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/CommonUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$Degree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$RentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$RoomType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$TypeCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/view/BookingView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/view/CustomerView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/view/EmployeeView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/view/FacilityView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/view/HomeView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_2/src/out/production/Module_2/caseStudy/view/PromotionView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e1_Base_Gallery/img/img_fjords.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e1_Base_Gallery/img/img_forest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e1_Base_Gallery/img/img_lights.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e1_Base_Gallery/img/img_mountains.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e1_Base_Gallery/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/bootstrap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/bootstrap-4.6.1-dist/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/Microsoft_logo_(2012).svg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/bg-micr365.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/card_img_1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/card_img_2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/card_img_3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/card_img_4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/game-icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/icon-search.svg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/icon_search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/images.png.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/images.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/img.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/img2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/img3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/img4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/micro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/panel2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/search_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/search_icon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/img/tải xuống.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/jquery/jquery-3.6.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/Italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/agenda.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/alarm-clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/alert.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/align-center.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/align-justify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/align-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/align-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/anchor.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/android.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-double-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-double-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-double-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-double-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/angle-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/announcement.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/apple.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/archive.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-circle-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-circle-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-circle-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-circle-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-top-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-top-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrows-corner.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrows-horizontal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/arrows-vertical.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/back-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/back-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bar-chart-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bar-chart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/basketball.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bell.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/blackboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bolt-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bolt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bookmark-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/bookmark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/briefcase.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/brush-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/brush.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/camera.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/car.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/check-box.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/clip.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/clipboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/cloud-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/cloud-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/cloud.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/comment-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/comment.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/comments-smiley.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/comments.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-backward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-eject.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-forward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-pause.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-play.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-record.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-shuffle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-skip-backward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-skip-forward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/control-stop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/credit-card.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/crown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/css3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/cup.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/cut.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/dashboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/desktop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/direction-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/direction.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/dribbble.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/dropbox-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/dropbox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/drupal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/email.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/envelope.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/eraser.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/exchange-vertical.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/export.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/eye.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/face-sad.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/face-smile.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/files.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/filter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/flag-alt-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/flag-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/flag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/flickr-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/flickr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/folder.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/fullscreen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/gallery.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/game.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/gift.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/google.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hand-drag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hand-open.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hand-point-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hand-point-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hand-point-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hand-point-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hand-stop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/harddrive.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/harddrives.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/headphone-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/headphone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/heart-broken.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/heart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/help-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/help.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/home.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/html5.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/hummer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/id-badge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/import.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/infinite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/info-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/info.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/ink-pen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/instagram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/joomla.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/jsfiddle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/key.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layers-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layers.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-accordion-list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-accordion-merged.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-accordion-separated.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-column2-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-column2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-column3-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-column3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-column4-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-column4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-cta-btn-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-cta-btn-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-cta-center.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-cta-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-cta-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-grid2-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-grid2-thumb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-grid2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-grid3-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-grid3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-grid4-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-grid4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-line-solid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-list-large-image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-list-post.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-list-thumb-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-list-thumb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-center-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-center.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-left-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-overlay-alt-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-overlay-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-overlay.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-right-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-media-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-menu-full.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-menu-separated.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-menu-v.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-menu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-placeholder.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-sidebar-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-sidebar-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-sidebar-none.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-sidebar-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-slider-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-slider.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-tab-min.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-tab-v.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-tab-window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-tab.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-width-default-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-width-default.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout-width-full.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/layout.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/light-bulb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/line-dashed.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/line-dotted.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/line-double.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/linkedin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/linux.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/list-ol.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/location-arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/location-pin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/lock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/loop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/magnet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/map-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/map.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/marker-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/marker.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/medall-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/medall.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/menu-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/menu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/microphone-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/microphone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/microsoft-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/microsoft.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/mobile.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/money.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/more-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/more.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/mouse-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/mouse.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/music-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/music.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/na.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/new-window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/notepad.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/package.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/paint-bucket.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/paint-roller.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/palette.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/panel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/paragraph.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pencil-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pencil-alt2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pencil.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pie-chart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pin-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pin2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pinterest-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pinterest.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/plug.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/power-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/printer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/pulse.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/quote-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/quote-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/receipt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/reddit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/reload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/rocket.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/rss-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/rss.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/ruler-alt-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/ruler-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/ruler-pencil.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/ruler.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/save-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/save.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/server.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/settings.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/share-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/share.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/sharethis-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/sharethis.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shield.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shift-left-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shift-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shift-right-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shift-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shine.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shopping-cart-full.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shopping-cart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/shortcode.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/signal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/skype.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/slice.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/smallcap.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/soundcloud.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/split-h.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/split-v-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/split-v.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/spray.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/stack-overflow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/stamp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/stats-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/stats-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/support.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/tablet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/tag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/target.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/text.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/themify-favicon-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/themify-favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/themify-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/thought.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/thumb-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/thumb-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/ticket.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/time.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/timer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/trash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/trello.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/truck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/tumblr-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/tumblr.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/twitter-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/twitter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/underline.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/unlink.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/unlock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/upload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/uppercase.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/vector.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/video-camera.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/video-clapper.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/view-grid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/view-list-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/view-list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/vimeo-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/vimeo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/volume.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/wallet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/wand.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/wheelchair.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/widget-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/widget.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/widgetized.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/window.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/wordpress.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/world.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/write.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/yahoo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/youtube.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/zip.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/zoom-in.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/SVG/zoom-out.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/Themify IconFonts 5-23-2014.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/demo-files/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/fonts/themify.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/fonts/themify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/fonts/themify.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/fonts/themify.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/ie7/ie7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/ie7/ie7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_e2_Landing_Page/themify-icons-font/themify-icons/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_9_boostrap/_p1_Form_Login/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="simple_dictionary" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="26ZCCQyMgfycS753NXCjjX6kisr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.60" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.60" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : simple_dictionary-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="17551246-4da1-49f7-90a2-fcd5da442127" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63757" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : simple_dictionary-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88ef4b23-2b64-486a-baaa-2751402d8c42" name="Default Changelist" comment="" />
+      <created>1647621594046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647621594046</updated>
+      <workItem from="1647621596637" duration="680000" />
+    </task>
+    <servers />
+  </component>
+</project>
