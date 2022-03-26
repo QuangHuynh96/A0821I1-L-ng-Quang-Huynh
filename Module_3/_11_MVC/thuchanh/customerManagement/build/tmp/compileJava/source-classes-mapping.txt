@@ -1,0 +1,12 @@
+model/bean/Customer.java
+ model.bean.Customer
+model/service/CustomerServiceImpl/CustomerServiceImpl.java
+ model.service.CustomerServiceImpl.CustomerServiceImpl
+model/repository/CustomerRepository.java
+ model.repository.CustomerRepository
+model/repository/CustomerRepositoryImpl/CustomerRepositoryImpl.java
+ model.repository.CustomerRepositoryImpl.CustomerRepositoryImpl
+model/service/CustomerService.java
+ model.service.CustomerService
+controller/customerServlet.java
+ controller.customerServlet
