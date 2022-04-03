@@ -157,7 +157,10 @@ values 	(5, 'Nguyễn Thị Hào', '1970-11-07', 0, 643431213, 0945423362, 'thih
         (3, 'Nguyễn Thị Hào', '1999-04-08', 0, 965656433, 0763212345, 'haohao99@gmail.com', '55 Nguyễn Văn Linh, Kon Tum'),
         (1, 'Trần Đại Danh', '1994-07-01', 1, 432341235, 0643343433, 'danhhai99@gmail.com', '24 Lý Thường Kiệt, Quảng Ngãi'),
         (2, 'Nguyễn Tâm Đắc', '1989-07-01', 1, 344343432, 0987654321, 'dactam@gmail.com', '22 Ngô Quyền, Đà Nẵng');
--- select * from khach_hang;
+select * from khach_hang;
+select * from khach_hang where id = 1;
+select * from khach_hang where ten like '%Huynh';
+
 
 -- kiểu thuê.
 insert into kieu_thue(ten)
@@ -271,5 +274,187 @@ order by id asc;
 -- 6.	Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu 
 -- của tất cả các loại dịch vụ chưa từng được khách hàng thực hiện đặt từ quý 1 của năm 2021 (Quý 1 là tháng 1, 2, 3).
 
-select dv.id, dv.ten, dv.dien_tich, dv.chi_phi_thue, ldv.ten as loai_dich_vu
-from dich_vu dv join loai_dich_vu ldv on dv.id_loai_dich_vu = ldv.id;
+select dv.id, dv.ten as Ten_dich_vu, dv.dien_tich, dv.chi_phi_thue, ldv.ten as loai_dich_vu, hd.ngay_lam_hop_dong 
+from dich_vu dv 
+join loai_dich_vu ldv on dv.id_loai_dich_vu = ldv.id
+join hop_dong hd on dv.id = hd.id_dich_vu
+where hd.ngay_lam_hop_dong not between cast('2021-01-01 00:00:00' as datetime) and cast('2021-03-31 00:00:00' as datetime)
+group by dv.id;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 7.	Hiển thị thông tin ma_dich_vu, ten_dich_vu, dien_tich, so_nguoi_toi_da, chi_phi_thue, ten_loai_dich_vu 
+-- của tất cả các loại dịch vụ đã từng được khách hàng đặt phòng trong năm 2020 nhưng chưa từng được khách hàng đặt phòng trong năm 2021. 
+
+select dv.id, dv.ten as ten_dich_vu, dv.dien_tich, dv.so_nguoi_toi_da, dv.chi_phi_thue, ldv.ten as ten_loai_dich_vu, hd.ngay_lam_hop_dong
+from dich_vu dv
+join loai_dich_vu ldv on dv.id_loai_dich_vu = ldv.id
+join hop_dong hd on dv.id = hd.id_dich_vu
+where (hd.ngay_lam_hop_dong between cast('2020-01-01 00:00:00' as datetime) and cast('2020-12-31 00:00:00' as datetime))
+and   (hd.ngay_lam_hop_dong not between cast('2021-01-01 00:00:00' as datetime) and cast('2021-12-31 00:00:00' as datetime))
+group by dv.ten;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 8.	Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.
+
+-- cách 1 tạo view cột tên và cột số lần trùng lặp
+create view ds_khach_hang as 
+select ten, count(ten) as trung_lap 
+from khach_hang
+group by ten;
+-- select view
+select ten from ds_khach_hang
+where trung_lap < 2;
+
+-- cách 2 gộp cách 1 thành chung một lệnh seclect
+select ten, count(ten) trung_lap
+from khach_hang
+group by ten
+having trung_lap <2;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 9. Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021
+--  thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
+
+select month(ngay_lam_hop_dong) as thang, count(month(ngay_lam_hop_dong)) as so_luong_hop_dong
+from hop_dong
+where year(ngay_lam_hop_dong) = 2021
+group by month(ngay_lam_hop_dong)
+order by month(ngay_lam_hop_dong) asc;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 10.	Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm.
+-- Kết quả hiển thị bao gồm 
+-- ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem 
+-- so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem).
+
+select hd.id as ma_hop_dong, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, hd.tien_dat_coc, sum(hdct.so_luong) as so_luong_dich_vu_di_kem 
+from hop_dong hd
+left join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id
+group by hd.id;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 11.	Hiển thị thông tin các dịch vụ đi kèm đã được sử dụng
+-- bởi những khách hàng có ten_loai_khach là
+--  “Diamond” và có dia_chi ở “Vinh” hoặc “Quảng Ngãi”.
+ 
+select dvdk.id, dvdk.ten
+from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on hdct.id_dich_vu_di_kem = dvdk.id
+join hop_dong hd on hdct.id_hop_dong = hd.id
+join khach_hang kh on kh.id = hd.id_khach_hang
+join loai_khach lk on lk.id = kh.id_loai_khach
+where lk.ten = 'Diamond' and (kh.dia_chi like '%Vinh' or kh.dia_chi like '%Quảng Ngãi')
+order by dvdk.id asc;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 12.	Hiển thị thông tin
+-- ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), so_dien_thoai (khách hàng), ten_dich_vu, so_luong_dich_vu_di_kem
+-- (được tính dựa trên việc sum so_luong ở dich_vu_di_kem), tien_dat_coc 
+-- của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2020
+-- nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
+
+select hd.id as 'Mã hợp đồng', nv.ten as 'Tên nhân viên', kh.ten as 'Tên khách hàng',hd.ngay_lam_hop_dong, kh.so_dien_thoai, dv.ten as 'Tên dịch vụ',
+ sum(hdct.so_luong) as so_luong_dich_vu_di_kem
+from hop_dong hd
+join nhan_vien nv on nv.id = hd.id_nhan_vien
+join khach_hang kh on kh.id = hd.id_khach_hang
+join dich_vu dv on dv.id = hd.id_dich_vu
+join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id
+join dich_vu_di_kem dvdk on dvdk.id = hdct.id_dich_vu_di_kem
+where (hd.ngay_lam_hop_dong between cast('2020-10-01 00:00:00' as datetime) and cast('2020-12-31 00:00:00' as datetime))
+and   (hd.ngay_lam_hop_dong not between cast('2021-01-01 00:00:00' as datetime) and cast('2021-06-31 00:00:00' as datetime))
+group by hd.id;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
+-- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+
+select  dvdk.ten as ten_dich_vu, count(ten) as 'số hợp đồng đặt', sum(hdct.so_luong) as tong_so_luong_dich_vu_di_kem
+from hop_dong hd
+left join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id
+left join dich_vu_di_kem dvdk on dvdk.id = hdct.id_dich_vu_di_kem
+group by dvdk.ten
+having tong_so_luong_dich_vu_di_kem >= 10;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
+-- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung 
+-- (được tính dựa trên việc count các ma_dich_vu_di_kem).
+
+select hd.id as ma_hop_dong, dv.ten, dvdk.ten, count(dvdk.ten) as so_lan_su_dung
+from hop_dong hd
+left join hop_dong_chi_tiet hdct on hdct.id_hop_dong = hd.id
+left join dich_vu_di_kem dvdk on dvdk.id = hdct.id_dich_vu_di_kem
+left join dich_vu dv on dv.id = hd.id_dich_vu
+group by dvdk.ten
+having so_lan_su_dung = 1 ;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm 
+-- ma_nhan_vien, ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai, dia_chi
+-- mới chỉ lập được tối đa 3 hợp đồng từ năm 2020 đến 2021.
+
+select nv.id as ma_nhan_vien, nv.ten, td.ten as ten_trinh_do, bp.ten as ten_bo_phan, nv.so_dien_thoai,
+ nv.dia_chi, count(nv.id) as so_luong_hd, year(hd.ngay_lam_hop_dong) as nam_lam_hop_dong
+from nhan_vien nv
+join hop_dong hd on hd.id_nhan_vien = nv.id
+left join trinh_do td on td.id = nv.id_trinh_do
+left join bo_phan bp on bp.id = nv.id_bo_phan
+group by nv.id
+having
+so_luong_hd <= 3 and ( nam_lam_hop_dong between 2020 and 2021);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+SET SQL_SAFE_UPDATES = 0;
+-- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+delete  
+from nhan_vien
+where not exists (
+select hop_dong.id_nhan_vien
+from hop_dong
+where year(hop_dong.ngay_lam_hop_dong) between 2019 and 2021 and hop_dong.id_nhan_vien = nhan_vien.id
+);
+-- check table nhan_vien
+select * 
+from nhan_vien;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 17.	Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond,
+ -- chỉ cập nhật những khách hàng đã từng đặt phòng 
+ -- với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
+ 
+ update khach_hang
+ set id_loai_khach = 1
+ where exists (
+	select khach_hang.id , khach_hang.ten, khach_hang.id_loai_khach,
+	dich_vu.chi_phi_thue + sum(hop_dong_chi_tiet.so_luong * dich_vu_di_kem.gia) as tong_tien 
+	from 
+	hop_dong
+	left join khach_hang on khach_hang.id = hop_dong.id_khach_hang
+    left join loai_khach on loai_khach.id = khach_hang.id_loai_khach
+	left join dich_vu on hop_dong.id_dich_vu = dich_vu.id
+	left join hop_dong_chi_tiet on hop_dong.id = hop_dong_chi_tiet.id_hop_dong
+	left join dich_vu_di_kem on dich_vu_di_kem.id = hop_dong_chi_tiet.id_dich_vu_di_kem
+	group by hop_dong.id
+	having tong_tien > 10000000 and khach_hang.id_loai_khach = 2
+	order by id asc
+    );
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
+delete khach_hang, hop_dong, hop_dong_chi_tiet
+from khach_hang
+join hop_dong on hop_dong.id_khach_hang = khach_hang.id
+join hop_dong_chi_tiet on hop_dong_chi_tiet.id_hop_dong = hop_dong.id
+where not exists(select hop_dong.id from hop_dong where year(hop_dong.ngay_lam_hop_dong) > '2021' and hop_dong.id_khach_hang = khach_hang.id);

@@ -1,0 +1,74 @@
+model/repository/CustomerTypeRepository.java
+ model.repository.CustomerTypeRepository
+model/repository/impl/RentalTypeDAOImpl.java
+ model.repository.impl.RentalTypeDAOImpl
+model/service/CustomerTypeService.java
+ model.service.CustomerTypeService
+model/repository/impl/ServiceTypeDAOImpl.java
+ model.repository.impl.ServiceTypeDAOImpl
+model/bean/BoPhan.java
+ model.bean.BoPhan
+model/bean/HopDongChiTiet.java
+ model.bean.HopDongChiTiet
+model/service/impl/DichVuServiceImpl.java
+ model.service.impl.DichVuServiceImpl
+model/service/DichVuService.java
+ model.service.DichVuService
+model/bean/Customer.java
+ model.bean.Customer
+controller/CustomerServlet.java
+ controller.CustomerServlet
+model/bean/ViTri.java
+ model.bean.ViTri
+model/repository/DichVuRepository.java
+ model.repository.DichVuRepository
+controller/ServiceServlet.java
+ controller.ServiceServlet
+model/service/impl/RentalTypeBOImpl.java
+ model.service.impl.RentalTypeBOImpl
+model/bean/HopDong.java
+ model.bean.HopDong
+model/repository/RentalTypeDAO.java
+ model.repository.RentalTypeDAO
+model/bean/LoaiDichVu.java
+ model.bean.LoaiDichVu
+model/repository/impl/CustomerTypeRepositoryImpl.java
+ model.repository.impl.CustomerTypeRepositoryImpl
+model/service/impl/ServiceTypeBOImpl.java
+ model.service.impl.ServiceTypeBOImpl
+model/bean/DichVu.java
+ model.bean.DichVu
+model/repository/BaseRepository.java
+ model.repository.BaseRepository
+model/repository/ServiceTypeDAO.java
+ model.repository.ServiceTypeDAO
+controller/ContractServlet.java
+ controller.ContractServlet
+model/service/ServiceTypeBO.java
+ model.service.ServiceTypeBO
+model/bean/TrinhDo.java
+ model.bean.TrinhDo
+model/service/RentalTypeBO.java
+ model.service.RentalTypeBO
+model/service/impl/CustomerTypeServiceImpl.java
+ model.service.impl.CustomerTypeServiceImpl
+model/bean/LoaiKhach.java
+ model.bean.LoaiKhach
+model/bean/DichVuDiKem.java
+ model.bean.DichVuDiKem
+model/bean/KieuThue.java
+ model.bean.KieuThue
+model/repository/CustomerRepository.java
+ model.repository.CustomerRepository
+controller/FilterUTF8.java
+ controller.FilterUTF8
+model/bean/Employees.java
+ model.bean.Employees
+model/service/CustomerService.java
+ model.service.CustomerService
+model/repository/impl/DichVuRepositoryImpl.java
+ model.repository.impl.DichVuRepositoryImpl
+model/service/impl/CustomerServiceImpl.java
+ model.service.impl.CustomerServiceImpl
+model/repository/impl/CustomerRepositoryImpl.java
+ model.repository.impl.CustomerRepositoryImpl
