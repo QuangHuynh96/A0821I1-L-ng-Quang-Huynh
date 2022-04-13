@@ -27,15 +27,18 @@
 <body>
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="index.jsp">Home</a>
+    <a href="/Service?action=findByAll" class="btn btn-success" >
+        back to service list
+    </a>
 </nav>
 <c:if test="${requestScope['message'] != null}">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light justify-content-sm-center">
         <h6 style="color: green">${requestScope['message']}</h6>
     </nav>
 </c:if>
 <div style="width: 700px; margin: auto">
     <nav class="navbar ">
-        <h5>Update Service</h5>
+        <h5>Edit Service</h5>
     </nav>
     <form action="/Service?action=edit" method="post">
         <div class="form-group">

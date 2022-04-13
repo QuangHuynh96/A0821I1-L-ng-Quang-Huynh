@@ -1,18 +1,16 @@
 package model.bean;
 
-public class Customer {
-    int id;
-    int idLoaikhach;
-    String ten;
-    String ngaySinh;
-    boolean gioiTinh;
-    int cmnd;
-    int soDienThoai;
-    String email;
-    String diaChi;
-    public Customer() {
+    public class Customer {
+        int id;
+        int idLoaikhach;
+        String ten;
+        String ngaySinh;
+        boolean gioiTinh;
+        int cmnd;
+        int soDienThoai;
+        String email;
+        String diaChi;
 
-    }
     public Customer(int idLoaikhach, String ten, String ngaySinh, boolean gioiTinh, int idCard, int soDienThoai, String email, String diaChi) {
         this.idLoaikhach = idLoaikhach;
         this.ten = ten;
@@ -106,5 +104,18 @@ public class Customer {
 
     public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
+    }
+
+    @Override
+    public String toString() {
+        return
+                " ten='" + ten + '\'' +
+                ", ngaySinh='" + ngaySinh + '\'' +
+                ", gioiTinh=" + gioiTinh +
+                ", cmnd=" + cmnd +
+                ", soDienThoai=" + soDienThoai +
+                ", email='" + email + '\'' +
+                ", diaChi='" + diaChi + '\'' +
+                '}';
     }
 }

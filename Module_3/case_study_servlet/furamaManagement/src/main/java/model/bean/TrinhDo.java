@@ -2,11 +2,11 @@ package model.bean;
 
 public class TrinhDo {
     int id;
-    String tenl;
+    String ten;
 
-    public TrinhDo(int id, String tenl) {
+    public TrinhDo(int id, String ten) {
         this.id = id;
-        this.tenl = tenl;
+        this.ten = ten;
     }
 
     public int getId() {
@@ -17,11 +17,11 @@ public class TrinhDo {
         this.id = id;
     }
 
-    public String getTenl() {
-        return tenl;
+    public String getTen() {
+        return ten;
     }
 
-    public void setTenl(String tenl) {
-        this.tenl = tenl;
+    public void setTen(String ten) {
+        this.ten = ten;
     }
 }

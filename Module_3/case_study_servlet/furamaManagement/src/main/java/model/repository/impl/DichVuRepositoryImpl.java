@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DichVuRepositoryImpl implements DichVuRepository {
-    private static final String FIND_BY_ALL = "select * from dich_vu;";
+    private static final String FIND_BY_ALL = "select * from dich_vu where delete_flag = true;";
     private static final String ADD_NEW_DICHVU =
             "insert into dich_vu("
                     +"id_kieu_thue," +
@@ -26,7 +26,7 @@ public class DichVuRepositoryImpl implements DichVuRepository {
                     " dien_tich_ho_boi," +
                     " so_tang)\n"
                     + "values \t(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    private  static final String DELETE_DICHVU = "delete from dich_vu where id = ?;";
+    private  static final String DELETE_DICHVU = "update dich_vu set delete_flag = false where id = ?;";
     private static final String UPDATE_DICHVU =
             "update dich_vu set" +
                     " id_kieu_thue = ?," +
@@ -40,8 +40,8 @@ public class DichVuRepositoryImpl implements DichVuRepository {
                     " dien_tich_ho_boi = ?," +
                     " so_tang = ?" +
                     " where id = ?;";
-    private static final String FINDBYID = "select * from dich_vu where id = ?;";
-    private static final String FINDBYNAME = "select * from dich_vu where ten like ?;";
+    private static final String FINDBYID = "select * from dich_vu where id = ? and  delete_flag = true;";
+    private static final String FINDBYNAME = "select * from dich_vu where ten like ? and  delete_flag = true;";
 
     @Override
     public List<DichVu> findAll() {

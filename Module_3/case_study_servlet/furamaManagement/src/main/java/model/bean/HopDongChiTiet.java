@@ -6,6 +6,12 @@ public class HopDongChiTiet {
     int idDichVuDiKem;
     int soLuong;
 
+    public HopDongChiTiet(int idHopDong, int idDichVuDiKem, int soLuong) {
+        this.idHopDong = idHopDong;
+        this.idDichVuDiKem = idDichVuDiKem;
+        this.soLuong = soLuong;
+    }
+
     public HopDongChiTiet(int id, int idHopDong, int idDichVuDiKem, int soLuong) {
         this.id = id;
         this.idHopDong = idHopDong;

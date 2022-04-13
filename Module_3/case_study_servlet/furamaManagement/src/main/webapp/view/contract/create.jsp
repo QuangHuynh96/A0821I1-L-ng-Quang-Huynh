@@ -27,67 +27,58 @@
 <body>
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="index.jsp">Home</a>
+    <a href="/Contract?action=findByAll" class="btn btn-success" >
+        back to contract list
+    </a>
 </nav>
 <c:if test="${requestScope['message'] != null}">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light ">
         <h6 style="color: green">${requestScope['message']}</h6>
     </nav>
 </c:if>
 <div style="width: 700px; margin: auto">
     <nav class="navbar ">
-        <h5>Create New Service</h5>
+        <h5>Create New Contract</h5>
     </nav>
-    <form action="/Service?action=create" method="post">
+    <form action="/Contract?action=create" method="post">
         <div class="form-group">
-            <label for="name">Service name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name">
-        </div>
-        <div class="form-group">
-            <label for="rentalType">Rental type</label>
-            <select class="custom-select" id="rentalType" name="rentalType">
-                <c:forEach items="${kieuThueList}" var="type">
-                    <option value="<c:out value='${type.id}'/>"><c:out value='${type.ten}'/></option>
+            <label for="employee">Employee</label>
+            <select class="custom-select" id="employee" name="employeeId">
+                <option>Enter employee</option>
+                <c:forEach items="${employeeList}" var="employee">
+                    <option value="<c:out value='${employee.id}'/>"><c:out value='${employee.toString()}'/></option>
                 </c:forEach>
             </select>
         </div>
         <div class="form-group">
-            <label for="serviceType">Rental type</label>
-            <select class="custom-select" id="serviceType" name="serviceType">
-                <c:forEach items="${loaiDichVuList}" var="type">
-                    <option value="<c:out value='${type.id}'/>"><c:out value='${type.ten}'/></option>
+            <label for="customer">Customer</label>
+            <select class="custom-select" id="customer" name="customerId">
+                <option>Enter customer</option>
+                <c:forEach items="${customerList}" var="customer">
+                    <option value="<c:out value='${customer.id}'/>"><c:out value='${customer.toString()}'/></option>
                 </c:forEach>
             </select>
         </div>
         <div class="form-group">
-            <label for="Area">Area</label>
-            <input type="number" class="form-control" id="Area" name="Area">
-        </div>
-        <div class="form-group">
-            <label for="rentalCosts">Rental costs</label>
-            <input type="text" class="form-control" id="rentalCosts" name="rentalCosts">
-        </div>
-        <div class="form-group">
-            <label for="maximumMenber">Maximum menber</label>
-            <input type="number" class="form-control" id="maximumMenber" name="maximumMenber">
-        </div>
-        <div class="form-group">
-            <label for="roomStandard"> Room standard</label>
-            <select class="custom-select" id="roomStandard" name="roomStandard">
-                <option value="vip">Vip</option>
-                <option value="normal">Normal</option>
+            <label for="service">Service</label>
+            <select class="custom-select" id="service" name="serviceId">
+                <option>Enter service</option>
+                <c:forEach items="${dichVuList}" var="service">
+                    <option value="<c:out value='${service.id}'/>"><c:out value='${service.toString()}'/></option>
+                </c:forEach>
             </select>
         </div>
         <div class="form-group">
-            <label for="description"> Description</label>
-            <input type="text" class="form-control" id="description" name="description">
+            <label for="startDay">Start day</label>
+            <input type="date" class="form-control" id="startDay" name="startDay">
         </div>
         <div class="form-group">
-            <label for="poolArea">Pool area</label>
-            <input type="number" class="form-control" id="poolArea" name="poolArea">
+            <label for="endDay">End day</label>
+            <input type="date" class="form-control" id="endDay" name="endDay">
         </div>
         <div class="form-group">
-            <label for="floors"> Floors</label>
-            <input type="text" class="form-control" id="floors" name="floors">
+            <label for="rentalCosts">rental costs</label>
+            <input type="number" class="form-control" id="rentalCosts" name="rentalCosts">
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>

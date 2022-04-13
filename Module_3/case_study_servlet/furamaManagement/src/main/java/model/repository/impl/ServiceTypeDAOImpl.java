@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ServiceTypeDAOImpl implements ServiceTypeDAO {
-    private static final String FINDALL = "select * from loai_dich_vu;";
+    private static final String FINDALL = "select * from loai_dich_vu where  delete_flag = true;";
     @Override
     public List<LoaiDichVu> findAll() {
         List<LoaiDichVu> loaiDichVuList = new ArrayList<>();

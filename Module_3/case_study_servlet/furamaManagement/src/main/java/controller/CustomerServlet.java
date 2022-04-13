@@ -90,6 +90,7 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showCustomerManagement(HttpServletRequest request, HttpServletResponse response) {
+        request.setAttribute("customerTypeList" , customerTypeService.findAll());
         String content =
                 "    <h4 class=\" navbar \" >Customer management</h4>" +
                 "   <form method=\"post\" action=\"/Customer?action=findByName\" class=\"form-inline my-2 my-lg-0\" style=\"padding: 0 8px\">\n" +

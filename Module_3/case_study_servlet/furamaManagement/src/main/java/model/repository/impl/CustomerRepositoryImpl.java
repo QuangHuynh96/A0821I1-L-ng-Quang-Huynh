@@ -12,15 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerRepositoryImpl implements CustomerRepository {
-    private static final String FIND_BY_ALL = "select * from khach_hang;";
+    private static final String FIND_BY_ALL = "select * from khach_hang where delete_flag = true;";
     private static final String ADD_NEW_CUSTOMER =
             "insert into khach_hang(id_loai_khach, ten, ngay_sinh, gioi_tinh, cmnd, so_dien_thoai, email, dia_chi)\n" +
             "values \t(?, ?, ?, ?, ?, ?, ?, ?);";
-    private  static final String DELETE_CUSTOMER = "delete from khach_hang where id = ?;";
+    private  static final String DELETE_CUSTOMER = "update khach_hang set delete_flag = false where id = ?;";
     private static final String UPDATE_CUSTOMER =
-            "update khach_hang set id_loai_khach = ?,ten= ?, ngay_sinh =?, gioi_tinh =?, cmnd =?, so_dien_thoai =?, email =?, dia_chi =? where id = ?;";
-    private static final String FINDBYID = "select * from khach_hang where id = ?;";
-    private static final String FINDBYNAME = "select * from khach_hang where ten like ?;";
+            "update khach_hang set id_loai_khach = ?,ten= ?, ngay_sinh =?, gioi_tinh =?, cmnd =?, so_dien_thoai =?, email =?, dia_chi =? where id = ? and delete_flag = true;";
+    private static final String FINDBYID = "select * from khach_hang where id = ? and  delete_flag = true;";
+    private static final String FINDBYNAME = "select * from khach_hang where ten like ? and  delete_flag = true;";
     @Override
     public List<Customer> findAll() {
         List<Customer> customerList = new ArrayList<>();

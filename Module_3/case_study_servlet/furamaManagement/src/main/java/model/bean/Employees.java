@@ -15,6 +15,19 @@ public class Employees {
 
     public Employees(){}
 
+    public Employees(String ten, String ngaySinh, int cmnd, int luong, int soDienThoai, String email, String diaChi, int idViTri, int idTrinhDo, int idBoPhan) {
+        this.ten = ten;
+        this.ngaySinh = ngaySinh;
+        this.cmnd = cmnd;
+        this.luong = luong;
+        this.soDienThoai = soDienThoai;
+        this.email = email;
+        this.diaChi = diaChi;
+        this.idViTri = idViTri;
+        this.idTrinhDo = idTrinhDo;
+        this.idBoPhan = idBoPhan;
+    }
+
     public Employees(int id, String ten, String ngaySinh, int cmnd, int luong, int soDienThoai, String email, String diaChi, int idViTri, int idTrinhDo, int idBoPhan) {
         this.id = id;
         this.ten = ten;
@@ -115,5 +128,20 @@ public class Employees {
 
     public void setIdBoPhan(int idBoPhan) {
         this.idBoPhan = idBoPhan;
+    }
+
+    @Override
+    public String toString() {
+        return  "ten='" + ten + '\'' +
+                ", ngaySinh='" + ngaySinh + '\'' +
+                ", cmnd=" + cmnd +
+                ", luong=" + luong +
+                ", soDienThoai=" + soDienThoai +
+                ", email='" + email + '\'' +
+                ", diaChi='" + diaChi + '\'' +
+                ", idViTri=" + idViTri +
+                ", idTrinhDo=" + idTrinhDo +
+                ", idBoPhan=" + idBoPhan +
+                '}';
     }
 }

@@ -34,20 +34,36 @@
             <a class="nav-link" href="/Customer">Customer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Employees (disabled)</a>
+            <a class="nav-link" href="/Employee">Employees </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/Service">Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="/Contract">Contract(disabled)</a>
+            <a class="nav-link " href="/Contract">Contract</a>
           </li>
         </ul>
       </div>
     </nav>
+    <c:if test='${requestScope["content"] == null}'>
+        <a href="/Contract?action=contractCustomer" class=" list-group-item list-group-item-action text-danger ">
+            Danh sách khách hàng đã sử dụng dịch vụ của resort
+        </a>
+    </c:if>
     <c:if test='${requestScope["content"] != null}'>
         <div class="list-group" >
+
             ${requestScope["content"]}
+<%--                <form method="post" action="/Customer?action=search" class="form-inline my-2 my-lg-0">--%>
+<%--                    <select>--%>
+<%--                        <c:forEach items="customerTypeList" var="type">--%>
+<%--                            <option value="type.id">${type.ten}</option>--%>
+<%--                        </c:forEach>--%>
+<%--                    </select>--%>
+<%--                    <input name="customerName" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--%>
+<%--                    <input name="phoneNumber" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--%>
+<%--                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>--%>
+<%--                </form>--%>
         </div>
     </c:if>
 </body>

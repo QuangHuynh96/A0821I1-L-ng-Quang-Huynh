@@ -14,7 +14,7 @@ import java.util.List;
 
 public class CustomerTypeRepositoryImpl implements CustomerTypeRepository {
 
-    private static  final String FIND_ALL = "select * from loai_khach;";
+    private static  final String FIND_ALL = "select * from loai_khach where delete_flag = true;";
     @Override
     public List<LoaiKhach> findAll() {
         List<LoaiKhach> customerTypeList = new ArrayList<>();

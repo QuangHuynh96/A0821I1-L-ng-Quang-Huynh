@@ -14,8 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service list</title>
     <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
     <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
     <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
@@ -27,7 +30,7 @@
         Create new service
     </a>
 </nav>
-<table class="table">
+<table id="tableList" class="table table-striped table-bordered">
     <thead>
     <tr>
         <th scope="col">ID</th>
@@ -117,6 +120,17 @@
         document.getElementById("serviceId").value= id;
         document.getElementById("serviceName").innerText= name;
     }
+
+    $(document).ready(
+        function() {
+            $('#tableList').dataTable(
+                {"dom": 'lrtip',
+                    "lengthChange": false,
+                    "pageLength": 7
+                }
+            );
+        }
+    );
 </script>
 </body>
 </html>

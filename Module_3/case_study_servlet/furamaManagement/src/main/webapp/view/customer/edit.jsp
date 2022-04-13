@@ -27,9 +27,12 @@
 <body>
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="index.jsp">Home</a>
+    <a href="/Customer?action=findByAll" class="btn btn-success" >
+        back to customer list
+    </a>
 </nav>
 <c:if test="${requestScope['message'] != null}">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light justify-content-sm-center">
         <h6 style="color: green">${requestScope['message']}</h6>
     </nav>
 </c:if>

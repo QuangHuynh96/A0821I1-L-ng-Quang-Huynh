@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RentalTypeDAOImpl implements RentalTypeDAO {
-    private static final String FINDALL = "select * from kieu_thue;";
+    private static final String FINDALL = "select * from kieu_thue where delete_flag = true;";
     @Override
     public List<KieuThue> findAll() {
         List<KieuThue> kieuThueList = new ArrayList<>();

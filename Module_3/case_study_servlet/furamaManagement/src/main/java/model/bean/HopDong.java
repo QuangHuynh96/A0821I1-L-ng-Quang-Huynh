@@ -9,6 +9,15 @@ public class HopDong {
     String ngayKetThuc;
     double tienDatCoc;
 
+    public HopDong(int idNhanVien, int idKhachHang, int idDichVu, String ngayLamHopDong, String ngayKetThuc, double tienDatCoc) {
+        this.idNhanVien = idNhanVien;
+        this.idKhachHang = idKhachHang;
+        this.idDichVu = idDichVu;
+        this.ngayLamHopDong = ngayLamHopDong;
+        this.ngayKetThuc = ngayKetThuc;
+        this.tienDatCoc = tienDatCoc;
+    }
+
     public HopDong(int id, int idNhanVien, int idKhachHang, int idDichVu, String ngayLamHopDong, String ngayKetThuc, double tienDatCoc) {
         this.id = id;
         this.idNhanVien = idNhanVien;

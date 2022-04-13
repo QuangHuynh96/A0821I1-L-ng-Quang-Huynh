@@ -1,17 +1,17 @@
 package model.bean;
 
-public class DichVu {
-    int id;
-    int idKieuThue;
-    int idLoaiDichVu;
-    String ten;
-    int dienTich;
-    double chiPhiThue;
-    int soNguoiToiDa;
-    String tieuChuanPhong;
-    String moTaTienNghiKhac;
-    int dienTichHoBoi;
-    int soTang;
+    public class DichVu {
+        int id;
+        int idKieuThue;
+        int idLoaiDichVu;
+        String ten;
+        int dienTich;
+        double chiPhiThue;
+        int soNguoiToiDa;
+        String tieuChuanPhong;
+        String moTaTienNghiKhac;
+        int dienTichHoBoi;
+        int soTang;
 
     public DichVu(int id, int idKieuThue, int idLoaiDichVu, String ten, int dienTich, double chiPhiThue, int soNguoiToiDa, String tieuChuanPhong, String moTaTienNghiKhac, int dienTichHoBoi, int soTang) {
         this.id = id;
@@ -126,5 +126,21 @@ public class DichVu {
 
     public void setSoTang(int soTang) {
         this.soTang = soTang;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "idKieuThue=" + idKieuThue +
+                ", idLoaiDichVu=" + idLoaiDichVu +
+                ", ten='" + ten + '\'' +
+                ", dienTich=" + dienTich +
+                ", chiPhiThue=" + chiPhiThue +
+                ", soNguoiToiDa=" + soNguoiToiDa +
+                ", tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                ", moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
+                ", dienTichHoBoi=" + dienTichHoBoi +
+                ", soTang=" + soTang +
+                '}';
     }
 }

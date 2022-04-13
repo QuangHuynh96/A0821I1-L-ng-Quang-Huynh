@@ -132,6 +132,8 @@ public class ServiceServlet extends HttpServlet {
         String name = request.getParameter("name");
         List<DichVu> dichVuList = dichVuService.FindByName(name);
         request.setAttribute("dichVuList", dichVuList);
+        request.setAttribute("kieuThueList", rentalTypeBO.findAll());
+        request.setAttribute("loaiDichVuList", serviceTypeBO.findAll());
         try {
             request.getRequestDispatcher("view/service/list.jsp").forward(request, response);
         } catch (ServletException e) {
