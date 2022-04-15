@@ -94,10 +94,26 @@ public class AutherServlet extends HttpServlet {
             case "createContractDetail":
 //                createContractDetail(request,response);
                 break;
-            case "findByName":
+            case "search":
+                searchAuther(request, response);
                 break;
             default:
                 break;
+        }
+    }
+
+    private void searchAuther(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        String nickName = request.getParameter("nickName");
+        String address = request.getParameter("address");
+
+        request.setAttribute("autherList", autherService.search(name, nickName,address));
+        try {
+            request.getRequestDispatcher("view/auther/list.jsp").forward(request , response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

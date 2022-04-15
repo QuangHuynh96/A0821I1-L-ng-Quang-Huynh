@@ -9,6 +9,6 @@ public interface AutherRepository {
     boolean add(Auther auther);
     boolean update(Auther auther);
     boolean delete(int id);
-    List<Auther> search(String name);
+    List<Auther> search(String name, String nickName, String address);
     Auther findById(int id);
 }

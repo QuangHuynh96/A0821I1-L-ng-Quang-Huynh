@@ -56,8 +56,8 @@ public class AutherServiceImpl implements AutherService {
     }
 
     @Override
-    public List<Auther> search(String name) {
-        return autherRepository.search(name);
+    public List<Auther> search(String name, String nickName, String address) {
+        return autherRepository.search( name, nickName, address);
     }
 
     @Override

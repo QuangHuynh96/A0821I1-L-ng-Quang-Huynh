@@ -9,6 +9,6 @@ public interface AutherService {
     List<String> add(Auther auther);
     List<String> update(Auther auther);
     boolean delete(int id);
-    List<Auther> search(String name);
+    List<Auther> search(String name, String nickName, String address);
     Auther findById(int id);
 }
