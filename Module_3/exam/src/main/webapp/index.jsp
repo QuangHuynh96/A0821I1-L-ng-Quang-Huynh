@@ -18,11 +18,11 @@
   <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
 </head>
   <body>
-  <a href="/Book" class="btn btn-success" >
-    Book list
-  </a>
-  <a href="/Auther" class="btn btn-success" >
-    Auther list
-  </a>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="/BenhAn"> Benh An</a>
+  </nav>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#"> Benh Nhan</a>
+  </nav>
   </body>
 </html>

@@ -1,32 +1,28 @@
+model/repository/BenhAnRepository.java
+ model.repository.BenhAnRepository
 common/Validation.java
  common.Validation
-model/bean/Auther.java
- model.bean.Auther
-model/repository/BookRepository.java
- model.repository.BookRepository
-controller/BaseServlet.java
- controller.BaseServlet
-model/bean/Book.java
- model.bean.Book
+model/service/impl/BenhAnServiceimpl.java
+ model.service.impl.BenhAnServiceimpl
+model/service/BenhNhanService.java
+ model.service.BenhNhanService
+model/bean/BenhAn.java
+ model.bean.BenhAn
 controller/FilterUTF8.java
  controller.FilterUTF8
+model/repository/impl/BenhNhanRepositoryImpl.java
+ model.repository.impl.BenhNhanRepositoryImpl
+model/repository/BenhNhanRepository.java
+ model.repository.BenhNhanRepository
+model/service/impl/BenhNhanServiceImpl.java
+ model.service.impl.BenhNhanServiceImpl
+model/bean/BenhNhan.java
+ model.bean.BenhNhan
+model/repository/impl/BenhAnRepositoryImpl.java
+ model.repository.impl.BenhAnRepositoryImpl
+model/service/BenhAnService.java
+ model.service.BenhAnService
 model/repository/BaseRepository.java
  model.repository.BaseRepository
-model/service/BookService.java
- model.service.BookService
-model/repository/impl/BookRepositoryImpl.java
- model.repository.impl.BookRepositoryImpl
-model/service/impl/BookServiceImpl.java
- model.service.impl.BookServiceImpl
-controller/AutherServlet.java
- controller.AutherServlet
-model/repository/AutherRepository.java
- model.repository.AutherRepository
-controller/BookServlet.java
- controller.BookServlet
-model/service/AutherService.java
- model.service.AutherService
-model/service/impl/AutherServiceImpl.java
- model.service.impl.AutherServiceImpl
-model/repository/impl/AutherRepositoryImpl.java
- model.repository.impl.AutherRepositoryImpl
+controller/BenhAnServlet.java
+ controller.BenhAnServlet
