@@ -11,7 +11,6 @@ repositories {
 }
 
 dependencies {
-
     implementation group: 'org.springframework', name: 'spring-web', version: '5.1.5.RELEASE'
     implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.1.5.RELEASE'
     compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
