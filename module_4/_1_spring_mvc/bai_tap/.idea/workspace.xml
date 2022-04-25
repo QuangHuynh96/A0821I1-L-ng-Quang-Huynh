@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="040c582a-e334-44f8-b8ad-22cffecba494" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Module_1/CASE STUDY/yêu cầu 3(xong)/bài5_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/data/paymentAccount.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/data/paymentAccount.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/data/savingAccount.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/data/savingAccount.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/models/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/models/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/models/PaymentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/models/PaymentAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/models/SavingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/models/SavingAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/serrvice/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/serrvice/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/serrvice/PaymentAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/serrvice/PaymentAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/serrvice/SavingAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/serrvice/SavingAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/view/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/bankAccount/view/HomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/controller/FuramarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/controller/FuramarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/ContractServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/caseStudy_2/service/impl/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/controller/BikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/controller/BikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/controller/TruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/controller/TruckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Bike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Transportation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Transportation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/models/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/BikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/BikeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/TruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/TruckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/impl/BikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/impl/BikeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/impl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/impl/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/impl/TruckServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/service/impl/TruckServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/util/ConstantUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/util/ConstantUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/AddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/AddView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/DeleteView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/DeleteView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/DisplayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/DisplayView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_1_transportationManagement/view/HomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/models/GenuineProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/models/GenuineProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/models/HandedProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/models/HandedProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/service/GenuineProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/service/GenuineProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/service/HandedProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/service/HandedProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/views/ProductViews.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_2_ProductManagement/views/ProductViews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/models/GoodStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/models/GoodStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/models/NormalStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/models/NormalStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/service/baseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/service/baseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/util/ValueDateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_2/src/eM_3_studentManagement/util/ValueDateStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/controller/EmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Booking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Facility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/House.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/model/Villa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/BaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/BookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/ContactService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/FacilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/CommonUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$Degree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$RentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$RoomType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil$TypeCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/util/ConstantUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/view/BookingView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/view/CustomerView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/view/EmployeeView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/view/FacilityView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/view/HomeView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_2/src/out/production/Module_2/caseStudy/view/PromotionView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module_3/_8_boostrap/_e2_Landing_Page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module_3/_8_boostrap/_e2_Landing_Page/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="28I6vTx1PZKk0ao31MRy2FbU8AI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="040c582a-e334-44f8-b8ad-22cffecba494" name="Default Changelist" comment="" />
+      <created>1650891982460</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650891982460</updated>
+      <workItem from="1650891983858" duration="146000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
