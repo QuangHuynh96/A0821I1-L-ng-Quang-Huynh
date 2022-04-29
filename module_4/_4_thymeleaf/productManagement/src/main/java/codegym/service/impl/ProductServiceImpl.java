@@ -2,7 +2,6 @@ package codegym.service.impl;
 
 import codegym.entity.Product;
 import codegym.repository.ProductRepository;
-import codegym.repository.impl.ProductRepositoryImpl;
 import codegym.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,21 +25,21 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void create(Product product) {
-
+        productRepository.create(product);
     }
 
     @Override
     public void update(Product product) {
-
+        productRepository.update(product);
     }
 
     @Override
     public void delete(String id) {
-
+        productRepository.delete(id);
     }
 
     @Override
     public Product findById(String id) {
-        return null;
+        return productRepository.findById(id);
     }
 }

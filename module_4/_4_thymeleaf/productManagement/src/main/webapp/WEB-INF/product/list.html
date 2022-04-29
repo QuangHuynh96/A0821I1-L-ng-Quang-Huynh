@@ -6,6 +6,12 @@
 </head>
 <body>
 <h1>Display all product</h1>
+<form th:action="@{/search}" method="post">
+    <input type="text" placeholder="Enter product name" name="name">
+    <input type="submit" value="search">
+</form>
+<a th:href="@{/create}">Create new product</a>
+<br><br>
 <table border="1">
     <tr>
         <th>ID</th>
@@ -19,15 +25,17 @@
     </tr>
     <tr th:each="product : ${products}" th:object="${product}">
         <td th:text="*{id}"></td>
-        <td th:text="*{name}"></td>
+        <td >
+            <a th:text="*{name}" th:href="@{/view/(id=*{id})}"></a>
+        </td>
         <td th:text="*{price}"></td>
         <td th:text="*{description}"></td>
         <td th:text="*{producer}"></td>
         <td>
-            <a th:href="@{/product/edit/(id=${product.id})}">Edit</a>
+            <a th:href="@{/update/(id=*{id})}">Update</a>
         </td>
         <td>
-            <a th:href="@{/product/delete/(id=${product.id})}">Delete</a>
+            <a th:href="@{/delete/(id=*{id})}">Delete</a>
         </td>
     </tr>
 </table>

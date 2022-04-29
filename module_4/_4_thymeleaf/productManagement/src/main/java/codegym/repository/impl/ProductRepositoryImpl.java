@@ -16,8 +16,8 @@ public class ProductRepositoryImpl implements ProductRepository {
     static {
         productMap.put("1", new Product("1", "phone1", 1000, "Dien thoai di dong 1", "nokia1"));
         productMap.put("2", new Product("2", "phone2", 1000, "Dien thoai di dong 2", "nokia2"));
-        productMap.put("3", new Product("2", "phone3", 1000, "Dien thoai di dong 3", "nokia3"));
-        productMap.put("4", new Product("2", "phone4", 1000, "Dien thoai di dong 4", "nokia4"));
+        productMap.put("3", new Product("3", "phone3", 1000, "Dien thoai di dong 3", "nokia3"));
+        productMap.put("4", new Product("4", "phone4", 1000, "Dien thoai di dong 4", "nokia4"));
     }
     @Override
     public List<Product> findAll() {
