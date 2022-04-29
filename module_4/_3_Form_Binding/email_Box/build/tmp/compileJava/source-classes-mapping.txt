@@ -1,0 +1,8 @@
+codegym/config/AppConfig.java
+ codegym.config.AppConfig
+codegym/config/AppInitiallizer.java
+ codegym.config.AppInitiallizer
+codegym/entity/EmailConfig.java
+ codegym.entity.EmailConfig
+codegym/controller/EmailBoxController.java
+ codegym.controller.EmailBoxController
