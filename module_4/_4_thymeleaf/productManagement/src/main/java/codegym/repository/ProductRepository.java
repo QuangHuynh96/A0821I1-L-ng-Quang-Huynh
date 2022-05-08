@@ -9,6 +9,6 @@ public interface ProductRepository {
     List<Product> findAll();
     void create (Product product);
     void update(Product product);
-    void delete(String id);
-    Product findById(String id);
+    void delete(int id);
+    Product findById(int id);
 }

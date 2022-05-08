@@ -1,14 +1,19 @@
 package codegym.entity;
 
+import javax.persistence.*;
+
+@Entity
 public class Product {
-    private String id;
+    @Id
+    @Column( columnDefinition = "varchar(10)")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String name;
     private double price;
     private String description;
     private String producer;
 
-    public Product(String id, String name, double price, String description, String producer) {
-        this.id = id;
+    public Product( String name, double price, String description, String producer) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -18,11 +23,11 @@ public class Product {
     public Product() {
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

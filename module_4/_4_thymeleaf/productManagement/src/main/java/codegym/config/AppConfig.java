@@ -1,9 +1,17 @@
 package codegym.config;
 
-import codegym.formatter.ProductFormatter;
+//import codegym.formatter.ProductFormatter;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.MessageSourceResourceBundle;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
@@ -19,8 +27,13 @@ import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import java.util.Properties;
+
 @Configuration
 @EnableWebMvc
+@EnableTransactionManagement
 @ComponentScan(basePackages = "codegym")
 public class AppConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
     private ApplicationContext applicationContext;
@@ -73,10 +86,58 @@ public class AppConfig extends WebMvcConfigurerAdapter implements ApplicationCon
     }
 
 
-    @Override
-    public void addFormatters(FormatterRegistry registry) {
-        registry.addFormatter(applicationContext.getBean(ProductFormatter.class));
-        super.addFormatters(registry);
+//    @Override
+//    public void addFormatters(FormatterRegistry registry) {
+//        registry.addFormatter(applicationContext.getBean(ProductFormatter.class));
+//        super.addFormatters(registry);
+//    }
+
+    // Config hibernate
+    // Step 1: config datasource (thông tin kết nối DB)
+    @Bean
+    public DriverManagerDataSource getDataSource() {
+        DriverManagerDataSource datasource = new DriverManagerDataSource();
+        datasource.setDriverClassName("com.mysql.jdbc.Driver");
+        datasource.setUrl("jdbc:mysql://localhost:3306/productManager?createDatabaseIfNotExist=true&useSSL=false");
+        datasource.setUsername("root");
+        datasource.setPassword("962241296");
+        return datasource;
+    }
+
+    // Hibernate config
+    private final Properties hibernateProperties() {
+        Properties hibernateProperties = new Properties();
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update"); //create, create-drop
+        hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
+        return hibernateProperties;
+    }
+
+    // Step 2: config entityManagerFactory
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean ();
+        entityManagerFactory.setDataSource(getDataSource());
+        entityManagerFactory.setPackagesToScan(new String[]{"codegym.entity"});
+
+        JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+        entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
+        entityManagerFactory.setJpaProperties(hibernateProperties());
+        return entityManagerFactory;
+    }
+
+    // Step 3: Config entity manager
+    @Bean
+    @Qualifier(value = "entityManager")
+    public EntityManager entityManager(EntityManagerFactory entityManagerFactory) {
+        return entityManagerFactory.createEntityManager();
+    }
+
+    // Step 4: Transaction support
+    @Bean
+    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory){
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory);
+        return transactionManager;
     }
 
 }

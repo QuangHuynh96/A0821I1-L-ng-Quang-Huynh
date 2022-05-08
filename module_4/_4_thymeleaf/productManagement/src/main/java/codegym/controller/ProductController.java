@@ -4,6 +4,7 @@ import codegym.entity.Product;
 import codegym.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,15 +19,20 @@ public class ProductController {
     private ProductService productService;
 
 
-    @GetMapping()
-    public String list(Model model) {
-        List<Product> products = productService.findAll();
-        model.addAttribute("products", products);
-        return "/product/list";
-    }
+        @GetMapping()
+        public String list(Model model) {
+            List<Product> products = productService.findAll();
+            model.addAttribute("products", products);
+            return "/product/list";
+        }
 
     @GetMapping("/create")
     public String viewCreate(Model model) {
+        List<String> producers = new ArrayList<>();
+        producers.add("nokia");
+        producers.add("samsung");
+        producers.add("apple");
+        model.addAttribute("producers", producers);
         model.addAttribute("product", new Product());
         return "/product/create";
     }
@@ -38,7 +44,7 @@ public class ProductController {
     }
 
     @GetMapping("/delete")
-    public String delete(@RequestParam("id") String id) {
+    public String delete(@RequestParam("id") int id) {
         productService.delete(id);
         return "redirect:/";
     }
@@ -57,8 +63,15 @@ public class ProductController {
     }
 
     @GetMapping("/update")
-    public String viewUpdate(@RequestParam("id") String id, Model model) {
+    public String viewUpdate(@RequestParam("id") int id, Model model) {
         Product product = productService.findById(id);
+        //fakelist
+        List<String> producers = new ArrayList<>();
+        producers.add("nokia");
+        producers.add("samsung");
+        producers.add("apple");
+        model.addAttribute("producers", producers);
+
         model.addAttribute("product", product);
         return "/product/update";
     }
@@ -70,7 +83,7 @@ public class ProductController {
     }
 
     @GetMapping("/view")
-    public String viewProduct(@RequestParam("id") String id, Model model) {
+    public String viewProduct(@RequestParam("id") int id, Model model) {
         Product product = productService.findById(id);
         model.addAttribute("product", product);
         return "/product/view";
