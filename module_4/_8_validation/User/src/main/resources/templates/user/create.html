@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create User</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+<h1>Create user</h1>
+<form action="/user/create" method="post" th:object="${dtoUser}" >
+    <table border="1">
+        <tr>
+            <td>id</td>
+            <td><input th:field="*{id}" /></td>
+            <td th:if="${#fields.hasErrors('id')}" th:errors="*{id}">id Error</td>
+        </tr>
+        <tr>
+            <td>firstName</td>
+            <td><input th:field="*{firstName}" /></td>
+        </tr>
+        <tr>
+            <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">id Error</td>
+        </tr>
+        <tr>
+            <td>lastname</td>
+            <td><input th:field="*{lastName}" /></td>
+
+        </tr>
+        <tr>
+            <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">id Error</td>
+        </tr>
+        <tr>
+            <td>phoneNumber</td>
+            <td><input th:field="*{phoneNumber}" /></td>
+
+        </tr>
+        <tr>
+            <td th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">id Error</td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td><input th:field="*{age}" />
+        </tr>
+        <tr>
+            <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">id Error</td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input th:field="*{email}" /></td>
+        </tr>
+        <tr>
+            <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">id Error</td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="Reset"></td>
+            <td><input type="submit" value="Save"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

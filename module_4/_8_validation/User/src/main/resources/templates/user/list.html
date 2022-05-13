@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+<h2>List</h2>
+<form method="get" action="/user/list" class="form-inline my-2 my-lg-0">
+    <input name="key_phoneNumber" class="form-control mr-sm-2" type="search" placeholder="phoneNumber" aria-label="Search">
+    <input name="key_email" class="form-control mr-sm-2" type="search" placeholder="Email" aria-label="Search">
+
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+<h3><a th:href="@{/user/create}">Create new user</a></h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Phone </th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
+        <th scope="col">edit</th>
+        <th scope="col">delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${users}">
+        <td scope="row" th:text="${item.id}"></td>
+        <td scope="row" th:text="${item.firstName}"></td>
+        <td scope="row" th:text="${item.lastName}"></td>
+        <td scope="row" th:text="${item.phoneNumber}"></td>
+        <td scope="row" th:text="${item.age}"></td>
+        <td scope="row" th:text="${item.email}"></td>
+        <td scope="row" ><a th:href="@{/user/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
+        <td scope="row" ><a th:onclick="|infoDelete(${item.id})|" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<a th:href="@{'/'(page=${users.number - 1})}" th:if="${users.hasPrevious()}">Previous</a>
+<span th:text="${users.number + 1}"></span>/<span th:text="${users.totalPages}"></span>
+<a th:href="@{'/'(page=${users.number + 1})}" th:if="${users.hasNext()}">Next</a>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form method="post" action="/blog/delete">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label id="labelId"></label>
+                    <input hidden type="text" id="id_value" name="id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submid" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function infoDelete(id) {
+        document.getElementById("id_value").value= id
+        document.getElementById("labelId").innerText= `Bạn chắc chắn muốn xóa user: ${id}`
+    }
+</script>
+</body>
+
+</html>
