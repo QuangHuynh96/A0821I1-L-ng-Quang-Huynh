@@ -52,13 +52,18 @@ public class BookController {
         contract.setId(id);
         contract.setBook(book);
         contractService.save(contract);
-
+// dùng if để xử lí lỗi.
+        if(book.getQuantity() == 0) {
+            model.addAttribute("message1", "Không thành công");
+            model.addAttribute("message2", "Sách tạm hêt.");
+            return "/book/result" ;
+        }
         //giảm số lượng xuống 1.
         book.setQuantity(book.getQuantity()-1);
         bookService.save(book);
 
-        model.addAttribute("message", id);
-        model.addAttribute("result", "Mã số thuê sách của bạn là");
+        model.addAttribute("message1", id);
+        model.addAttribute("message2", "Mã số thuê sách của bạn là");
         return "/book/result" ;
     }
 
@@ -70,7 +75,8 @@ public class BookController {
 
     @PostMapping("/giveBackBook")
     public String giveBackBook(@RequestParam("code") Long id, Model model) {
-
+// xử lí lỗi bằng try/catch
+        String messError = "";
         try {
             Optional<Contract> contract = contractService.findById(id);
             List<Book> books = bookService.getAll();
@@ -80,15 +86,16 @@ public class BookController {
                     book.setQuantity(book.getQuantity() + 1);
                     // xóa hợp đồng mượn sách(xóa mã số).
                     contractService.delete(contract.get());
-                    model.addAttribute("message", "Đã trả sách thành công");
+                    model.addAttribute("message1", "Đã trả sách thành công");
                     return "/book/result";
                 }
             }
         }
         catch (Exception e) {
-
+            messError = e.getMessage();
         }
-        model.addAttribute("message", "Trả sách không thành công");
+        model.addAttribute("message1", "Trả sách không thành công");
+        model.addAttribute("message2", messError);
         return "/book/result";
     }
 }
