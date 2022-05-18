@@ -9,20 +9,20 @@ public class DtoUser implements Validator {
     private Long id;
 
     @NotEmpty( message = "Khong duoc de kkhoan trang")
-    @Size(min = 5, max = 45)
+    @Size(min = 5, max = 45, message = "từ 5 đến 45 ký tự")
     private String firstName;
     
     @NotEmpty( message = "Khong duoc de kkhoan trang")
-    @Size(min = 5, max = 45)
+    @Size(min = 5, max = 45, message = "từ 5 đến 45 ký tự")
     private String lastName;
 
     @Positive
     private String phoneNumber;
 
-    @Min(18)
+    @Min(value = 18, message = "Tuổi phải từ 18")
     private int age;
 
-    @Email
+    @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",message = "Email không hợp lệ")
     private String email;
 
     public DtoUser() {

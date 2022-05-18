@@ -17,6 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/user")
@@ -57,5 +58,18 @@ public class UserController {
             return "redirect:/user/list";
         }
 
+    }
+
+    @PostMapping("/delete")
+    public String delete(@RequestParam("id") User user) {
+        userService.delete(user);
+        return "redirect:/user/list";
+    }
+
+    @GetMapping("/update/{id}")
+    public String showUpdate(@PathVariable("id") Long  id, Model model) {
+        Optional<User> user = userService.findById(id);
+        model.addAttribute("dtoUser",user);
+        return "/user/create";
     }
 }
