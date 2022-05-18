@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+    <H1>
+        <a style="color: #1c7430; text-decoration: none" th:href="@{/book/list}">Library</a>
+    </H1>
+    <a th:href="@{/book/viewBack}" class="btn btn-primary">Trả sách</a>
+    <br>
+    <br>
+    <form method="get" action="/book/list" class="form-inline my-2 my-lg-0">
+        <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="name" aria-label="Search">
+        <input name="key_category" class="form-control mr-sm-2" type="search" placeholder="Category" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <br>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Ten sach</th>
+            <th scope="col">Tac gia</th>
+            <th scope="col">The loai</th>
+            <th scope="col">So luong</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${books}">
+                <td scope="row" th:text="${item.id}"></td>
+                <td scope="row">
+                    <a th:href="@{/book/view/{id}(id=${item.id})}" th:text="${item.name}"></a>
+                </td>
+                <td scope="row" th:text="${item.author}"></td>
+                <td scope="row" th:text="${item.category}"></td>
+                <td scope="row" th:text="${item.quantity}"></td>
+                <td scope="row" ><a th:href="@{/book/view/{id}(id=${item.id})}" class="btn btn-primary">Thuê sách</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{'/'(page=${books.number - 1})}" th:if="${books.hasPrevious()}">Previous</a>
+    <span th:text="${books.number + 1}"></span>/<span th:text="${books.totalPages}"></span>
+    <a th:href="@{'/'(page=${books.number + 1})}" th:if="${books.hasNext()}">Next</a>
+</body>
+</html>

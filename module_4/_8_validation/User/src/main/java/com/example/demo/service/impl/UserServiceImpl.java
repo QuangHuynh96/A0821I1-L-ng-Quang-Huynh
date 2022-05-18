@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -24,7 +26,14 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public Optional<User> findById(Long id) {
+        return userRepository.findById(id);
+    }
+
+    @Override
     public Page<User> getAllUser(String phoneNumber, String email, Pageable pageable) {
         return userRepository.findAll(phoneNumber, email, pageable);
     }
+
+
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+    <H1>
+        <a style="color: #1c7430; text-decoration: none" th:href="@{/book/list}">Library</a>
+    </H1>
+    <br>
+    <table class="table table-bordered">
+            <tr scope="row">
+                <th scope="col">id</th>
+                <td scope="col" th:text="${book.id}"></td>
+            </tr>
+            <tr scope="row">
+                <th scope="col">name</th>
+                <td scope="col" th:text="${book.name}"></td>
+            </tr>
+            <tr scope="row">
+                <th scope="col">author</th>
+                <td scope="col" th:text="${book.author}"></td>
+            </tr>
+            <tr scope="row">
+                <th scope="col">description</th>
+                <td scope="col" th:text="${book.description}"></td>
+            </tr>
+            <tr scope="row">
+                <th scope="col">category</th>
+                <td scope="col" th:text="${book.category}"></td>
+            </tr>
+            <tr scope="row">
+                <th scope="col">quantity</th>
+                <td scope="col" th:text="${book.quantity}"></td>
+            </tr>
+        <tr scope="row">
+            <th scope="col"></th>
+            <td scope="row" >
+                <a th:href="@{/book/rent/{id}(id=${book.id})}" class="btn btn-primary">Thuê</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body style="max-width: 500px; margin: auto">
+    <form action="/book/giveBackBook" method="post">
+        <div class="form-group">
+            <label for="code">Nhập mã thuê sách (4 chữ số)</label>
+            <input type="number" class="form-control" id="code" aria-describedby="emailHelp" name="code">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
