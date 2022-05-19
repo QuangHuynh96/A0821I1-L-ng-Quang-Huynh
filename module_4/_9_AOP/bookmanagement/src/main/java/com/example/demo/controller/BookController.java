@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Contract;
+import com.example.demo.exception.BookException;
 import com.example.demo.service.BookService;
 import com.example.demo.service.ContractService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,11 +76,10 @@ public class BookController {
 
     @PostMapping("/giveBackBook")
     public String giveBackBook(@RequestParam("code") Long id, Model model) {
-// xử lí lỗi bằng try/catch
-        String messError = "";
-        try {
+
             Optional<Contract> contract = contractService.findById(id);
             List<Book> books = bookService.getAll();
+
             for (Book book : books) {
                 if (book == contract.get().getBook()) {
                     //tăng só lượng lên 1
@@ -87,15 +87,20 @@ public class BookController {
                     // xóa hợp đồng mượn sách(xóa mã số).
                     contractService.delete(contract.get());
                     model.addAttribute("message1", "Đã trả sách thành công");
+                    model.addAttribute("message2", "Đã trả sách thành công");
                     return "/book/result";
                 }
             }
-        }
-        catch (Exception e) {
-            messError = e.getMessage();
-        }
         model.addAttribute("message1", "Trả sách không thành công");
-        model.addAttribute("message2", messError);
+        model.addAttribute("message2", "Trả sách không thành công");
         return "/book/result";
+    }
+
+    @ExceptionHandler(BookException.class)
+    public String errorHandler(BookException e, Model model) {
+        model.addAttribute("message1", e.getMessage());
+        model.addAttribute("message2", e.getMessage());
+        System.err.println("=============Book controller============");
+        return "redirect:/book/list";
     }
 }
