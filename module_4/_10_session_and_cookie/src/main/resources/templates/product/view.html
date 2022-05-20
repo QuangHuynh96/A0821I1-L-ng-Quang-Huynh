@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+
+    <style>
+        .description-product {
+            border:1px solid #818182;
+            border-radius: 5px;
+            background-color: #fffcd9;
+            color:#ff180e ;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light mb-1">
+        <a class="navbar-brand text-success" th:href="@{/product/list}">PRODUCT STORE</a>
+        <form method="get" action="/product/list" class="form-inline">
+            <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="search name" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img th:src="@{/image/{linkimg}(linkimg=${product.linkImagel})}"
+                         class="card-img-top" alt="...">
+                    <div class="card-footer">
+                        <h5 class="card-title text-muted" th:text="'Mã sản phẩn: '+ ${product.id}"></h5>
+                        <del class="text-muted" th:text="'Giá cũ: '+${product.oldPrice}"></del>
+                        <br>
+                        <small >Giá mới:
+                            <h5 class="text-danger" th:text="${product.newPrice}+' VNĐ'"></h5>
+                        </small>
+                        <a th:href="@{/product/add/__${product.id}__(action='show')}" class="btn btn-success">Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col card" style="width: 18rem; border: none;">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${product.name.toUpperCase()}"></h5>
+                    <hr>
+                    <div class="description-product">
+                        <p th:text="${product.description}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
