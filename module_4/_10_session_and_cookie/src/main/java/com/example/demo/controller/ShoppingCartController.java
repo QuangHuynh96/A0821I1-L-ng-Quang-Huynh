@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("cart")
+@RequestMapping("/cart")
 public class ShoppingCartController {
 
     @ModelAttribute("cart")

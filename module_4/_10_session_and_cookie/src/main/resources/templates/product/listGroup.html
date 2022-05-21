@@ -11,10 +11,8 @@
     <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
 
     <style>
-        body {
-            background-image: url("/static/image/brg2.jpg");
-            background-repeat: no-repeat;
-            background-size: 100% auto;
+        .br-cl {
+            background-color: rgba(21,40,55,0.79);
         }
         .product-card:hover {
             opacity: 0.9 ;
@@ -28,14 +26,14 @@
     </style>
 
 </head>
-<body>
+<body class="br-cl">
     <nav class="navbar navbar-light bg-light mb-1">
-        <a class="navbar-brand text-success" th:href="@{/product/list}">PRODUCT STORE</a>
-        <form method="get" action="/product/list" class="form-inline">
+        <a class="navbar-brand text-success" th:href="@{/product/shop}">PRODUCT STORE</a>
+        <form method="get" action="/product/shop" class="form-inline">
             <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="search name" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <a class="btn btn-outline-danger" th:href="@{cart/shoppingCart}">Giỏ hàng</a>
+        <a class="btn btn-outline-danger" th:href="@{/cart/shoppingCart}">Giỏ hàng</a>
     </nav>
     <div class="card-deck row row-cols-1 row-cols-sm-2 row-cols-md-4">
         <div class="col mb-4" th:each="item : ${products}">

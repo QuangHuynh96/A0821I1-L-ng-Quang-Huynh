@@ -2,39 +2,98 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Shopping Cart</title>
+    <title>List</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+
+    <style>
+        a {
+         text-decoration: none;
+        }
+        #cart,#payment,#order {
+            display: none;
+        }
+        .display-bl {
+            display: block!important;
+        }
+    </style>
 </head>
 <body>
-<p>
-    <a th:href="@{/product/shop}">Shop</a>
-</p>
-<h1>Your Cart</h1>
-<form th:action="@{/product/shop}" th:object="${cart}" method="post">
-    <h3>Total Items: <span th:text="${cart.countItemQuantity()}"></span></h3>
-    <h3>Total Products: <span th:text="${cart.countProductQuantity()}"></span></h3>
-    <table border="1">
-        <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-        <tr th:each="product: ${cart.products}">
-            <td th:text="${product.getKey().name}"></td>
-            <td>
-                <a id="decrease_button" th:href="@{/product/add/__${product.getKey().id}__(action='down')}"
-                   th:text="${'-'}" ></a>
-                <span th:text="${product.getValue()}"></span>
-                <a id="increase_button" th:href="@{/product/add/__${product.getKey().id}__(action='up')}"
-                   th:text="${'+'}"></a>
-            </td>
-            <td th:text="${product.getKey().newPrice}"></td>
-        </tr>
-        <tr>
-            <td>Total</td>
-            <td></td>
-            <td th:text="${cart.countTotalPayment()}"></td>
-        </tr>
-    </table>
-</form>
+<nav class="navbar navbar-light bg-light mb-1">
+    <a class="navbar-brand text-success" th:href="@{/product/shop}">PRODUCT STORE</a>
+    <form method="get" action="/product/shop" class="form-inline">
+        <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="search name" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+<ul class="list-inline row">
+    <li class="list-inline-item col-sm text-center">
+        <button class="btn btn-outline-success" onclick="displayCart('cart')" >Giỏ hàng</button>
+    </li>
+    <li class="list-inline-item col-sm text-center ">
+        <button class="btn btn-outline-success" onclick="displayCart('order')" >Giỏ hàng</button>
+    </li>
+    <li class="list-inline-item col-sm text-center ">
+        <button class="btn btn-outline-success" onclick="displayCart('payment')" >Giỏ hàng</button>
+    </li>
+</ul>
+<div id="payment"></div>
+<div id="order"></div>
+<div id="cart">
+    <h1>Your Cart</h1>
+    <form th:action="@{/product/shop}" th:object="${cart}" method="post">
+        <h3>Total Items: <span th:text="${cart.countItemQuantity()}"></span></h3>
+        <h3>Total Products: <span th:text="${cart.countProductQuantity()}"></span></h3>
+        <table border="1">
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            <tr th:each="product: ${cart.products}">
+                <td th:text="${product.getKey().name}"></td>
+                <td>
+                    <a id="decrease_button" th:href="@{/product/add/__${product.getKey().id}__(action='down')}"
+                       th:text="${'-'}" ></a>
+                    <span th:text="${product.getValue()}"></span>
+                    <a id="increase_button" th:href="@{/product/add/__${product.getKey().id}__(action='up')}"
+                       th:text="${'+'}"></a>
+                </td>
+                <td th:text="${product.getKey().newPrice}"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td th:text="${cart.countTotalPayment()}"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+   function displayCart(content) {
+       switch (content) {
+           case "cart":
+               document.getElementById("cart").classList.add("display-bl");
+               document.getElementById("order").classList.remove("display-bl");
+               document.getElementById("payment").classList.remove("display-bl");
+               break;
+           case "order":
+               document.getElementById("order").classList.add("display-bl");
+               document.getElementById("cart").classList.remove("display-bl");
+               document.getElementById("payment").classList.remove("display-bl");
+               break;
+           case "payment":
+               document.getElementById("payment").classList.add("display-bl");
+               document.getElementById("cart").classList.remove("display-bl");
+               document.getElementById("order").classList.remove("display-bl");
+               break;
+       }
+   }
+</script>
 </body>
 </html>
