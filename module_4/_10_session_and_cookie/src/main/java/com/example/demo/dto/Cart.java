@@ -20,6 +20,7 @@ public class Cart {
         return products;
     }
 
+    //để kiểm tra xem sản phẩm đó đã có trong giỏ hàng hay chưa
     private boolean checkItemInCart(Product product){
         for (Map.Entry<Product, Integer> entry : products.entrySet()) {
             if(entry.getKey().getId().equals(product.getId())){
@@ -38,6 +39,7 @@ public class Cart {
         return null;
     }
 
+    //tăng số lượng sản phẩm 1 đơn vị.
     public void addProduct(Product product){
         if (!checkItemInCart(product)){
             products.put(product,1);
@@ -47,11 +49,13 @@ public class Cart {
         }
     }
 
+    //giảm số lượng snar phẩm 1 đơn vị.
     public void deleteProduct(Product product){
             Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
             products.replace(itemEntry.getKey(),itemEntry.getValue() -1);
     }
 
+    //dùng để đếm số lượng sản phẩm đó hiện có trong giỏ hàng.
     public Integer countProductQuantity(){
         Integer productQuantity = 0;
         for (Map.Entry<Product, Integer> entry : products.entrySet()) {
@@ -60,15 +64,21 @@ public class Cart {
         return productQuantity;
     }
 
+    //để đếm số lượng sản phẩm có trong giỏ hàng
     public Integer countItemQuantity(){
         return products.size();
     }
 
+    // dùng để tính tổng số tiền cần phải thanh toán.
     public Float countTotalPayment(){
         float payment = 0;
         for (Map.Entry<Product, Integer> product : products.entrySet()) {
             payment += product.getKey().getNewPrice() * (float) product.getValue();
         }
         return payment;
+    }
+    //xóa sản phẩm.
+    public void deleteOneProductType(Product product) {
+        products.remove(product);
     }
 }

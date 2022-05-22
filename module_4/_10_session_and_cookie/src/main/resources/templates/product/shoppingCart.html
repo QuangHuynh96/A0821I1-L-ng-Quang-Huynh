@@ -6,19 +6,33 @@
     <script src="/jquery/jquery-3.6.0.min.js"></script>
     <script src="/datatables/js/jquery.dataTables.js"></script>
     <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/themify-icons-font%20(1)/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
     <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
     <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
 
     <style>
-        a {
-         text-decoration: none;
-        }
-        #cart,#payment,#order {
+        .display-none {
             display: none;
         }
         .display-bl {
             display: block!important;
+        }
+
+        .display-inl-bl {
+            display: inline-block!important;
+        }
+
+        .btn-bg-ss {
+            background-color: #dc3545;
+            color: honeydew;
+        }
+        .btn-a {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none!important;
         }
     </style>
 </head>
@@ -31,66 +45,83 @@
     </form>
 </nav>
 <ul class="list-inline row">
-    <li class="list-inline-item col-sm text-center">
-        <button class="btn btn-outline-success" onclick="displayCart('cart')" >Giỏ hàng</button>
+    <li class=" list-inline-item col-sm text-center">
+        <button id="btn-cart" class="btn btn-a btn-outline-danger btn-bg-ss" onclick="displayCart('cart')" >Giỏ hàng</button>
     </li>
     <li class="list-inline-item col-sm text-center ">
-        <button class="btn btn-outline-success" onclick="displayCart('order')" >Giỏ hàng</button>
+        <button id="btn-order" class="btn btn-a btn-outline-danger" onclick="displayCart('order')" >Đơn hàng</button>
     </li>
     <li class="list-inline-item col-sm text-center ">
-        <button class="btn btn-outline-success" onclick="displayCart('payment')" >Giỏ hàng</button>
+        <button id="btn-payment" class="btn btn-a btn-outline-danger" onclick="displayCart('payment')" >Thanh toán</button>
     </li>
 </ul>
-<div id="payment"></div>
-<div id="order"></div>
-<div id="cart">
-    <h1>Your Cart</h1>
+<div id="payment" class="display-none">payment</div>
+<div id="order" class="display-none">order</div>
+<div id="cart" class="display-none">
     <form th:action="@{/product/shop}" th:object="${cart}" method="post">
-        <h3>Total Items: <span th:text="${cart.countItemQuantity()}"></span></h3>
-        <h3>Total Products: <span th:text="${cart.countProductQuantity()}"></span></h3>
-        <table border="1">
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tr th:each="product: ${cart.products}">
-                <td th:text="${product.getKey().name}"></td>
-                <td>
-                    <a id="decrease_button" th:href="@{/product/add/__${product.getKey().id}__(action='down')}"
-                       th:text="${'-'}" ></a>
-                    <span th:text="${product.getValue()}"></span>
-                    <a id="increase_button" th:href="@{/product/add/__${product.getKey().id}__(action='up')}"
-                       th:text="${'+'}"></a>
-                </td>
-                <td th:text="${product.getKey().newPrice}"></td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td></td>
-                <td th:text="${cart.countTotalPayment()}"></td>
-            </tr>
-        </table>
+        <ul class="list-group">
+            <li class="list-group-item bg-light" aria-current="true">
+                <span th:text="${'Giỏ hàng('+cart.countItemQuantity()}+')'"></span>
+            </li>
+            <li class="list-group-item">
+                <ul class=" list-inline row" th:each="product: ${cart.products}">
+                    <li class="list-group-item" style="line-height: 100%">
+                        <a class="btn ti-close" th:href="@{/product/delete/__${product.getKey().id}__}"></a>
+                        <img class="col-sm-4 display-inl-bl" style="width: 100%; height: auto" th:src="@{/image/{linkimg}(linkimg=${product.getKey().linkImagel})}">
+                        <div class="col-sm-auto display-inl-bl">
+                            <p style="color: red;" th:text="${product.getKey().name}"></p>
+                            <p>Mã sản phẩm: <span style="color: green"  th:text="${product.getKey().id}"></span></p>
+                            <p th:text="${'Đơn giá: '+product.getKey().newPrice}+' đ'"></p>
+                            <p>Số lượng:
+                                <span  style="color: red" th:text="${product.getValue()}"></span>
+                                <a id="decrease_button" class="ti-arrow-circle-down" th:href="@{/product/add/__${product.getKey().id}__(action='down')}"></a>
+                                <a id="increase_button" class="ti-arrow-circle-up" th:href="@{/product/add/__${product.getKey().id}__(action='up')}"></a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <span style="color: red">Tổng cộng: </span>
+                <span th:text="${cart.countTotalPayment()+' đ'}"></span>
+            </li>
+        </ul>
     </form>
 </div>
 
 <script>
+    displayCart("cart");
    function displayCart(content) {
        switch (content) {
            case "cart":
                document.getElementById("cart").classList.add("display-bl");
                document.getElementById("order").classList.remove("display-bl");
                document.getElementById("payment").classList.remove("display-bl");
+
+
+               document.getElementById("btn-cart").classList.add("btn-bg-ss");
+               document.getElementById("btn-order").classList.remove("btn-bg-ss");
+               document.getElementById("btn-payment").classList.remove("btn-bg-ss");
                break;
            case "order":
                document.getElementById("order").classList.add("display-bl");
                document.getElementById("cart").classList.remove("display-bl");
                document.getElementById("payment").classList.remove("display-bl");
+
+
+               document.getElementById("btn-order").classList.add("btn-bg-ss");
+               document.getElementById("btn-cart").classList.remove("btn-bg-ss");
+               document.getElementById("btn-payment").classList.remove("btn-bg-ss");
                break;
            case "payment":
                document.getElementById("payment").classList.add("display-bl");
                document.getElementById("cart").classList.remove("display-bl");
                document.getElementById("order").classList.remove("display-bl");
+
+
+               document.getElementById("btn-payment").classList.add("btn-bg-ss");
+               document.getElementById("btn-cart").classList.remove("btn-bg-ss");
+               document.getElementById("btn-order").classList.remove("btn-bg-ss");
                break;
        }
    }
