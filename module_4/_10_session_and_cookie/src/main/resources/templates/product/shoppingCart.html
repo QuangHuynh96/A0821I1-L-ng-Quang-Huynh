@@ -55,7 +55,9 @@
         <button id="btn-payment" class="btn btn-a btn-outline-danger" onclick="displayCart('payment')" >Thanh toán</button>
     </li>
 </ul>
-<div id="payment" class="display-none">payment</div>
+<div id="payment" class="display-none">payment
+    <a class="btn btn-outline-danger" th:href="@{/product/createCartData}">Chốt đơn</a>
+</div>
 <div id="order" class="display-none">order</div>
 <div id="cart" class="display-none">
     <form th:action="@{/product/shop}" th:object="${cart}" method="post">

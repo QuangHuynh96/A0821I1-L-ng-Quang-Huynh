@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.demo.session;
 
 import com.example.demo.entity.Product;
 
@@ -79,6 +79,6 @@ public class Cart {
     }
     //xóa sản phẩm.
     public void deleteOneProductType(Product product) {
-        products.remove(product);
+        products.remove(product.hashCode());
     }
 }

@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.Cart;
+import com.example.demo.entity.CartData;
+import com.example.demo.repository.CartDataRepository;
+import com.example.demo.session.Cart;
 import com.example.demo.entity.Product;
 import com.example.demo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,9 @@ public class ProductController {
 
     @Autowired
     ProductService productService;
+
+    @Autowired
+    CartDataRepository cartDataRepository;
 
     @ModelAttribute("cart")
     public Cart setupCart() {
@@ -71,5 +76,16 @@ public class ProductController {
                             @ModelAttribute Cart cart) {
             cart.deleteOneProductType(product);
         return "redirect:/cart/shoppingCart";
+    }
+
+    @GetMapping("/createCartData")
+    public String createCartData(@ModelAttribute Cart cart) {
+        CartData cartData = new CartData();
+            cart.getProducts().entrySet().forEach(s -> {
+                cartData.setProduct(s.getKey());
+                cartData.setQuality(s.getValue());
+                cartDataRepository.save(cartData);
+            });
+    return "redirect:/cart/shoppingCart";
     }
 }
