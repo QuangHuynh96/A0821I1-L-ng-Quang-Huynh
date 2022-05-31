@@ -1,0 +1,87 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create User</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body >
+<a style="text-decoration: none" th:href="@{/}">
+    <nav class="navbar navbar-light bg-light">
+        <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+    </nav>
+</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Customer type</th>
+                <th scope="col">Name</th>
+                <th scope="col">Birtday</th>
+                <th scope="col">Gender</th>
+                <th scope="col">ID card</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${customers}">
+                <th th:text="${item.id}"></th>
+                <td th:text="${item.customerType.name}"></td>
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.birtday}"></td>
+                <td th:if="${item.gender}" th:text="'Nam'"></td>
+                <td th:if="${!item.gender}" th:text="'Nu'"></td>
+                <td th:text="${item.idCard}"></td>
+                <td th:text="${item.phone}"></td>
+                <td th:text="${item.email}"></td>
+                <td th:text="${item.address}"></td>
+                <td scope="row" ><a th:href="@{/customer/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
+                <td scope="row" ><a th:onclick="|infoDelete(${item.id})|" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+    <a th:href="@{'/'(page=${customers.number - 1})}" th:if="${customers.hasPrevious()}">Previous</a>
+    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/'(page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="post" action="/customer/delete">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label id="labelId"></label>
+                        <input hidden type="text" id="id_value" name="id">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" id="submid" class="btn btn-primary">Delete</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function infoDelete(id) {
+            document.getElementById("id_value").value= id
+            document.getElementById("labelId").innerText= `Bạn chắc chắn muốn xóa khach hang: ${id}`
+        }
+    </script>
+</body>
+</html>

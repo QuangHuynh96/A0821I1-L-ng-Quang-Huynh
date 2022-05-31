@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FURAMA resort</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/css/homeStyle.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+    <a style="text-decoration: none" th:href="@{/}">
+        <nav class="navbar navbar-light bg-light">
+            <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+        </nav>
+    </a>
+    <div>
+        <!-- Tab items -->
+        <div class="tabs">
+            <div class="tab-item active">
+                <i class="tab-icon fas fa-code"></i>
+                Employee
+            </div>
+            <div class="tab-item">
+                <i class="tab-icon fas fa-cog"></i>
+                Customer
+            </div>
+            <div class="tab-item">
+                <i class="tab-icon fas fa-plus-circle"></i>
+                Service
+            </div>
+            <div class="tab-item">
+                <i class="tab-icon fas fa-pen-nib"></i>
+                Contract
+            </div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Tab content -->
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <h2>employee</h2>
+                <p>danh sach nhan vien</p>
+            </div>
+            <div class="tab-pane">
+                <h2>customer</h2>
+                <a th:href="@{/customer/list}">danh sach khach hang</a>
+            </div>
+            <div class="tab-pane">
+                <h2>service</h2>
+                <p>dich vu</p>
+            </div>
+            <div class="tab-pane">
+                <h2>contract</h2>
+                <p>hop dong </p>
+            </div>
+        </div>
+    </div>
+<script>
+
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+
+    const tabs = $$(".tab-item");
+    const panes = $$(".tab-pane");
+
+    const tabActive = $(".tab-item.active");
+    const line = $(".tabs .line");
+
+
+    tabs.forEach((tab, index) => {
+        const pane = panes[index];
+
+        tab.onclick = function () {
+            $(".tab-item.active").classList.remove("active");
+            $(".tab-pane.active").classList.remove("active");
+
+            line.style.left = this.offsetLeft + "px";
+            line.style.width = this.offsetWidth + "px";
+
+            this.classList.add("active");
+            pane.classList.add("active");
+        };
+    });
+
+</script>
+</body>
+</html>

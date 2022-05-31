@@ -1,0 +1,81 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create User</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body >
+    <a style="text-decoration: none;" th:href="@{/}">
+        <nav class="navbar navbar-light bg-light">
+            <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+        </nav>
+    </a>
+    <h2>Edit customer</h2>
+    <form style="width: 80%; margin: auto;" action="/customer/create" method="post" th:object="${dtoCustomer}">
+<!--        id-->
+        <div class="form-group">
+            <label for="exampleInputId">ID</label>
+            <input type="text" class="form-control" id="exampleInputId" th:field="*{id}">
+        </div>
+<!--        customerType-->
+        <div class="form-group">
+            <label for="exampleInputType">Customer Type</label>
+            <select class="custom-select" id="exampleInputType" th:field="*{customerType.id}">
+                    <option th:each="item : ${customerTypes}" th:value="${item.id}" th:text="${item.name}"></option>
+            </select>
+<!--            <input type="text" class="form-control" id="exampleInputType" th:field="*{customerType}">-->
+        </div>
+<!--        Name-->
+        <div class="form-group">
+            <label for="exampleInputName">Name</label>
+            <input type="text" class="form-control" id="exampleInputName" th:field="*{name}">
+        </div>
+<!--        Birtday-->
+        <div class="form-group">
+            <label for="exampleInputBirtday">Birtday</label>
+            <input type="date" class="form-control" id="exampleInputBirtday" th:field="*{birtday}">
+        </div>
+<!--        Gender-->
+        <div class="form-group">
+            <label for="gender"> gender</label>
+            <select class="custom-select" id="gender" th:field="*{gender}">
+                <option value="true">Nam</option>
+                <option value="false">Nu</option>
+                <option value="false">other</option>
+            </select>
+        </div>
+<!--        IdCart-->
+        <div class="form-group">
+            <label for="exampleInputIdCart">IdCart</label>
+            <input type="number" class="form-control" id="exampleInputIdCart" th:field="*{idCard}">
+        </div>
+<!--        //Phone-->
+        <div class="form-group">
+            <label for="exampleInputPhone">Phone</label>
+            <input type="text" class="form-control" id="exampleInputPhone" th:field="*{phone}">
+        </div>
+<!--        //email-->
+        <div class="form-group" >
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:field="*{email}">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+<!--        //Address-->
+        <div class="form-group">
+            <label for="exampleInputAddress">Address</label>
+            <input type="text" class="form-control" id="exampleInputAddress" th:field="*{address}">
+        </div>
+<!--        //Contract-->
+        <div class="form-group">
+            <label for="exampleInputContract">Contract</label>
+            <input type="text" class="form-control" id="exampleInputContract" th:field="*{contracts}">
+        </div>
+<!--        //button_submit-->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>
