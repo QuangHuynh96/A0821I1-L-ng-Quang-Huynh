@@ -1,12 +1,11 @@
-package com.example.demo.entity;
+package com.example.demo.dto;
 
-import javax.persistence.*;
-import java.util.List;
+import com.example.demo.entity.RentType;
+import com.example.demo.entity.ServiceType;
 
-@Entity
-public class Service {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+import javax.persistence.ManyToOne;
+
+public class DtoService {
     private Long id;
     private String name;
     private int area;
@@ -24,10 +23,7 @@ public class Service {
     private double poolArea;
     private int numberOfFloors;
 
-    @OneToMany(mappedBy = "service")
-    List<Contract> contracts;
-
-    public Service() {
+    public DtoService() {
     }
 
     public Long getId() {
@@ -116,13 +112,5 @@ public class Service {
 
     public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
-    }
-
-    public List<Contract> getContracts() {
-        return contracts;
-    }
-
-    public void setContracts(List<Contract> contracts) {
-        this.contracts = contracts;
     }
 }

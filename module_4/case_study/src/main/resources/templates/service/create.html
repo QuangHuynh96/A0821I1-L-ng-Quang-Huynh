@@ -1,0 +1,83 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Service</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body >
+<a style="text-decoration: none;" th:href="@{/}">
+    <nav class="navbar navbar-light bg-light">
+        <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+    </nav>
+</a>
+<h2 style="text-align: center">Edit service</h2>
+<form style="width: 60%; margin: auto;" action="/service/create" method="post" th:object="${dtoService}">
+    <!--        id-->
+    <div class="form-group" hidden>
+        <label for="exampleInputId">ID</label>
+        <input type="text" class="form-control " id="exampleInputId" th:field="*{id}">
+    </div>
+    <!--        Name-->
+    <div class="form-group">
+        <label for="exampleInputName">Name</label>
+        <input type="text" class="form-control" id="exampleInputName" th:field="*{name}">
+    </div>
+    <!--        Area-->
+    <div class="form-group">
+        <label for="exampleInputArea">Area</label>
+        <input type="number" class="form-control" id="exampleInputArea" th:field="*{area}">
+    </div>
+    <!--        Cost-->
+    <div class="form-group">
+        <label for="exampleInputCost">Cost</label>
+        <input type="number" class="form-control" id="exampleInputCost" th:field="*{cost}">
+    </div>
+    <!--        MaxPeople-->
+    <div class="form-group">
+        <label for="exampleInputMaxPeople">Max people</label>
+        <input type="number" class="form-control" id="exampleInputMaxPeople" th:field="*{maxPeople}">
+    </div>
+    <!--        rentType-->
+    <div class="form-group">
+        <label for="exampleInputRentType">Rent Type</label>
+        <select class="custom-select" id="exampleInputRentType" th:field="*{rentType.id}">
+            <option th:each="item : ${rentTypes}" th:value="${item.id}" th:text="${item.name}"></option>
+        </select>
+    </div>
+    <!--        serviceType-->
+    <div class="form-group">
+        <label for="exampleInputServiceType">Service Type</label>
+        <select class="custom-select" id="exampleInputServiceType" th:field="*{serviceType.id}">
+            <option th:each="item : ${serviceTypes}" th:value="${item.id}" th:text="${item.name}"></option>
+        </select>
+    </div>
+    <!--        standardRoom-->
+    <div class="form-group">
+        <label for="exampleInputStandardRoom">standardRoom</label>
+        <input type="text" class="form-control" id="exampleInputStandardRoom" th:field="*{standardRoom}">
+    </div>
+    <!--        descriptionOtherConvenience-->
+    <div class="form-group">
+        <label for="descriptionOtherConvenience">descriptionOtherConvenience</label>
+        <input type="text" class="form-control" id="descriptionOtherConvenience" th:field="*{descriptionOtherConvenience}">
+    </div>
+    <!--       poolArea-->
+    <div class="form-group">
+        <label for="poolArea">poolArea</label>
+        <input type="number" class="form-control" id="poolArea" th:field="*{poolArea}">
+    </div>
+    <!--       numberOfFloors-->
+    <div class="form-group">
+        <label for="numberOfFloors">numberOfFloors</label>
+        <input type="number" class="form-control" id="numberOfFloors" th:field="*{numberOfFloors}">
+    </div>
+    <!--        //button_submit-->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+</body>
+</html>

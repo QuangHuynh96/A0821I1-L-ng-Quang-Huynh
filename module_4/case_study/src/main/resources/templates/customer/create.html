@@ -14,12 +14,12 @@
             <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
         </nav>
     </a>
-    <h2>Edit customer</h2>
-    <form style="width: 80%; margin: auto;" action="/customer/create" method="post" th:object="${dtoCustomer}">
+    <h2 style="text-align: center">Edit customer</h2>
+    <form style="width: 60%; margin: auto;" action="/customer/create" method="post" th:object="${dtoCustomer}">
 <!--        id-->
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label for="exampleInputId">ID</label>
-            <input type="text" class="form-control" id="exampleInputId" th:field="*{id}">
+            <input type="text" class="form-control " id="exampleInputId" th:field="*{id}">
         </div>
 <!--        customerType-->
         <div class="form-group">
@@ -27,7 +27,6 @@
             <select class="custom-select" id="exampleInputType" th:field="*{customerType.id}">
                     <option th:each="item : ${customerTypes}" th:value="${item.id}" th:text="${item.name}"></option>
             </select>
-<!--            <input type="text" class="form-control" id="exampleInputType" th:field="*{customerType}">-->
         </div>
 <!--        Name-->
         <div class="form-group">
@@ -44,7 +43,7 @@
             <label for="gender"> gender</label>
             <select class="custom-select" id="gender" th:field="*{gender}">
                 <option value="true">Nam</option>
-                <option value="false">Nu</option>
+                <option value="false">Nữ</option>
                 <option value="false">other</option>
             </select>
         </div>
@@ -71,11 +70,12 @@
         </div>
 <!--        //Contract-->
         <div class="form-group">
-            <label for="exampleInputContract">Contract</label>
+            <label for="exampleInputContract">Contract number</label>
             <input type="text" class="form-control" id="exampleInputContract" th:field="*{contracts}">
         </div>
 <!--        //button_submit-->
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <br>
 </body>
 </html>

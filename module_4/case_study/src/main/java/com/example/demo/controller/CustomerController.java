@@ -44,12 +44,12 @@ public class CustomerController {
 
     // -------------------------------------------------------------------------------------- list --
     @GetMapping("/list")
-    public String getList( @RequestParam(defaultValue = "") String key_namer,
+    public String getList( @RequestParam(defaultValue = "") String key_name,
                            @RequestParam(defaultValue = "") String key_phoneNumber,
                            @RequestParam(defaultValue = "") String key_idCard,
                            @PageableDefault(size = 5) Pageable pageable,
                            Model model) {
-        Page<Customer> customers = customerService.getAllCustomer(key_namer, key_phoneNumber, key_idCard, pageable);
+        Page<Customer> customers = customerService.getAllCustomer(key_name, key_phoneNumber, key_idCard, pageable);
         model.addAttribute("customers", customers);
         return "/customer/list";
     }

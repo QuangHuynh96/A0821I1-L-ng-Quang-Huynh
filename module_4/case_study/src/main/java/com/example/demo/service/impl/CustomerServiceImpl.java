@@ -10,6 +10,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
@@ -26,6 +28,11 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void delete(Customer customer) {
         customerRepository.delete(customer);
+    }
+
+    @Override
+    public List<Customer> getList() {
+        return customerRepository.findAll();
     }
 
     @Override

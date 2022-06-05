@@ -9,11 +9,21 @@
     <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
 </head>
 <body >
-<a style="text-decoration: none" th:href="@{/}">
     <nav class="navbar navbar-light bg-light">
-        <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+        <a style="text-decoration: none" th:href="@{/}">
+            <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+        </a>
     </nav>
-</a>
+    <h2 style="text-align: center">Customer list</h2>
+    <div>
+        <form method="get" action="/customer/list" class="form-inline my-2 my-lg-0">
+            <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Search">
+            <input name="key_phoneNumber" class="form-control mr-sm-2" type="number" placeholder="Phone number" aria-label="Search">
+            <input name="key_idCard" class="form-control mr-sm-2" type="number" placeholder="ID card" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    <br>
     <table class="table table-striped">
         <thead>
             <tr>
