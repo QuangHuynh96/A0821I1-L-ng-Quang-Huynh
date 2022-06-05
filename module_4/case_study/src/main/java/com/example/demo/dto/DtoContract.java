@@ -1,12 +1,15 @@
-package com.example.demo.entity;
+package com.example.demo.dto;
+
+import com.example.demo.entity.ContractDetail;
+import com.example.demo.entity.Customer;
+import com.example.demo.entity.Employee;
+import com.example.demo.entity.Service;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
-public class Contract {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class DtoContract {
+
     private Long id;
     private String startDay;
     private String endDay;
@@ -27,7 +30,7 @@ public class Contract {
     @OneToMany(mappedBy = "contract")
     List<ContractDetail> contractDetails;
 
-    public Contract() {
+    public DtoContract() {
     }
 
     public Long getId() {
@@ -100,13 +103,5 @@ public class Contract {
 
     public void setContractDetails(List<ContractDetail> contractDetails) {
         this.contractDetails = contractDetails;
-    }
-
-    @Override
-    public String toString() {
-        return  " Contract id: " + id +
-                ", startDay: '" + startDay + '\'' +
-                ", endDay: '" + endDay + '\'' +
-                ", customer: " + customer.getName();
     }
 }

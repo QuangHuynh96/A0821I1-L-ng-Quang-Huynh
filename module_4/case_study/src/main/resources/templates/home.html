@@ -11,8 +11,8 @@
     <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
     <script src="/js/customerAjax.js"></script>
 </head>
-<body>
 
+<body>
     <nav class="navbar navbar-light bg-light">
         <a style="text-decoration: none" th:href="@{/}">
             <h1 class="navbar-brand " style="color: #34675c; font-family: -apple-system; font-weight: bold ">FURAMA resort managerment</h1>
@@ -49,9 +49,9 @@
             <div class="tab-pane active">
                     <form method="get" action="/employee/list" class="form-inline my-2 my-lg-0">
                         <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Search">
-                        <input name="key_phoneNumber" class="form-control mr-sm-2" type="number" placeholder="Phone number" aria-label="Search">
-                        <input name="key_idCard" class="form-control mr-sm-2" type="number" placeholder="ID card" aria-label="Search">
-                        <input name="key_email" class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Search">
+                        <input name="key_phoneNumber" class="form-control mr-sm-2" type="search" placeholder="Phone number" aria-label="Search">
+                        <input name="key_idCard" class="form-control mr-sm-2" type="search" placeholder="ID card" aria-label="Search">
+                        <input name="key_email" class="form-control mr-sm-2" type="search" placeholder="Email" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 <br>
@@ -61,7 +61,7 @@
                             <div class="card">
                                 <img src="https://t4.ftcdn.net/jpg/01/09/45/79/240_F_109457945_Xp3z6asWNQaHVsWOHRUMoK6D62l2iSr5.jpg" class="card-img-top img-hover" alt="no internet">
                                 <div class="card-body">
-                                    <h5 class="card-title">Create new employee</h5>
+                                    <h5 class="card-title">Add new employee</h5>
                                 </div>
                             </div>
                         </a>
@@ -71,7 +71,7 @@
                             <div class="card">
                                 <img src="https://t3.ftcdn.net/jpg/03/52/24/32/240_F_352243237_zIWrrGamMZ300Vnuf8X3Myp7DSVA4Spt.jpg" class="card-img-top img-hover" alt="no internet">
                                 <div class="card-body">
-                                    <h5 class="card-title">Get all employee list</h5>
+                                    <h5 class="card-title">Employee list</h5>
                                 </div>
                             </div>
                         </a>
@@ -82,8 +82,8 @@
             <div class="tab-pane">
                 <form method="get" action="/customer/list" class="form-inline my-2 my-lg-0">
                     <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Search">
-                    <input name="key_phoneNumber" class="form-control mr-sm-2" type="number" placeholder="Phone number" aria-label="Search">
-                    <input name="key_idCard" class="form-control mr-sm-2" type="number" placeholder="ID card" aria-label="Search">
+                    <input name="key_phoneNumber" class="form-control mr-sm-2" type="search" placeholder="Phone number" aria-label="Search">
+                    <input name="key_idCard" class="form-control mr-sm-2" type="search" placeholder="ID card" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <br>
@@ -91,9 +91,9 @@
                     <div class="col mb-4  card-hover">
                         <a th:href="@{/customer/create}" style="text-decoration: none">
                             <div class="card">
-                                <img src="https://cdn-icons.flaticon.com/png/512/1771/premium/1771013.png?token=exp=1654101564~hmac=ea0537a55313b4dae4e2b7a08224adef" class="card-img-top img-hover" alt="no internet">
+                                <img src="https://t4.ftcdn.net/jpg/02/66/42/33/240_F_266423383_mqTkDOit8mCqPPTdkXoVUeIODmsclvkN.jpg" class="card-img-top img-hover" alt="no internet">
                                 <div class="card-body">
-                                    <h5 class="card-title">Create new customer</h5>
+                                    <h5 class="card-title">New customer</h5>
                                 </div>
                             </div>
                         </a>
@@ -101,7 +101,8 @@
                     <div class="col mb-4  card-hover">
                         <a th:href="@{/customer/list}" style="text-decoration: none">
                             <div class="card">
-                                <img src="https://t4.ftcdn.net/jpg/01/30/53/17/240_F_130531713_x0P62HBEmbVGRfmgW9TES0D3dMLEowrb.jpg" class="card-img-top img-hover" alt="no internet">
+
+                                <img src="https://t3.ftcdn.net/jpg/03/71/89/52/240_F_371895216_sHXUBJSTz0V1k1d3NiyN44oLRM8ZY15H.jpg" class="card-img-top img-hover" alt="no internet">
                                 <div class="card-body">
                                     <h5 class="card-title">Get all customer list</h5>
                                 </div>
@@ -128,30 +129,33 @@
             </div>
             <!------------------------------------------contract-->
             <div class="tab-pane">
-                <form method="get" action="/customer/list" class="form-inline my-2 my-lg-0">
-                    <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Search">
-                    <input name="key_phoneNumber" class="form-control mr-sm-2" type="number" placeholder="Phone number" aria-label="Search">
-                    <input name="key_idCard" class="form-control mr-sm-2" type="number" placeholder="ID card" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-                <br>
                 <div class="row row-cols-2 row-cols-md-4">
                     <div class="col mb-4 card-hover">
-                        <a th:href="@{/customer/create}" style="text-decoration: none">
+                        <a th:href="@{/contract/create}" style="text-decoration: none">
                             <div class="card">
-                                <img src="https://as1.ftcdn.net/v2/jpg/04/16/23/74/1000_F_416237483_FEGQEMbKQZrv5XIMnW1uQ2kt7js952cB.jpg" class="card-img-top img-hover" alt="no internet">
+                                <img src="https://t4.ftcdn.net/jpg/01/17/09/73/240_F_117097369_B5x9pvBDTDoxqbcoN2z2Pt0X2UU8x0Pz.jpg" class="card-img-top img-hover" alt="no internet">
                                 <div class="card-body">
-                                    <h5 class="card-title">Create new customer</h5>
+                                    <h5 class="card-title">New Contract</h5>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="col mb-4  card-hover">
-                        <a th:href="@{/customer/list}" style="text-decoration: none">
+                        <a th:href="@{/contract/list}" style="text-decoration: none">
                             <div class="card">
-                                <img src="https://t3.ftcdn.net/jpg/03/52/24/32/240_F_352243237_zIWrrGamMZ300Vnuf8X3Myp7DSVA4Spt.jpg" class="card-img-top img-hover" alt="no internet">
+                                <img src="https://t3.ftcdn.net/jpg/02/94/26/94/240_F_294269463_MWWZOTbwJjRiiitAgGGYzjZL4WD8oni0.jpg" class="card-img-top img-hover" alt="no internet">
                                 <div class="card-body">
-                                    <h5 class="card-title">Get all customer list</h5>
+                                    <h5 class="card-title">Get all Contract list</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col mb-4  card-hover">
+                        <a th:href="@{/contractDetail/create}" style="text-decoration: none">
+                            <div class="card">
+                                <img src="https://t4.ftcdn.net/jpg/02/16/16/63/240_F_216166342_LO0MtFdCzqJGBzxNY1FqJ9eNZREicfwn.jpg" class="card-img-top img-hover" alt="no internet">
+                                <div class="card-body">
+                                    <h5 class="card-title">New Contract Detail</h5>
                                 </div>
                             </div>
                         </a>

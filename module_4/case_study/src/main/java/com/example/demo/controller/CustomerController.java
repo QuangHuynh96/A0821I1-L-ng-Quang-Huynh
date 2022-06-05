@@ -49,9 +49,14 @@ public class CustomerController {
                            @RequestParam(defaultValue = "") String key_idCard,
                            @PageableDefault(size = 5) Pageable pageable,
                            Model model) {
-        Page<Customer> customers = customerService.getAllCustomer(key_name, key_phoneNumber, key_idCard, pageable);
-        model.addAttribute("customers", customers);
-        return "/customer/list";
+        try {
+            Page<Customer> customers = customerService.getAllCustomer(key_name, key_phoneNumber, key_idCard, pageable);
+            model.addAttribute("customers", customers);
+            return "/customer/list";
+        }
+        catch (Exception e) {
+            return "redirect:/";
+        }
     }
 
     // --------------------------------------------------------------------------------------  delete --

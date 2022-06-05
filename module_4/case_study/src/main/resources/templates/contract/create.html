@@ -1,0 +1,75 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Contract</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body >
+<a style="text-decoration: none;" th:href="@{/}">
+    <nav class="navbar navbar-light bg-light">
+        <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+    </nav>
+</a>
+<h2 style="text-align: center">Edit contract</h2>
+<form style="width: 60%; margin: auto;" action="/contract/create" method="post" th:object="${dtoContract}">
+    <!--        id-->
+    <div class="form-group" hidden>
+        <label for="exampleInputId">ID</label>
+        <input type="text" class="form-control " id="exampleInputId" th:field="*{id}">
+    </div>
+    <!--        start day-->
+    <div class="form-group">
+        <label for="exampleInputStartDay">Start day</label>
+        <input type="date" class="form-control" id="exampleInputStartDay" th:field="*{startDay}">
+    </div>
+    <!--        end day-->
+    <div class="form-group">
+        <label for="exampleInputEndDay">End day</label>
+        <input type="date" class="form-control" id="exampleInputEndDay" th:field="*{endDay}">
+    </div>
+    <!--        Deposit-->
+    <div class="form-group">
+        <label for="exampleInputDeposit">Deposit</label>
+        <input type="number" class="form-control" id="exampleInputDeposit" th:field="*{deposit}">
+    </div>
+    <!--        TotalMoney-->
+    <div class="form-group">
+        <label for="exampleInputTotalMoney">TotalMoney</label>
+        <input type="number" class="form-control" id="exampleInputTotalMoney" th:field="*{totalMoney}">
+    </div>
+    <!--    Customer -->
+    <div class="form-group">
+        <label for="exampleInputCustomer">Customer</label>
+        <select class="custom-select" id="exampleInputCustomer" th:field="*{customer.id}">
+            <option th:each="item : ${customers}" th:value="${item.id}" th:text="${item.name}"></option>
+        </select>
+    </div>
+    <!--    Employee -->
+    <div class="form-group">
+        <label for="exampleInputEmployee">Employee</label>
+        <select class="custom-select" id="exampleInputEmployee" th:field="*{employee.id}">
+            <option th:each="item : ${employees}" th:value="${item.id}" th:text="${item.name}"></option>
+        </select>
+    </div>
+    <!--    Service -->
+    <div class="form-group">
+        <label for="exampleInputService">Service</label>
+        <select class="custom-select" id="exampleInputService" th:field="*{service.id}">
+            <option th:each="item : ${services}" th:value="${item.id}" th:text="${item.name}"></option>
+        </select>
+    </div>
+    <!--        //Contract details-->
+    <div class="form-group">
+        <label for="exampleInputContractdetails">Contract details number</label>
+        <input type="text" class="form-control" id="exampleInputContractdetails" th:field="*{contractDetails}">
+    </div>
+    <!--        //button_submit-->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+</body>
+</html>

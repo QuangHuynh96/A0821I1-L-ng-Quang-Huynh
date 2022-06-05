@@ -1,6 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Create User</title>
+    <title>Contract list</title>
     <script src="/jquery/jquery-3.6.0.min.js"></script>
     <script src="/datatables/js/jquery.dataTables.js"></script>
     <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
@@ -14,57 +14,38 @@
         <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
     </a>
 </nav>
-<h2 style="text-align: center">Employee list</h2>
-<div>
-    <form method="get" action="/employee/list" class="form-inline my-2 my-lg-0">
-        <input name="key_name" class="form-control mr-sm-2" type="search" placeholder="Name" aria-label="Search">
-        <input name="key_phoneNumber" class="form-control mr-sm-2" type="search" placeholder="Phone number" aria-label="Search">
-        <input name="key_idCard" class="form-control mr-sm-2" type="search" placeholder="ID card" aria-label="Search">
-        <input name="key_email" class="form-control mr-sm-2" type="search" placeholder="email" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</div>
+<h2 style="text-align: center">Contract list</h2>
 <br>
 <table class="table table-striped">
     <thead>
     <tr>
         <th scope="col">ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Birtday</th>
-        <th scope="col">ID card</th>
-        <th scope="col">Salary</th>
-        <th scope="col">Phone Number</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
-        <th scope="col">Position</th>
-        <th scope="col">Division</th>
-        <th scope="col">Education</th>
+        <th scope="col">Start day</th>
+        <th scope="col">End day</th>
+        <th scope="col">deposit</th>
+        <th scope="col">total money</th>
+        <th scope="col">Customer</th>
+        <th scope="col">Employee</th>
+        <th scope="col">Service</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="item : ${employees}">
+    <tr th:each="item : ${contracts}">
         <th th:text="${item.id}"></th>
-        <td th:text="${item.name}"></td>
-        <td th:text="${item.birtday}"></td>
-        <td th:text="${item.idCard}"></td>
-        <td th:text="${item.salary}"></td>
-        <td th:text="${item.phone}"></td>
-        <td th:text="${item.email}"></td>
-        <td th:text="${item.address}"></td>
-        <td th:text="${item.position.name}"></td>
-        <td th:text="${item.division.name}"></td>
-        <td th:text="${item.educationDegree.name}"></td>
-        <td scope="row" ><a th:href="@{/employee/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
+        <td th:text="${item.startDay}"></td>
+        <td th:text="${item.endDay}"></td>
+        <td th:text="${item.deposit}"></td>
+        <td th:text="${item.totalMoney}"></td>
+        <td th:text="${item.customer.name}"></td>
+        <td th:text="${item.employee.name}"></td>
+        <td th:text="${item.service.name}"></td>
+        <td scope="row" ><a th:href="@{/contract/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
         <td scope="row" ><a th:onclick="|infoDelete(${item.id})|" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a></td>
     </tr>
     </tbody>
 </table>
-
-<a th:href="@{'/'(page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
-<span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
-<a th:href="@{'/'(page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -92,7 +73,7 @@
 <script>
     function infoDelete(id) {
         document.getElementById("id_value").value= id
-        document.getElementById("labelId").innerText= `Bạn chắc chắn muốn xóa nhân viên: ${id} không`
+        document.getElementById("labelId").innerText= `Bạn chắc chắn muốn xóa hợp đồng: ${id} không`
     }
 </script>
 </body>
