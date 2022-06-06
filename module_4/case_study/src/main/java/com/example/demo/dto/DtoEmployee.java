@@ -1,18 +1,38 @@
 package com.example.demo.dto;
 
 import com.example.demo.entity.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.aspectj.apache.bcel.ExceptionConstants;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.List;
 
-public class DtoEmployee {
+public class DtoEmployee implements Validator {
     private Long id;
+
+    @NotEmpty( message = "Không được để trống.")
+    @Size(min = 5, max = 45, message = "Từ 5-45 ký tự")
     private String name;
+
+    @NotNull(message = "")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
     private String birtday;
+
+    @NotNull(message = "Bắt buộc")
+    @Pattern(regexp = "^[0-9]{9,12}$",message = "idcart phải từ 9-12 số")
     private String idCard;
+
+    @Min(value = 0, message = "không được âm")
     private double salary;
+
     private String phone;
+
+    @Pattern(regexp = "^[0\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",message = "Email không hợp lệ")
     private String email;
+
     private String address;
 
     @ManyToOne(targetEntity = Position.class)
@@ -146,5 +166,15 @@ public class DtoEmployee {
 
     public void setContracts(List<Contract> contracts) {
         this.contracts = contracts;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+
     }
 }

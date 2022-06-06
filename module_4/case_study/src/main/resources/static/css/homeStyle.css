@@ -60,6 +60,7 @@ body > div {
     width: 80%;
     margin: auto;
     text-align: center;
+    transition: all 0.2s ease;
 }
 .tab-pane {
     color: #333;

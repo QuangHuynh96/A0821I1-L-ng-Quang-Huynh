@@ -47,8 +47,13 @@ public class EmployeeController {
     public String create(@ModelAttribute("dtoEmployee") @Validated DtoEmployee dtoEmployee,
                          BindingResult bindingResult,
                          Model model ) {
-        employeeService.save(dtoEmployee);
-        return "redirect:/employee/list";
+//        new DtoEmployee().validate(dtoEmployee, bindingResult);
+        if(bindingResult.hasFieldErrors()) {
+            return "/employee/create";
+        }else {
+            employeeService.save(dtoEmployee);
+            return "redirect:/employee/list";
+        }
     }
 
     // ------------------------------------------------------------------------------------ list --
