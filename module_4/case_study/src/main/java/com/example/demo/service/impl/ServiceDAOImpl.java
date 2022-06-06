@@ -17,6 +17,7 @@ public class ServiceDAOImpl implements ServiceDAO {
     public void save(DtoService dtoService) {
         Service service = new Service();
         BeanUtils.copyProperties(dtoService, service);
+        service.setFlag(true);
         serviceRepository.save(service);
     }
 

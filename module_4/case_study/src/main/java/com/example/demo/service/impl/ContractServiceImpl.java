@@ -18,14 +18,14 @@ public class ContractServiceImpl implements ContractService {
     public void save(DtoContract dtoContract) {
         Contract contract = new Contract();
         BeanUtils.copyProperties(dtoContract, contract);
+        contract.setFlag(true);
         contractRepository.save(contract);
     }
 
     @Override
     public void delete(Contract contract) {
-        if(contract.getId() != null) {
-            contractRepository.delete(contract);
-        }
+        contract.setFlag(false);
+        contractRepository.save(contract);
     }
 
     @Override

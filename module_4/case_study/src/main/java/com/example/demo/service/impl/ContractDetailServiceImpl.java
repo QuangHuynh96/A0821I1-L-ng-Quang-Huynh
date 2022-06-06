@@ -19,12 +19,14 @@ public class ContractDetailServiceImpl implements ContractDetailService {
     public void save(DtoContractDetail dtoContractDetail) {
         ContractDetail contractDetail = new ContractDetail();
         BeanUtils.copyProperties(dtoContractDetail, contractDetail);
+        contractDetail.setFlag(true);
         contractDetailRepository.save(contractDetail);
     }
 
     @Override
     public void delete(ContractDetail contractDetail) {
-        contractDetailRepository.delete(contractDetail);
+        contractDetail.setFlag(false);
+        contractDetailRepository.save(contractDetail);
     }
 
     @Override

@@ -27,6 +27,16 @@ public class Contract {
     @OneToMany(mappedBy = "contract")
     List<ContractDetail> contractDetails;
 
+    private boolean flag;
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
     public Contract() {
     }
 

@@ -9,8 +9,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
-    @Query(value = "SELECT * FROM employee where name like concat('%',:name,'%')  and phone like concat('%',:phone,'%') and id_card like concat('%',:idCard,'%') and email like concat('%',:email,'%')",
+    @Query(value = "SELECT * FROM employee where name like concat('%',:name,'%')  and phone like concat('%',:phone,'%') and id_card like concat('%',:idCard,'%') and email like concat('%',:email,'%') and flag = true",
             nativeQuery = true,
-            countQuery = "select count(*) from ( SELECT * FROM employee where name like concat('%',:name,'%')  and phone like concat('%',:phone,'%') and id_card like concat('%',:idCard,'%') and email like concat('%',:email,'%') ) abc ")
+            countQuery = "select count(*) from ( SELECT * FROM employee where name like concat('%',:name,'%')  and phone like concat('%',:phone,'%') and id_card like concat('%',:idCard,'%') and email like concat('%',:email,'%') and flag = true ) abc ")
     Page<Employee> findAll(@Param("name") String name, @Param("phone") String phone, @Param("idCard") String idCard, @Param("email") String email, Pageable pageable);
 }

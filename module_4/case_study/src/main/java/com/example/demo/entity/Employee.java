@@ -32,7 +32,17 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     List<Contract> contracts;
 
-//    @ManyToOne(targetEntity = Role.class)
+    private boolean flag;
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
+    //    @ManyToOne(targetEntity = Role.class)
 //    private Role role;
 
     public Long getId() {

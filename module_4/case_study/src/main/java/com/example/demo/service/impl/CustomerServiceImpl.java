@@ -22,12 +22,14 @@ public class CustomerServiceImpl implements CustomerService {
     public void save(DtoCustomer dtoCustomer) {
         Customer customer = new Customer();
         BeanUtils.copyProperties(dtoCustomer, customer);
+        customer.setFlag(true);
         customerRepository.save(customer);
     }
 
     @Override
     public void delete(Customer customer) {
-        customerRepository.delete(customer);
+        customer.setFlag(false);
+        customerRepository.save(customer);
     }
 
     @Override
