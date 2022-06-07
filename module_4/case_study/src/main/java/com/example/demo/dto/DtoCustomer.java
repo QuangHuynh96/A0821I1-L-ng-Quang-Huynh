@@ -2,8 +2,13 @@ package com.example.demo.dto;
 
 import com.example.demo.entity.Contract;
 import com.example.demo.entity.CustomerType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 public class DtoCustomer {
@@ -12,11 +17,24 @@ public class DtoCustomer {
     @ManyToOne(targetEntity = CustomerType.class)
     private CustomerType customerType;
 
+    @NotEmpty( message = "Không được để trống.")
+    @Size(min = 5, max = 45, message = "Từ 5-45 ký tự")
     private String name;
+
+    @NotNull(message = "")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
     private String birtday;
+
     private Boolean gender;
+
+    @NotNull(message = "Bắt buộc")
+    @Pattern(regexp = "^[0-9]{9,12}$",message = "idcart phải từ 9-12 số")
     private String idCard;
+
+    @Pattern(regexp = "^((84(\\+|))|0)(90|91)+([0-9]{7})$", message = "Số điện thoại không đúng định dạng")
     private String phone;
+
+    @Pattern(regexp = "^[0\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",message = "Email không hợp lệ")
     private String email;
     private String address;
 

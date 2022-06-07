@@ -4,12 +4,25 @@ import com.example.demo.entity.RentType;
 import com.example.demo.entity.ServiceType;
 
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 public class DtoService {
+
     private Long id;
+
+    @NotEmpty( message = "Không được để trống.")
+    @Size(min = 5, max = 45, message = "Từ 5-45 ký tự")
     private String name;
+
+    @Min(value = 0, message = "lỗi không được âm")
     private int area;
+
+    @Min(value = 0, message = "lỗi không được âm")
     private double cost;
+
+    @Min(value = 0, message = "lỗi không được âm")
     private int maxPeople;
 
     @ManyToOne(targetEntity = RentType.class)
@@ -18,9 +31,14 @@ public class DtoService {
     @ManyToOne(targetEntity = ServiceType.class)
     private ServiceType serviceType;
 
+    @NotEmpty( message = "Không được để trống.")
     private String standardRoom;
     private String descriptionOtherConvenience;
+
+    @Min(value = 0, message = "lỗi không được âm")
     private double poolArea;
+
+    @Min(value = 0, message = "lỗi không được âm")
     private int numberOfFloors;
 
     private boolean flag;

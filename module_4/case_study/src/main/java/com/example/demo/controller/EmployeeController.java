@@ -49,6 +49,9 @@ public class EmployeeController {
                          Model model ) {
 //        new DtoEmployee().validate(dtoEmployee, bindingResult);
         if(bindingResult.hasFieldErrors()) {
+            model.addAttribute("positions", positionService.getList());
+            model.addAttribute("divisions", divisionService.getList());
+            model.addAttribute("educationDegrees", educationDegreeService.getList());
             return "/employee/create";
         }else {
             employeeService.save(dtoEmployee);

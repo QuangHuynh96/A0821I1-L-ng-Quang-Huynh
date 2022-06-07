@@ -4,15 +4,18 @@ import com.example.demo.entity.AttachService;
 import com.example.demo.entity.Contract;
 
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
 
 public class DtoContractDetail {
     private Long id;
     private int quanlity;
 
     @ManyToOne(targetEntity = Contract.class)
+    @NotEmpty( message = "Không được để trống.")
     Contract contract;
 
     @ManyToOne(targetEntity = AttachService.class)
+    @NotEmpty( message = "Không được để trống.")
     AttachService attachService;
 
     private boolean flag;

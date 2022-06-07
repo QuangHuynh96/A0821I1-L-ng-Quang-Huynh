@@ -4,27 +4,44 @@ import com.example.demo.entity.ContractDetail;
 import com.example.demo.entity.Customer;
 import com.example.demo.entity.Employee;
 import com.example.demo.entity.Service;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public class DtoContract {
 
     private Long id;
+
+    @NotNull(message = "")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
     private String startDay;
+
+    @NotNull(message = "")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
     private String endDay;
+
+    @Min(value = 0, message = "lỗi không được âm")
     private double deposit;
+
+    @Min(value = 0, message = "lỗi không được âm")
     private double totalMoney;
 
     @ManyToOne( targetEntity = Employee.class)
+    @NotEmpty( message = "Không được để trống.")
     private Employee employee;
 
 
     @ManyToOne( targetEntity = Customer.class)
+    @NotEmpty( message = "Không được để trống.")
     private Customer customer;
 
 
     @ManyToOne( targetEntity = Service.class)
+    @NotEmpty( message = "Không được để trống.")
     private Service service;
 
     @OneToMany(mappedBy = "contract")

@@ -70,6 +70,7 @@
         <select class="custom-select" id="exampleInputPosition" th:field="*{position.id}">
             <option th:each="item : ${positions}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('position')}" th:errors="*{position.id}"></small>
     </div>
     <!--    EducationDegree -->
     <div class="form-group">
@@ -77,6 +78,7 @@
         <select class="custom-select" id="exampleInputEducationDegree" th:field="*{educationDegree.id}">
             <option th:each="item : ${educationDegrees}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('educationDegree')}" th:errors="*{educationDegree.id}"></small>
     </div>
     <!--    Division -->
     <div class="form-group">
@@ -84,6 +86,7 @@
         <select class="custom-select" id="exampleInputDivision" th:field="*{division.id}">
             <option th:each="item : ${divisions}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('division')}" th:errors="*{division.id}"></small>
     </div>
     <!--        //Contract-->
     <div class="form-group">

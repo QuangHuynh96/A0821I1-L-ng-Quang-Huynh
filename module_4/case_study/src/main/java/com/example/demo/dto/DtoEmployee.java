@@ -25,9 +25,10 @@ public class DtoEmployee implements Validator {
     @Pattern(regexp = "^[0-9]{9,12}$",message = "idcart phải từ 9-12 số")
     private String idCard;
 
-    @Min(value = 0, message = "không được âm")
+    @Min(value = 0, message = "lỗi không được âm")
     private double salary;
 
+    @Pattern(regexp = "^((84(\\+|))|0)(90|91)+([0-9]{7})$", message = "Số điện thoại không đúng định dạng")
     private String phone;
 
     @Pattern(regexp = "^[0\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",message = "Email không hợp lệ")
