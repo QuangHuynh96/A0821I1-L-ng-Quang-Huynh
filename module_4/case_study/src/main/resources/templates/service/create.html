@@ -25,40 +25,49 @@
     <div class="form-group">
         <label for="exampleInputName">Name</label>
         <input type="text" class="form-control" id="exampleInputName" th:field="*{name}">
+        <small style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small>
     </div>
     <!--        Area-->
     <div class="form-group">
         <label for="exampleInputArea">Area</label>
         <input type="number" class="form-control" id="exampleInputArea" th:field="*{area}">
+        <small style="color: red" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></small>
     </div>
     <!--        Cost-->
     <div class="form-group">
         <label for="exampleInputCost">Cost</label>
         <input type="number" class="form-control" id="exampleInputCost" th:field="*{cost}">
+        <small style="color: red" th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}"></small>
     </div>
     <!--        MaxPeople-->
     <div class="form-group">
         <label for="exampleInputMaxPeople">Max people</label>
         <input type="number" class="form-control" id="exampleInputMaxPeople" th:field="*{maxPeople}">
+        <small style="color: red" th:if="${#fields.hasErrors('maxPeople')}" th:errors="*{maxPeople}"></small>
     </div>
     <!--        rentType-->
     <div class="form-group">
         <label for="exampleInputRentType">Rent Type</label>
         <select class="custom-select" id="exampleInputRentType" th:field="*{rentType.id}">
+            <option value="">-chọn kiểu thuê-</option>
             <option th:each="item : ${rentTypes}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('rentType')}" th:errors="*{rentType}"></small>
     </div>
     <!--        serviceType-->
     <div class="form-group">
         <label for="exampleInputServiceType">Service Type</label>
         <select class="custom-select" id="exampleInputServiceType" th:field="*{serviceType.id}">
+            <option value="">-chọn loại dịch vụ-</option>
             <option th:each="item : ${serviceTypes}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('serviceType')}" th:errors="*{serviceType}"></small>
     </div>
     <!--        standardRoom-->
     <div class="form-group">
         <label for="exampleInputStandardRoom">standardRoom</label>
         <input type="text" class="form-control" id="exampleInputStandardRoom" th:field="*{standardRoom}">
+        <small style="color: red" th:if="${#fields.hasErrors('standardRoom')}" th:estandardRoomrrors="*{standardRoom}"></small>
     </div>
     <!--        descriptionOtherConvenience-->
     <div class="form-group">
@@ -69,11 +78,13 @@
     <div class="form-group">
         <label for="poolArea">poolArea</label>
         <input type="number" class="form-control" id="poolArea" th:field="*{poolArea}">
+        <small style="color: red" th:if="${#fields.hasErrors('poolArea')}" th:estandardRoomrrors="*{poolArea}"></small>
     </div>
     <!--       numberOfFloors-->
     <div class="form-group">
         <label for="numberOfFloors">numberOfFloors</label>
         <input type="number" class="form-control" id="numberOfFloors" th:field="*{numberOfFloors}">
+        <small style="color: red" th:if="${#fields.hasErrors('numberOfFloors')}" th:estandardRoomrrors="*{numberOfFloors}"></small>
     </div>
     <!--        //button_submit-->
     <button type="submit" class="btn btn-primary">Submit</button>

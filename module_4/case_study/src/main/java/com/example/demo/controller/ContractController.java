@@ -6,6 +6,8 @@ import com.example.demo.service.ContractService;
 import com.example.demo.service.CustomerService;
 import com.example.demo.service.EmployeeService;
 import com.example.demo.service.ServiceDAO;
+import com.example.demo.validator.ContractValidator;
+import com.example.demo.validator.ServiceValidator;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,8 +45,16 @@ public class ContractController {
     public String create(@ModelAttribute("dtoContract") @Validated DtoContract dtoContract,
                          BindingResult bindingResult,
                          Model model ) {
-        contractService.save(dtoContract);
-        return "redirect:/contract/list";
+        new ContractValidator().validate(dtoContract, bindingResult);
+        if(bindingResult.hasFieldErrors()) {
+            model.addAttribute("customers",customerService.getList());
+            model.addAttribute("employees",employeeService.getList());
+            model.addAttribute("services",serviceDAO.getAllService());
+            return "/contract/create";
+        }else {
+            contractService.save(dtoContract);
+            return "redirect:/contract/list";
+        }
     }
 
     // -------------------------------------------------------------------------------------- list --

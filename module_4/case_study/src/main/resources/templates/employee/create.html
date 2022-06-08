@@ -68,30 +68,28 @@
     <div class="form-group">
         <label for="exampleInputPosition">Position</label>
         <select class="custom-select" id="exampleInputPosition" th:field="*{position.id}">
+            <option value=""></option>
             <option th:each="item : ${positions}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
-        <small style="color: red" th:if="${#fields.hasErrors('position')}" th:errors="*{position.id}"></small>
+        <small style="color: red" th:if="${#fields.hasErrors('position')}" th:errors="*{position}"></small>
     </div>
     <!--    EducationDegree -->
     <div class="form-group">
         <label for="exampleInputEducationDegree">EducationDegree</label>
         <select class="custom-select" id="exampleInputEducationDegree" th:field="*{educationDegree.id}">
+            <option value=""></option>
             <option th:each="item : ${educationDegrees}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
-        <small style="color: red" th:if="${#fields.hasErrors('educationDegree')}" th:errors="*{educationDegree.id}"></small>
+        <small style="color: red" th:if="${#fields.hasErrors('educationDegree')}" th:errors="*{educationDegree}"></small>
     </div>
     <!--    Division -->
     <div class="form-group">
         <label for="exampleInputDivision">Division</label>
         <select class="custom-select" id="exampleInputDivision" th:field="*{division.id}">
+            <option value=""></option>
             <option th:each="item : ${divisions}" th:value="${item.id}" th:text="${item.name}"></option>
         </select>
-        <small style="color: red" th:if="${#fields.hasErrors('division')}" th:errors="*{division.id}"></small>
-    </div>
-    <!--        //Contract-->
-    <div class="form-group">
-        <label for="exampleInputContract">Contract number</label>
-        <input type="text" class="form-control" id="exampleInputContract" th:field="*{contracts}">
+        <small style="color: red" th:if="${#fields.hasErrors('division')}" th:errors="*{division}"></small>
     </div>
     <!--        //button_submit-->
     <button type="submit" class="btn btn-primary">Submit</button>

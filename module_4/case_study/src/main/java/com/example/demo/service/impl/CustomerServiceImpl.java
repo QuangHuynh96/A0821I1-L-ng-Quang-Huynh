@@ -38,6 +38,16 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public boolean checkIdCard(String idCard) {
+        return customerRepository.existsByIdCard(idCard);
+    }
+
+    @Override
+    public boolean checkId(Long id) {
+        return customerRepository.existsById(id);
+    }
+
+    @Override
     public Page<Customer> getAllCustomer(String key_name, String key_phoneNumber, String key_idCard, Pageable pageable) {
         return customerRepository.findAll(key_name, key_phoneNumber, key_idCard, pageable);
     }

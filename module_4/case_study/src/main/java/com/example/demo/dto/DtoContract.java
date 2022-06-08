@@ -31,17 +31,14 @@ public class DtoContract {
     private double totalMoney;
 
     @ManyToOne( targetEntity = Employee.class)
-    @NotEmpty( message = "Không được để trống.")
     private Employee employee;
 
 
     @ManyToOne( targetEntity = Customer.class)
-    @NotEmpty( message = "Không được để trống.")
     private Customer customer;
 
 
     @ManyToOne( targetEntity = Service.class)
-    @NotEmpty( message = "Không được để trống.")
     private Service service;
 
     @OneToMany(mappedBy = "contract")

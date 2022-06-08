@@ -27,16 +27,19 @@
             <select class="custom-select" id="exampleInputType" th:field="*{customerType.id}">
                     <option th:each="item : ${customerTypes}" th:value="${item.id}" th:text="${item.name}"></option>
             </select>
+            <small style="color: red" th:if="${#fields.hasErrors('customerType')}" th:errors="*{customerType}"></small>
         </div>
 <!--        Name-->
         <div class="form-group">
             <label for="exampleInputName">Name</label>
             <input type="text" class="form-control" id="exampleInputName" th:field="*{name}">
+            <small style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small>
         </div>
 <!--        Birtday-->
         <div class="form-group">
             <label for="exampleInputBirtday">Birtday</label>
             <input type="date" class="form-control" id="exampleInputBirtday" th:field="*{birtday}">
+            <small style="color: red" th:if="${#fields.hasErrors('birtday')}" th:errors="*{birtday}"></small>
         </div>
 <!--        Gender-->
         <div class="form-group">
@@ -51,27 +54,26 @@
         <div class="form-group">
             <label for="exampleInputIdCart">IdCart</label>
             <input type="number" class="form-control" id="exampleInputIdCart" th:field="*{idCard}">
+            <small style="color: red" th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></small>
+            <small style="color: red" th:if="${checkIdCard}" th:text="${checkIdCard}"></small>
         </div>
 <!--        //Phone-->
         <div class="form-group">
             <label for="exampleInputPhone">Phone</label>
             <input type="text" class="form-control" id="exampleInputPhone" th:field="*{phone}">
+            <small style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></small>
         </div>
 <!--        //email-->
         <div class="form-group" >
             <label for="exampleInputEmail1">Email</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:field="*{email}">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <small style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
         </div>
 <!--        //Address-->
         <div class="form-group">
             <label for="exampleInputAddress">Address</label>
             <input type="text" class="form-control" id="exampleInputAddress" th:field="*{address}">
-        </div>
-<!--        //Contract-->
-        <div class="form-group">
-            <label for="exampleInputContract">Contract number</label>
-            <input type="text" class="form-control" id="exampleInputContract" th:field="*{contracts}">
         </div>
 <!--        //button_submit-->
         <button type="submit" class="btn btn-primary">Submit</button>

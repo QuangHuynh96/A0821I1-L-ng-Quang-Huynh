@@ -5,6 +5,8 @@ import com.example.demo.entity.Customer;
 import com.example.demo.entity.CustomerType;
 import com.example.demo.service.CustomerService;
 import com.example.demo.service.CustomerTypeService;
+import com.example.demo.validator.CustomerValidator;
+import com.example.demo.validator.EmployeeValidator;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -38,8 +40,20 @@ public class CustomerController {
     public String create(@ModelAttribute("dtoCustomer") @Validated DtoCustomer dtoCustomer,
                          BindingResult bindingResult,
                          Model model ) {
-        customerService.save(dtoCustomer);
-        return "redirect:/customer/list";
+
+        new CustomerValidator().validate(dtoCustomer, bindingResult);
+
+//        boolean checkIdCard = customerService.checkIdCard(dtoCustomer.getIdCard());
+//        boolean checkId = customerService.checkId(dtoCustomer.getId());
+
+        if(bindingResult.hasFieldErrors() ) {
+            model.addAttribute("customerTypes", customerTypeService.findAll());
+//            model.addAttribute("checkIdCard", "ID đã tồn tại");
+            return "/customer/create";
+        }else {
+            customerService.save(dtoCustomer);
+            return "redirect:/customer/list";
+        }
     }
 
     // -------------------------------------------------------------------------------------- list --

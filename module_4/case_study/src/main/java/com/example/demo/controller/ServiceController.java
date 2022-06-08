@@ -6,6 +6,7 @@ import com.example.demo.entity.Customer;
 import com.example.demo.service.RentTypeService;
 import com.example.demo.service.ServiceDAO;
 import com.example.demo.service.ServiceTypeDAO;
+import com.example.demo.validator.ServiceValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -41,8 +42,16 @@ public class ServiceController {
     public String create(@ModelAttribute("dtoService") @Validated DtoService dtoService,
                          BindingResult bindingResult,
                          Model model ) {
-        serviceDAO.save(dtoService);
-        return "redirect:/";
+        new ServiceValidator().validate(dtoService,bindingResult);
+
+        if(bindingResult.hasFieldErrors()) {
+            model.addAttribute("rentTypes", rentTypeService.getList());
+            model.addAttribute("serviceTypes", serviceTypeDAO.getList());
+            return "/service/create";
+        }else {
+            serviceDAO.save(dtoService);
+            return "redirect:/";
+        }
     }
 
     //-------------------------------------------------------------------------list--

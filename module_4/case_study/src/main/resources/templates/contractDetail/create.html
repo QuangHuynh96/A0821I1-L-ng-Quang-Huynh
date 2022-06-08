@@ -25,20 +25,27 @@
     <div class="form-group">
         <label for="exampleInputContract">Contract ID</label>
         <select class="custom-select" id="exampleInputContract" th:field="*{contract.id}">
-            <option th:each="item : ${contracts}" th:value="${item.id}" th:text="${item.toString()}"></option>
+            <option value="">-Chọn dịch hợp đồng-</option>
+            <option th:each="item : ${contracts}" th:value="${item.id}" th:text="${item.toString()}"
+                    th:selected="${item.id == dtoContractDetail.getContract().id}"></option>
         </select>
+<!--        <small style="color: red" th:if="*{#fields.hasErrors('contract')}" th:errors="*{contract}"></small>-->
     </div>
     <!--    attach service -->
     <div class="form-group">
         <label for="exampleInputAttachService">Attach Service(dịch vụ đi kèm)</label>
         <select class="custom-select" id="exampleInputAttachService" th:field="*{attachService.id}">
-            <option th:each="item : ${attachServices}" th:value="${item.id}" th:text="${item.name}"></option>
+            <option value="">-Chọn dịch vụ đi kèm-</option>
+            <option th:each="item : ${attachServices}" th:value="${item.id}" th:text="${item.name}"
+                    th:selected="${item.id == dtoContractDetail.getAttachService().id}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('attachService')}" th:errors="*{attachService}"></small>
     </div>
     <!--        Quality-->
     <div class="form-group">
         <label for="exampleInputQuality">Quality</label>
         <input type="number" class="form-control" id="exampleInputQuality" th:field="*{quanlity}">
+        <small style="color: red" th:if="${#fields.hasErrors('quanlity')}" th:errors="*{quanlity}"></small>
     </div>
     <!--        //button_submit-->
     <button type="submit" class="btn btn-primary">Submit</button>

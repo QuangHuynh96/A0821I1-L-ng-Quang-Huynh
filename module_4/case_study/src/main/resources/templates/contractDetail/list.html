@@ -1,0 +1,82 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contract list</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <a style="text-decoration: none" th:href="@{/}">
+        <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
+    </a>
+</nav>
+<h2 style="text-align: center">Contract list</h2>
+<br>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Start day</th>
+        <th scope="col">End day</th>
+        <th scope="col">deposit</th>
+        <th scope="col">total money</th>
+        <th scope="col">Customer</th>
+        <th scope="col">Employee</th>
+        <th scope="col">Service</th>
+        <th scope="col">attach Service</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${contractDetails}">
+        <th th:text="${item.id}"></th>
+        <td th:text="${item.getContract().startDay}"></td>
+        <td th:text="${item.getContract().endDay}"></td>
+        <td th:text="${item.getContract().deposit}"></td>
+        <td th:text="${item.getContract().totalMoney}"></td>
+        <td th:text="${item.getContract().customer.name}"></td>
+        <td th:text="${item.getContract().employee.name}"></td>
+        <td th:text="${item.getContract().service.name}"></td>
+        <td th:text="${item.attachService.name +' ('+ item.quanlity+')'}"></td>
+        <td scope="row" ><a th:href="@{/contract/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
+        <td scope="row" ><a th:onclick="|infoDelete(${item.id})|" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form method="post" action="/contract/delete">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label id="labelId"></label>
+                    <input hidden type="text" id="id_value" name="id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submid" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function infoDelete(id) {
+        document.getElementById("id_value").value= id
+        document.getElementById("labelId").innerText= `Bạn chắc chắn muốn xóa hợp đồng: ${id} không`
+    }
+</script>
+</body>
+</html>

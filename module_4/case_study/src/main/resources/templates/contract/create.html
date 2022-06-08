@@ -25,47 +25,55 @@
     <div class="form-group">
         <label for="exampleInputStartDay">Start day</label>
         <input type="date" class="form-control" id="exampleInputStartDay" th:field="*{startDay}">
+        <small style="color: red" th:if="${#fields.hasErrors('startDay')}" th:errors="*{startDay}"></small>
     </div>
     <!--        end day-->
     <div class="form-group">
         <label for="exampleInputEndDay">End day</label>
         <input type="date" class="form-control" id="exampleInputEndDay" th:field="*{endDay}">
+        <small style="color: red" th:if="${#fields.hasErrors('endDay')}" th:errors="*{endDay}"></small>
     </div>
     <!--        Deposit-->
     <div class="form-group">
         <label for="exampleInputDeposit">Deposit</label>
         <input type="number" class="form-control" id="exampleInputDeposit" th:field="*{deposit}">
+        <small style="color: red" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></small>
     </div>
     <!--        TotalMoney-->
     <div class="form-group">
         <label for="exampleInputTotalMoney">TotalMoney</label>
         <input type="number" class="form-control" id="exampleInputTotalMoney" th:field="*{totalMoney}">
+        <small style="color: red" th:if="${#fields.hasErrors('totalMoney')}" th:errors="*{totalMoney}"></small>
     </div>
     <!--    Customer -->
     <div class="form-group">
         <label for="exampleInputCustomer">Customer</label>
         <select class="custom-select" id="exampleInputCustomer" th:field="*{customer.id}">
-            <option th:each="item : ${customers}" th:value="${item.id}" th:text="${item.name}"></option>
+            <option value="">-Chọn khách hàng-</option>
+            <option th:each="item : ${customers}" th:value="${item.id}" th:text="${item.name}"
+                    th:selected="${item.id == dtoContract.getCustomer().id}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('customer')}" th:errors="*{customer}"></small>
     </div>
     <!--    Employee -->
     <div class="form-group">
         <label for="exampleInputEmployee">Employee</label>
         <select class="custom-select" id="exampleInputEmployee" th:field="*{employee.id}">
-            <option th:each="item : ${employees}" th:value="${item.id}" th:text="${item.name}"></option>
+            <option value="">-Chọn nhân viên-</option>
+            <option th:each="item : ${employees}" th:value="${item.id}" th:text="${item.name}"
+                    th:selected="${item.id == dtoContract.getEmployee().id}"></option>
         </select>
+        <small style="color: red" th:if="${#fields.hasErrors('employee')}" th:errors="*{employee}"></small>
     </div>
     <!--    Service -->
     <div class="form-group">
         <label for="exampleInputService">Service</label>
         <select class="custom-select" id="exampleInputService" th:field="*{service.id}">
-            <option th:each="item : ${services}" th:value="${item.id}" th:text="${item.name}"></option>
+            <option value="">-Chọn dịch vụ-</option>
+            <option th:each="item : ${services}" th:value="${item.id}" th:text="${item.name}"
+                    th:selected="${item.id == dtoContract.getService().id}"></option>
         </select>
-    </div>
-    <!--        //Contract details-->
-    <div class="form-group">
-        <label for="exampleInputContractdetails">Contract details number</label>
-        <input type="text" class="form-control" id="exampleInputContractdetails" th:field="*{contractDetails}">
+        <small style="color: red" th:if="${#fields.hasErrors('service')}" th:errors="*{service}"></small>
     </div>
     <!--        //button_submit-->
     <button type="submit" class="btn btn-primary">Submit</button>

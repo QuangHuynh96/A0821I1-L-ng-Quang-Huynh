@@ -36,6 +36,7 @@ public class DtoCustomer {
 
     @Pattern(regexp = "^[0\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",message = "Email không hợp lệ")
     private String email;
+
     private String address;
 
     @OneToMany(mappedBy = "customer")

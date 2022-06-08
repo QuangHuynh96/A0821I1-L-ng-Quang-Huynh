@@ -3,6 +3,7 @@ package com.example.demo.dto;
 import com.example.demo.entity.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.aspectj.apache.bcel.ExceptionConstants;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
@@ -10,7 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.util.List;
 
-public class DtoEmployee implements Validator {
+public class DtoEmployee {
     private Long id;
 
     @NotEmpty( message = "Không được để trống.")
@@ -36,13 +37,18 @@ public class DtoEmployee implements Validator {
 
     private String address;
 
+
     @ManyToOne(targetEntity = Position.class)
     private Position position;
 
+
     @ManyToOne(targetEntity = EducationDegree.class)
+    @NotNull(message = "Bắt buộc")
     private EducationDegree educationDegree;
 
+
     @ManyToOne(targetEntity = Division.class)
+    @NotNull(message = "Bắt buộc")
     private Division division;
 
     @ManyToOne(targetEntity = User.class)
@@ -169,13 +175,4 @@ public class DtoEmployee implements Validator {
         this.contracts = contracts;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
-
-    @Override
-    public void validate(Object target, Errors errors) {
-
-    }
 }

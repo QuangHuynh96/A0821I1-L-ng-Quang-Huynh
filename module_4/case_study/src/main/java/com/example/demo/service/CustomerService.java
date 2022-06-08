@@ -15,6 +15,10 @@ public interface CustomerService {
 
     List<Customer> getList();
 
+    boolean checkIdCard(String idCard);
+
+    boolean checkId(Long id);
+
     Page<Customer> getAllCustomer(String key_name, String key_phoneNumber, String key_idCard, Pageable pageable );
 
 }

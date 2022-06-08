@@ -5,6 +5,7 @@ import com.example.demo.dto.DtoEmployee;
 import com.example.demo.entity.Customer;
 import com.example.demo.entity.Employee;
 import com.example.demo.service.*;
+import com.example.demo.validator.EmployeeValidator;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -47,7 +48,7 @@ public class EmployeeController {
     public String create(@ModelAttribute("dtoEmployee") @Validated DtoEmployee dtoEmployee,
                          BindingResult bindingResult,
                          Model model ) {
-//        new DtoEmployee().validate(dtoEmployee, bindingResult);
+        new EmployeeValidator().validate(dtoEmployee, bindingResult);
         if(bindingResult.hasFieldErrors()) {
             model.addAttribute("positions", positionService.getList());
             model.addAttribute("divisions", divisionService.getList());

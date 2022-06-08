@@ -13,5 +13,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
             countQuery = "select count(*) from ( SELECT * FROM customer where name like concat('%',:name,'%')  and phone like concat('%',:phone,'%') and id_card like concat('%',:idCard,'%') and flag = true ) abc ")
     Page<Customer> findAll(@Param("name") String name,@Param("phone") String phone, @Param("idCard") String idCard, Pageable pageable);
 
+    boolean existsByIdCard(String idCard);
 
+    boolean existsById(Long id);
 }

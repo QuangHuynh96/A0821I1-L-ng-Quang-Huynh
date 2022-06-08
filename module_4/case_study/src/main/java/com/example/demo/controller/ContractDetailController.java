@@ -5,6 +5,8 @@ import com.example.demo.dto.DtoContractDetail;
 import com.example.demo.service.AttachServiceDAO;
 import com.example.demo.service.ContractDetailService;
 import com.example.demo.service.ContractService;
+import com.example.demo.validator.ContractDetailValidator;
+import com.example.demo.validator.ContractValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,7 +40,22 @@ public class ContractDetailController {
     public String create(@ModelAttribute("dtoContractDetail") @Validated DtoContractDetail dtoContractDetail,
                          BindingResult bindingResult,
                          Model model ) {
-        contractDetailService.save(dtoContractDetail);
-        return "redirect:/";
+        new ContractDetailValidator().validate(dtoContractDetail, bindingResult);
+
+        if(bindingResult.hasFieldErrors()) {
+            model.addAttribute("contracts", contractService.getList());
+            model.addAttribute("attachServices", attachServiceDAO.getList());
+            return "/contractDetail/create";
+        }else {
+            contractDetailService.save(dtoContractDetail);
+            return "redirect:/";
+        }
+    }
+    // -------------------------------------------------------------------------------------- list --
+
+    @GetMapping("/list")
+    public String list(Model model) {
+        model.addAttribute("contractDetails", contractDetailService.getList());
+        return "/contractDetail/list";
     }
 }
