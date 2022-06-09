@@ -14,20 +14,18 @@
         <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
     </a>
 </nav>
-<h2 style="text-align: center">Contract list</h2>
+<h2 style="text-align: center">Contract Detail list</h2>
+<a th:href="@{/contractDetail/create/{id}(id=${contractId})}" class="btn btn-primary">Add new attachService</a>
+<br>
 <br>
 <table class="table table-striped">
     <thead>
     <tr>
         <th scope="col">ID</th>
-        <th scope="col">Start day</th>
-        <th scope="col">End day</th>
-        <th scope="col">deposit</th>
-        <th scope="col">total money</th>
-        <th scope="col">Customer</th>
-        <th scope="col">Employee</th>
-        <th scope="col">Service</th>
-        <th scope="col">attach Service</th>
+        <th scope="col">Attach Service</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Quality</th>
+        <th scope="col">Total</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
     </tr>
@@ -35,15 +33,11 @@
     <tbody>
     <tr th:each="item : ${contractDetails}">
         <th th:text="${item.id}"></th>
-        <td th:text="${item.getContract().startDay}"></td>
-        <td th:text="${item.getContract().endDay}"></td>
-        <td th:text="${item.getContract().deposit}"></td>
-        <td th:text="${item.getContract().totalMoney}"></td>
-        <td th:text="${item.getContract().customer.name}"></td>
-        <td th:text="${item.getContract().employee.name}"></td>
-        <td th:text="${item.getContract().service.name}"></td>
-        <td th:text="${item.attachService.name +' ('+ item.quanlity+')'}"></td>
-        <td scope="row" ><a th:href="@{/contract/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
+        <td th:text="${item.attachService.name}"></td>
+        <td th:text="${item.attachService.cost}"></td>
+        <td th:text="${item.quanlity}"></td>
+        <td th:text="${item.attachService.cost*item.quanlity}"></td>
+        <td scope="row" ><a th:href="@{/contractDetail/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
         <td scope="row" ><a th:onclick="|infoDelete(${item.id})|" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a></td>
     </tr>
     </tbody>
@@ -51,7 +45,7 @@
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form method="post" action="/contract/delete">
+        <form method="post" action="/contractDetail/delete">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>

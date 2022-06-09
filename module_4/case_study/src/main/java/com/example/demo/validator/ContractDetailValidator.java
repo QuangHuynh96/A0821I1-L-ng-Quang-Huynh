@@ -17,11 +17,9 @@ public class ContractDetailValidator implements Validator {
         }
         DtoContractDetail dtoContractDetail = (DtoContractDetail) target;
 
-        if(dtoContractDetail.getContract().getId() == null) {
-            errors.rejectValue("contract", "", "please set contract");
-        }
         if(dtoContractDetail.getAttachService().getId() == null) {
             errors.rejectValue("attachService","", "please set attachService");
         }
+
     }
 }

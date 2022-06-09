@@ -30,7 +30,7 @@ public class ContractDetailServiceImpl implements ContractDetailService {
     }
 
     @Override
-    public List<ContractDetail> getList() {
-        return contractDetailRepository.findAll();
+    public List<ContractDetail> getList(Long id) {
+        return contractDetailRepository.getListByContractId(id);
     }
 }

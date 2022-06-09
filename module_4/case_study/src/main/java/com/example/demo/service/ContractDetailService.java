@@ -12,5 +12,5 @@ public interface ContractDetailService {
 
     void delete(ContractDetail contractDetail);
 
-    List<ContractDetail> getList();
+    List<ContractDetail> getList(Long id);
 }

@@ -14,7 +14,7 @@
         <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">FURAMA resort</h1>
     </a>
 </nav>
-<h2 style="text-align: center">Contract list</h2>
+<h2 style="text-align: center" >Contract list</h2>
 <br>
 <table class="table table-striped">
     <thead>
@@ -27,6 +27,7 @@
         <th scope="col">Customer</th>
         <th scope="col">Employee</th>
         <th scope="col">Service</th>
+        <th scope="col">Contract detail</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
     </tr>
@@ -41,6 +42,7 @@
         <td th:text="${item.customer.name}"></td>
         <td th:text="${item.employee.name}"></td>
         <td th:text="${item.service.name}"></td>
+        <td scope="row" ><a th:href="@{/contractDetail/list/{id}(id=${item.id})}" class="btn btn-info">Detail</a></td>
         <td scope="row" ><a th:href="@{/contract/update/{id}(id=${item.id})}" class="btn btn-primary">update</a></td>
         <td scope="row" ><a th:onclick="|infoDelete(${item.id})|" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a></td>
     </tr>

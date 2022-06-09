@@ -9,7 +9,7 @@ import javax.validation.constraints.Min;
 public class DtoContractDetail {
     private Long id;
 
-    @Min(value = 0, message = "không được âm")
+    @Min(value = 1, message = "please set quality")
     private int quanlity;
 
     @ManyToOne(targetEntity = Contract.class)

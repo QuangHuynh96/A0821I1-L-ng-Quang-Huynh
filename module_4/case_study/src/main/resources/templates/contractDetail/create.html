@@ -22,14 +22,8 @@
         <input type="text" class="form-control " id="exampleInputId" th:field="*{id}">
     </div>
     <!--    Contract -->
-    <div class="form-group">
-        <label for="exampleInputContract">Contract ID</label>
-        <select class="custom-select" id="exampleInputContract" th:field="*{contract.id}">
-            <option value="">-Chọn dịch hợp đồng-</option>
-            <option th:each="item : ${contracts}" th:value="${item.id}" th:text="${item.toString()}"
-                    th:selected="${item.id == dtoContractDetail.getContract().id}"></option>
-        </select>
-<!--        <small style="color: red" th:if="*{#fields.hasErrors('contract')}" th:errors="*{contract}"></small>-->
+    <div class="form-group" hidden>
+        <input type="text"  class="form-control" id="exampleInputContract" th:field="*{contract.id}">
     </div>
     <!--    attach service -->
     <div class="form-group">
