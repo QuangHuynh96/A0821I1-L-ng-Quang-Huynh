@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.DtoCustomer;
 import com.example.demo.dto.DtoEmployee;
-import com.example.demo.entity.Customer;
 import com.example.demo.entity.Employee;
 import com.example.demo.service.*;
 import com.example.demo.validator.EmployeeValidator;
@@ -32,7 +30,7 @@ public class EmployeeController {
     EducationDegreeService educationDegreeService;
 
     @Autowired
-    UserService userService;
+    UserRoleService userRoleService;
 
     // ------------------------------------------------------------------------------------ create --
     @GetMapping("/create")

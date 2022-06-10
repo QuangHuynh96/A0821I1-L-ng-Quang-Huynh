@@ -68,8 +68,8 @@ public class ContractDetailController {
     @PostMapping("/delete")
     public String delete(@RequestParam("id") ContractDetail contractDetail) {
         List<ContractDetail> contractDetails = contractDetail.getContract().getContractDetails();
-        contractDetails.remove(contractDetail);
         Contract contract = contractDetail.getContract();
+        contractDetails.remove(contractDetail);
         contract.setContractDetails(contractDetails);
 
         DtoContract dtoContract = new DtoContract();
