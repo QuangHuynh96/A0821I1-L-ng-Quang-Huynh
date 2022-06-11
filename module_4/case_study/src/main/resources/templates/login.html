@@ -9,18 +9,30 @@
     <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
     <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
 </head>
-<body>
-    <form th:action="@{/doLogin}" method="post">
-        <small style="color: red" th:if="${#request.getParameter('error') == 'true'}" > Sai username hoặc passwword</small>
-        <div class="form-group" >
-            <label for="exampleInputId">User name</label>
-            <input class="form-control " id="exampleInputId" type="text" name="username" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPass">Password</label>
-            <input class="form-control " id="exampleInputPass" type="password" name="password" >
-        </div>
-        <input type="submit" class="btn btn-primary" value="Login" />
-    </form>
+<body style="background: url('https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg') no-repeat fixed center; background-size: 100% auto;">
+<nav class="navbar navbar-light bg-light">
+    <a style="text-decoration: none" th:href="@{/}">
+        <h1 class="navbar-brand " style="color: #34675c; font-family: -apple-system; font-weight: bold ">FURAMA resort managerment</h1>
+    </a>
+</nav>
+    <div style="background-color: #fff ; width: 50%; margin: auto">
+        <h2 style="text-align: center">Login</h2>
+        <form th:action="@{/doLogin}" method="post" style="padding: 30px">
+            <small style="color: red" th:if="${#request.getParameter('error') == 'true'}" > Sai username hoặc passwword</small>
+            <div class="form-group" >
+                <label for="exampleInputId">User name</label>
+                <input class="form-control " id="exampleInputId" type="text" name="username" >
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPass">Password</label>
+                <input class="form-control " id="exampleInputPass" type="password" name="password" >
+            </div>
+            <div class="">
+                <label for="exampleInputRemember">Remember Me</label>
+                <input class="" id="exampleInputRemember" type="checkbox" name="remember-me" >
+            </div>
+            <input type="submit" class="btn btn-primary" value="Login" />
+        </form>
+    </div>
 </body>
 </html>

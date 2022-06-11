@@ -13,10 +13,15 @@
 </head>
 
 <body>
+    <p id="message" th:text="${#request.getParameter('message')}" style="display: none"></p>
     <nav class="navbar navbar-light bg-light">
         <a style="text-decoration: none" th:href="@{/}">
             <h1 class="navbar-brand " style="color: #34675c; font-family: -apple-system; font-weight: bold ">FURAMA resort managerment</h1>
         </a>
+        <nav>
+            <a th:href="@{/login}" class="btn btn-outline-info">Login</a>
+            <a th:href="@{/logout}" class="btn btn-outline-info">Logout</a>
+        </nav>
     </nav>
 
     <div id="main">
@@ -155,6 +160,7 @@
         </div>
     </div>
 <script>
+    let message = document.getElementById("message");
 
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
@@ -180,6 +186,16 @@
             pane.classList.add("active");
         };
     });
+
+    if(message.innerText == "login") {
+        alert("login thành công!");
+    }
+    if(message.innerText == "logout") {
+        alert("logout thành công!")
+    }
+    if(message.innerText == "denied") {
+        alert("Bạn không được cấp quyền truy cập vào trang này!")
+    }
 
 </script>
 </body>

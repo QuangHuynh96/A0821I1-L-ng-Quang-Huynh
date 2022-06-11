@@ -9,6 +9,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
@@ -29,25 +31,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
         http.authorizeRequests().antMatchers("/home","/login","/logout").permitAll();
 //                .and().authorizeRequests().antMatchers("/user/**").hasRole("USER")
         // Các trang yêu cầu quyền
-            http.authorizeRequests().antMatchers( "/customer/**", "/contractDetail/**").access(
+            http.authorizeRequests().antMatchers( "/contract/**","/customer/**", "/contractDetail/**").access(
                 "hasAnyRole('ROLE_USER','ROLE_ADMIN')");
         http.authorizeRequests().antMatchers("/employee/**","/service/**").hasRole("ADMIN");
 
         // Nếu access không đúng quyền, giả sử Role_User vào trang /admin/**
-        http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/");
+        http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/?message=denied");
         http.authorizeRequests().and().formLogin()
                 .loginProcessingUrl("/doLogin")
                 .loginPage("/login")
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/?message=login")
                 .failureUrl("/login?error=true")
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .and().logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/");
+                .logoutSuccessUrl("/?message=logout");
 
         // Cấu hình remember me
         http.authorizeRequests().and()
