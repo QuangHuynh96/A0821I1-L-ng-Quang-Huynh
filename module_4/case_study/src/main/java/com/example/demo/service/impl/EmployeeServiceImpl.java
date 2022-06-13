@@ -3,16 +3,15 @@ package com.example.demo.service.impl;
 import com.example.demo.dto.DtoEmployee;
 import com.example.demo.entity.Employee;
 import com.example.demo.entity.User;
-import com.example.demo.repository.ContractRepository;
-import com.example.demo.repository.EmployeeRepository;
-import com.example.demo.repository.UserRepository;
-import com.example.demo.repository.UserRoleRepository;
+import com.example.demo.entity.UserRole;
+import com.example.demo.repository.*;
 import com.example.demo.service.EmployeeService;
 import com.example.demo.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -28,16 +27,30 @@ public class EmployeeServiceImpl implements EmployeeService {
     UserRepository userRepository;
 
     @Autowired
+    RoleRepository roleRepository;
+
+    @Autowired
     ContractRepository contractRepository;
 
     @Override
     public void save(DtoEmployee dtoEmployee) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         Employee employee = new Employee();
         BeanUtils.copyProperties(dtoEmployee, employee);
+
+        //tạo user
         User user = new User();
         user.setName(employee.getEmail());
-        user.setPassword("123");
+        user.setPassword(encoder.encode("123"));
         userRepository.save(user);
+
+        //cấp quyền user
+        UserRole userRole = new UserRole();
+        userRole.setUser(user);
+        userRole.setRole(roleRepository.findRoleByName("ROLE_EMP"));
+        userRoleRepository.save(userRole);
+
+        //save employee
         employee.setUser(user);
         employee.setFlag(true);
         employeeRepository.save(employee);
@@ -52,7 +65,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> getList() {
-        return employeeRepository.findAll();
+        return employeeRepository.getListEmployee();
     }
 
     @Override

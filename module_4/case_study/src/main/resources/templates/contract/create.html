@@ -53,6 +53,7 @@
             <option th:each="item : ${customers}" th:value="${item.id}" th:text="${item.name}"
                     th:selected="${item.id == dtoContract.getCustomer().id}"></option>
         </select>
+        <a th:href="@{/customer/create}" class="btn btn-outline-info" >new customer</a>
         <small style="color: red" th:if="${#fields.hasErrors('customer')}" th:errors="*{customer}"></small>
     </div>
     <!--    Employee -->
@@ -73,6 +74,7 @@
             <option th:each="item : ${services}" th:value="${item.id}" th:text="${item.name}"
                     th:selected="${item.id == dtoContract.getService().id}"></option>
         </select>
+        <a th:href="@{/service/create}" class="btn btn-outline-info" >new service</a>
         <small style="color: red" th:if="${#fields.hasErrors('service')}" th:errors="*{service}"></small>
     </div>
     <!--        //button_submit-->

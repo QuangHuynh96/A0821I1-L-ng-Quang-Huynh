@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .and().authorizeRequests().antMatchers("/user/**").hasRole("USER")
         // Các trang yêu cầu quyền
             http.authorizeRequests().antMatchers( "/contract/**","/customer/**", "/contractDetail/**").access(
-                "hasAnyRole('ROLE_USER','ROLE_ADMIN')");
+                "hasAnyRole('ROLE_EMP','ROLE_ADMIN')");
         http.authorizeRequests().antMatchers("/employee/**","/service/**").hasRole("ADMIN");
 
         // Nếu access không đúng quyền, giả sử Role_User vào trang /admin/**
