@@ -1,0 +1,90 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body >
+<nav class="navbar navbar-light bg-light">
+    <a style="text-decoration: none" th:href="@{/khuyenMai/list}">
+        <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">Danh sách Khuyến mãi</h1>
+    </a>
+</nav>
+<div>
+
+    <form method="get" action="/khuyenMai/search" class="form-inline my-2 my-lg-0">
+        <input name="key_money" class="form-control mr-sm-2" type="search" placeholder="money" aria-label="Search">
+        <input name="key_startDay" class="form-control mr-sm-2" type="date" placeholder="start day" aria-label="Search">
+        <input name="key_endDay" class="form-control mr-sm-2" type="date" placeholder="end day" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <a th:href="@{/khuyenMai/create}" class="btn btn-success" >add new</a>
+    </form>
+
+</div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">title</th>
+        <th scope="col">start day</th>
+        <th scope="col">end day</th>
+        <th scope="col">money</th>
+        <th scope="col">detail</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${khuyenMaiList}">
+        <th th:text="${item.id}"></th>
+        <td th:text="${item.title}"></td>
+        <td th:text="${item.startDay}"></td>
+        <td th:text="${item.endDay}"></td>
+        <td th:text="${item.money}"></td>
+        <td th:text="${item.detail}"></td>
+        <td scope="row" ><a th:href="@{/news/update/{id}(id=${item.id})}" class="btn btn-primary disabled">update (disabled)</a></td>
+        <td scope="row" ><a th:onclick="|infoDelete(${item.id})|" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete</a></td>
+    </tr>
+
+    </tbody>
+</table>
+
+<a th:href="@{'/'(page=${khuyenMaiList.number - 1})}" th:if="${khuyenMaiList.hasPrevious()}">Previous</a>
+<span th:text="${khuyenMaiList.number + 1}"></span>/<span th:text="${khuyenMaiList.totalPages}"></span>
+<a th:href="@{'/'(page=${khuyenMaiList.number + 1})}" th:if="${khuyenMaiList.hasNext()}">Next</a>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form method="post" action="/khuyenMai/delete">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label id="labelId"></label>
+                    <input hidden type="text" id="id_value" name="id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submid" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function infoDelete(id) {
+        document.getElementById("id_value").value= id
+        document.getElementById("labelId").innerText= `Bạn có muốn xóa chương trình khuyến mãi số: ${id}`
+    }
+</script>
+</body>
+</html>

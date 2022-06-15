@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create User</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body >
+<nav class="navbar navbar-light bg-light">
+    <a style="text-decoration: none" th:href="@{/khuyenMai/list}">
+        <h1 class="navbar-brand " style="color: #1c7430; font-family: -apple-system; font-weight: bold ">Danh sách Khuyến mãi</h1>
+    </a>
+</nav>
+<h2 style="text-align: center">Edit news</h2>
+<p id="message" th:text="${message}" style="color: #1c7430;text-align: center" ></p>
+<form style="width: 60%; margin: auto;" action="/khuyenMai/create" method="post" th:object="${khuyenMaiDto}">
+    <!--        id-->
+    <div class="form-group" hidden>
+        <label for="exampleInputId">ID</label>
+        <input type="text" class="form-control " id="exampleInputId" th:field="*{id}">
+    </div>
+    <!--        title-->
+    <div class="form-group">
+        <label for="exampleInputName">title</label>
+        <input type="text" class="form-control" id="exampleInputName" th:field="*{title}">
+        <small style="color: red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></small>
+    </div>
+
+    <!--        startday-->
+    <div class="form-group">
+        <label for="exampleInputstartday">startday</label>
+        <input type="date" class="form-control" id="exampleInputstartday" th:field="*{startDay}">
+        <small style="color: red" th:if="${#fields.hasErrors('startDay')}" th:errors="*{startDay}"></small>
+    </div>
+    <!--        endDay-->
+    <div class="form-group">
+        <label for="exampleInputendDay">endDay</label>
+        <input type="date" class="form-control" id="exampleInputendDay" th:field="*{endDay}">
+        <small style="color: red" th:if="${#fields.hasErrors('endDay')}" th:errors="*{endDay}"></small>
+    </div>
+    <!--        money-->
+    <div class="form-group">
+        <label for="exampleInputmoney">money</label>
+        <input type="number" class="form-control" id="exampleInputmoney" th:field="*{money}">
+        <small style="color: red" th:if="${#fields.hasErrors('money')}" th:errors="*{money}"></small>
+    </div>
+    <!--        detail-->
+    <div class="form-group">
+        <label for="exampleInputBirtday">detail</label>
+        <input type="text" class="form-control" id="exampleInputBirtday" th:field="*{detail}">
+        <small style="color: red" th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}"></small>
+    </div>
+    <!--        //button_submit-->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+</body>
+</html>
