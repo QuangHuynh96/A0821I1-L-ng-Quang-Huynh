@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.KhuyenMaiDto;
 import com.example.demo.entity.KhuyenMai;
+import com.example.demo.formatKhuyenMai;
 import com.example.demo.service.KhuyenMaiService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,13 +33,10 @@ public class KhuyenMaiController {
     public String create(@ModelAttribute("khuyenMaiDto") @Validated KhuyenMaiDto khuyenMaiDto,
                          BindingResult bindingResult,
                          Model model ) {
-
-//        new CustomerValidator().validate(dtoCustomer, bindingResult);
-        KhuyenMai khuyenMai = new KhuyenMai();
         if (bindingResult.hasFieldErrors()) {
             return "/khuyenMai/create";
         } else {
-            BeanUtils.copyProperties(khuyenMaiDto, khuyenMai);
+            KhuyenMai khuyenMai = new formatKhuyenMai().format(khuyenMaiDto);
             khuyenMai.setFlag(true);
             khuyenMaiService.save(khuyenMai);
             model.addAttribute("message", "Thêm mới thành công!");

@@ -32,13 +32,13 @@
     <!--        startday-->
     <div class="form-group">
         <label for="exampleInputstartday">startday</label>
-        <input type="date" class="form-control" id="exampleInputstartday" th:field="*{startDay}">
+        <input type="date" data-date-format="DD MMMM YYYY" class="form-control" id="exampleInputstartday" th:field="*{startDay}">
         <small style="color: red" th:if="${#fields.hasErrors('startDay')}" th:errors="*{startDay}"></small>
     </div>
     <!--        endDay-->
     <div class="form-group">
         <label for="exampleInputendDay">endDay</label>
-        <input type="date" class="form-control" id="exampleInputendDay" th:field="*{endDay}">
+        <input type="date" data-date-format="DD MMMM YYYY" class="form-control" id="exampleInputendDay" th:field="*{endDay}">
         <small style="color: red" th:if="${#fields.hasErrors('endDay')}" th:errors="*{endDay}"></small>
     </div>
     <!--        money-->

@@ -3,6 +3,7 @@ package com.example.demo.dto;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 public class KhuyenMaiDto {
 
@@ -12,9 +13,11 @@ public class KhuyenMaiDto {
     private String title;
 
     @NotEmpty( message = "Không được để trống.")
+    @Pattern(regexp = "^\\d{4}[\\/\\-](0?[1-9]|1[012])[\\/\\-](0?[1-9]|[12][0-9]|3[01])$", message = "sai định dạng")
     private String startDay;
 
     @NotEmpty( message = "Không được để trống.")
+    @Pattern(regexp = "^\\d{4}[\\/\\-](0?[1-9]|1[012])[\\/\\-](0?[1-9]|[12][0-9]|3[01])$", message = "sai định dạng")
     private String endDay;
 
     @NotNull( message = "Không được để trống.")

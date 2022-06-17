@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class KhuyenMai {
@@ -13,8 +14,8 @@ public class KhuyenMai {
 
     private String title;
 
-    private String startDay;
-    private String endDay;
+    private Date startDay;
+    private Date endDay;
 
     private int money;
 
@@ -41,19 +42,19 @@ public class KhuyenMai {
         this.title = title;
     }
 
-    public String getStartDay() {
+    public Date getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(String startDay) {
+    public void setStartDay(Date startDay) {
         this.startDay = startDay;
     }
 
-    public String getEndDay() {
+    public Date getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(String endDay) {
+    public void setEndDay(Date endDay) {
         this.endDay = endDay;
     }
 
