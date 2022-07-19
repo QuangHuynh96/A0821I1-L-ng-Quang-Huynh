@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background: url("https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-13.jpg") no-repeat fixed center;
+    background-size: 100% auto;
+    opacity: 0.9;
+}
+body > div {
+    /*margin: 5% auto 0;*/
+    /*max-width: 720px;*/
+}
+.tabs {
+    display: flex;
+    position: relative;
+}
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #1c7430;
+    transition: all 0.2s ease;
+}
+.tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #1e7e34;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+}
+.tab-item:hover {
+    opacity: 1;
+    background-color: rgba(106,171,65,0.36);
+    /*border-color: rgba(17,55,38,0.79);*/
+}
+.tab-item.active {
+    opacity: 1;
+}
+.tab-content {
+    padding: 28px 0;
+    color: #fff!important;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+.tab-pane {
+    color: #333;
+    display: none;
+}
+.tab-pane.active {
+    display: block;
+}
+/*.tab-pane h2 {*/
+/*    font-size: 24px;*/
+/*    margin-bottom: 8px;*/
+/*}*/
+
+.img-hover:hover {
+    background-color: #0c0c0c;
+    opacity: 0.6;
+}
+
+

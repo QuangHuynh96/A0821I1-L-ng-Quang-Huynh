@@ -1,0 +1,68 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Oder product</title>
+    <script src="/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/datatables/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/datatables/css/dataTables.bootstrap4.min.css">
+    <script src="/bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+    <script src="/datatables/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body >
+<nav class="navbar navbar-light bg-light">
+    <h2 style="text-align: center">Oder product</h2>
+</nav>
+<form style="width: 60%; margin: auto;" action="/oder/create" method="post" th:object="${oderDto}">
+    <!--        id-->
+    <div class="form-group" hidden>1
+        <label for="exampleInputId">ID</label>
+        <input type="text" class="form-control " id="exampleInputId" th:field="*{id}">
+    </div>
+    <!--        Name-->
+    <div class="form-group">
+        <label for="Day">Day</label>
+        <input type="date" class="form-control" id="Day" th:field="*{day}">
+        <small style="color: red" th:if="${#fields.hasErrors('day')}" th:errors="*{day}"></small>
+    </div>
+    <!--        product name-->
+    <div class="form-group">
+        <label for="productName">product name </label>
+        <input type="text" class="form-control" id="productName" th:field="*{productName}">
+        <small style="color: red" th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}"></small>
+    </div>
+    <!--        product price-->
+    <div class="form-group">
+        <label for="productPrice">product Price </label>
+        <input type="text" class="form-control" id="productPrice" th:field="*{productPrice}">
+        <small style="color: red" th:if="${#fields.hasErrors('productPrice')}" th:errors="*{productPrice}"></small>
+    </div>
+    <!--        quantity-->
+    <div class="form-group">
+        <label for="quantity">quantity</label>
+        <input type="text" class="form-control" id="quantity" th:field="*{quantity}">
+        <small style="color: red" th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></small>
+    </div>
+    <!--        //customerName-->
+    <div class="form-group">
+        <label for="customerName">customer Name</label>
+        <input type="text" class="form-control" id="customerName" th:field="*{customerName}">
+        <small style="color: red" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></small>
+    </div>
+    <!--        //customerPhone-->
+    <div class="form-group">
+        <label for="customerPhone">customer Phone</label>
+        <input type="text" class="form-control" id="customerPhone" th:field="*{customerPhone}">
+        <small style="color: red" th:if="${#fields.hasErrors('customerPhone')}" th:errors="*{customerPhone}"></small>
+    </div>
+    <!--        //customerAddress-->
+    <div class="form-group">
+        <label for="customerPhone">customer Address</label>
+        <input type="text" class="form-control" id="customerAddress" th:field="*{customerAddress}">
+        <small style="color: red" th:if="${#fields.hasErrors('customerAddress')}" th:errors="*{customerAddress}"></small>
+    </div>
+    <!--        //button_submit-->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+</body>
+</html>
