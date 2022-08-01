@@ -15,7 +15,7 @@
 }
 
 body {
-  background: #13111a;
+  background: url(https://assets.nflxext.com/ffe/siteui/vlv3/3a073c5f-0160-4d85-9a42-6f59aa4b64b9/3242af29-8ec6-41c7-890e-5bd7393e2047/VN-vi-20220718-popsignuptwoweeks-perspective_alpha_website_medium.jpg?width=721&height=406);
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
@@ -341,13 +341,14 @@ body {
 }
 
 .form {
-  background: url(https://media.discordapp.net/attachments/925012908029657189/929269525755617300/bg-login.png?width=721&height=406);
+  background: url(https://assets.nflxext.com/ffe/siteui/vlv3/3a073c5f-0160-4d85-9a42-6f59aa4b64b9/3242af29-8ec6-41c7-890e-5bd7393e2047/VN-vi-20220718-popsignuptwoweeks-perspective_alpha_website_medium.jpg?width=721&height=406);
   max-width: 100%;
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: center;
+
 }
 .form-container {
   padding: 50px 32px 30px;
@@ -358,7 +359,7 @@ body {
 }
 .form-main {
   max-width: 400px;
-  background-color: rgba(15, 14, 14, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   text-align: left;
   margin: 0 auto;
   padding: 30px 50px 50px;
@@ -426,10 +427,10 @@ body {
 .form-support span a {
   display: inline-block;
   color: #fff;
-  text-decoration: underline;
   font-size: 15px;
   letter-spacing: 1.5px;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
